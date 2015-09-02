@@ -1,9 +1,10 @@
 # Task_2
 ## Abstract Data Type
+Excercise in using ADT. Create a CLock ADT that separates between the Specification and Implementation using C++
 
 ### Clock.h
 * Create a Clock ADT to store time (hour, minute, and second)
-```
+```pascal
 TYPE Hour 	  : integer {0..23}
 TYPE Minute 	: integer {0..59}
 TYPE Second 	: integer {0..59}
@@ -15,7 +16,7 @@ TYPE Clock :
     >
 ```
 * define the primitive function in Clock.h
-```
+```pascal
 Function IsValid(HH,MM,SS: integer) : boolean
 //return true if 0≤HH≤23, and 0≤MM≤59, and 0≤MM≤59
 
