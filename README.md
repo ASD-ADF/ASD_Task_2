@@ -43,4 +43,34 @@ Procedure PrintClock ( c : clock );
 * Write the Function Implementation of Clock ADT
 
 ### Main.cpp
-* Create the Driver application to try each functoin that you made
+* Create the Driver application to try each function that you made
+
+###E Example
+```
+clock c1 = MakeClock(2,30,4)
+clock c2 = MakeClock(6,0,0)
+clock c3 = MakeClock(1,62,30) //should not be created as the input is invalid, use IsValid function
+
+PrintClock(c1)
+PrintClock(c2)
+
+output(getHour(c1))
+output(getSecond(c2))
+
+c3 = AddClock(c1, c2)
+PrintClock(c3)
+
+output(IsEqual(c1,c2))
+
+
+```
+
+The output should be like : 
+```
+c1 = 2:30:04
+c2 = 6:00:00
+2
+0
+8:30:04
+false
+```
