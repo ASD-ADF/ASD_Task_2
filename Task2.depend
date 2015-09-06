@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1441381243 source:/home/g40/CodeBlocks Projects/Task2/KumpulanFunction.cpp
+
+1441565255 source:/home/g40/CodeBlocks Projects/Task2/main.cpp
+	<iostream>
+	"Clock.h"
+
+1441380545 /home/g40/CodeBlocks Projects/Task2/ClockFunction.h
+
+1441529638 source:/home/g40/CodeBlocks Projects/Task2/Clock.cpp
+	<iostream>
+	"Clock.h"
+
+1441527922 /home/g40/CodeBlocks Projects/Task2/Clock.h
+
