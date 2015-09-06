@@ -1,21 +1,83 @@
-#include <iostream>
-#include "Clock.h"
+#include "clock.h"
 
-using namespace std;
-
-int main()
+bool IsValid(int HH, int MM, int SS)
 {
-    clock c1 = MakeClock(2,30,4);
-    clock c2 = MakeClock(6,0,0);
-    clock c3 = MakeClock(1,62,30);//tidak bisa dibuat karna isvalid mereturn false
+    if ((HH>=0) and (HH<=23) and (MM>=0) and (MM<=59) and (SS>=0) and (MM<=59))
+    {
+        return true;
+    }
+    else { return false; }
+}
 
-    PrintClock(c1);
-    PrintClock(c2);
+clock MakeClock(int HH, int MM, int SS)
+{
+    clock c;
+    c.HH = HH;
+    c.MM = MM;
+    c.SS = SS;
+    return c;
+}
+hour GetHour(clock c)
+{
+return c.HH;
+}
+minute GetMinute(clock c)
+{
+    return c.MM;
+}
+second GetSecond(clock c)
+{
+    return c.SS;
+}
+void SetHour(clock *c, int newHH )
+{
+    (*c).HH = newHH;
+}
 
-    cout << (GetHour(c1));
-    cout << (GetSecond(c2));
+void SetMinute(clock *c, int newMM )
+{
+    (*c).MM = newMM;
+}
 
-    c3 = AddClock(c1,c2);
+void SetSecond(clock *c, int newSS )
+{
+    (*c).SS = newSS;
+}
 
-    cout << (IsEqual(c1,c2));
+bool IsEqual(clock  c1,clock c2)
+{
+    if ((c1.HH==c2.HH) and (c2.MM==c2.MM) and (c2.SS==c2.SS))
+    {
+        return true;
+    }
+}
+
+clock AddClock (clock c1 ,clock c2 )
+{
+    clock ctot;
+    ctot.SS = c1.SS + c2.SS;
+    ctot.MM = c1.MM + c2.MM;
+    ctot.HH = c1.HH + c2.HH;
+
+    if (ctot.SS >=60)
+    {
+        ctot.SS = ctot.SS-60;
+        ctot.MM = ctot.MM+1;
+    }
+    if (ctot.MM >=60)
+    {
+        ctot.MM = ctot.MM-60;
+        ctot.HH = ctot.HH+1;
+    }
+    if (ctot.HH>=24)
+    {
+        ctot.HH = ctot.HH-24;
+    }
+}
+
+void PrintClock (clock c)
+{
+    cout <<c.HH<<" : ";
+    cout <<c.MM<<" : ";
+    cout <<c.SS<<endl;
 }
