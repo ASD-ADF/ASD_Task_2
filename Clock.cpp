@@ -1,23 +1,43 @@
-#include <iostream>
+# include <iostream>
 # include "clock.h"
 
 using namespace std;
 
-int main()
-{
-    clock c1 = MakeClock(2,30,4)
-clock c2 = MakeClock(6,0,0)
-clock c3 = MakeClock(1,62,30) //should not be created as the input is invalid, use IsValid function
 
-PrintClock(c1)
-PrintClock(c2)
+  bool isValid (int HH,int MM,int SS)
+  {
+      if ((0<HH<23) && (0<MM<59) && (0<SS<59)) {
+            return true;
+      }
+      else {
+        return false;
+      }
+      }
 
-output(getHour(c1))
-output(getSecond(c2))
+ Clock MakeClock (int HH,int MM,int SS) {
+    Clock c;
+    return c;}
 
-c3 = AddClock(c1, c2)
-PrintClock(c3)
+    Hour GetHour (Clock c){
+       return c.HH; }
+    Minute GetMinute (Clock c) {
+        return c.MM;}
+    Second GetSecond (Clock c) {
+        return c.SS;}
 
-output(IsEqual(c1,c2))
-    return 0;
-}
+void SetHour (Clock c,int newHH){
+    c.HH==newHH;}
+    void SetMinute(Clock c,int newMM)
+    {cin>> newMM;c.MM=newMM;}
+    void SetSecond(Clock c,int newSS)
+    {cin>>newSS;c.SS=newSS;}
+
+    bool IsEqual (Clock c1,Clock c2)
+    {if (c1.HH=c2.HH) {return true;}
+    else {return false;}
+    }
+
+    Clock AddClock (Clock c1,Clock c2){
+        AddClock=c1+c2;}
+    void PrintClock (Clock c){
+        cout<< c;}
