@@ -1,5 +1,5 @@
 #include <iostream>
-#include "headerr.h"
+#include "clock.h"
 
 using namespace std;
 bool valid,vald;
