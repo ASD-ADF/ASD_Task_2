@@ -1,7 +1,6 @@
 //Nama : Friendly Halomoan Sipayung
 //NIM  : 13011444001
 //Kelas: IF-38-01
-
 #include <iostream>
 #include "clock.h"
 
