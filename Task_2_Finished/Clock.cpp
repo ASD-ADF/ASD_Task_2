@@ -4,7 +4,7 @@
 
 using namespace std;
 
-bool isValid(int &HH, int &MM, int &SS){
+bool isValid(int HH, int MM, int SS){
     bool valid = false;
     if((0<=HH<=23) and (0<=MM<=59) and (0<=SS<=59)) {
         valid = true;
@@ -36,18 +36,18 @@ second getSecond(clock c){
 
 void setHour(clock c, int newHH){
     c.HH = newHH;
-    cout<<c.HH;
+    cout<<c.HH<<endl;
 };
 
 void setMinute(clock c, int newMM){
     c.MM = newMM;
-    cout<<c.MM;
+    cout<<c.MM<<endl;
 };
 
 
 void setSecond(clock c, int newSS){
     c.SS = newSS;
-    cout<<c.SS;
+    cout<<c.SS<<endl;
 };
 
 bool isEqual(clock c1, clock c2){
@@ -64,7 +64,3 @@ clock addClock(clock c1, clock c2){
     c1=c2;
     return c2;
 };
-
-
-
-
