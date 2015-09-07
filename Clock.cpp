@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include "Clock.h"
 
@@ -18,11 +17,11 @@ bool IsValid(int HH, int MM, int SS)
 
 Clock MakeClock(int HH, int MM, int SS)
 {
-    Clock jam;
-    jam.HH = HH;
-    jam.MM = MM;
-    jam.SS = SS;
-    return jam;
+    Clock jm;
+    jm.HH = HH;
+    jm.MM = MM;
+    jm.SS = SS;
+    return jm;
 }
 
 hour GetHour(Clock c)
@@ -53,7 +52,7 @@ void SetSecond(Clock *c, int newSS)
 
 bool IsEqual (Clock c1, Clock c2)
 {
-    if (c1.HH==c2.HH)&& (c1.MM==c2.MM) && (c1.SS==c2.SS)
+    if ((c1.HH==c2.HH)&& (c1.MM==c2.MM) && (c1.SS==c2.SS))
             {
                 return true;
             }
@@ -67,13 +66,13 @@ bool IsEqual (Clock c1, Clock c2)
 Clock AddClock (Clock c1, Clock c2)
 {
     Clock c3;
-    int menit, jam;
-    menit=0;
-    jam=0;
+    int mn, jm;
+    mn=0;
+    jm=0;
     if (c1.SS+c2.SS>=60)
     {
         c3.SS=(c1.SS+c2.SS)-60;
-        menit=1;
+        mn=1;
     }
     else
     {
@@ -81,20 +80,20 @@ Clock AddClock (Clock c1, Clock c2)
     }
     if (c1.MM+c2.MM>=60)
     {
-        c3.MM=(c1.MM+c2.MM)-60+menit;
-        jam=1;
+        c3.MM=(c1.MM+c2.MM)-60+mn;
+        jm=1;
     }
     else
     {
-        c3.MM=c1.MM+c2.MM+menit;
+        c3.MM=c1.MM+c2.MM+mn;
     }
-    if (c1.HH+c2.HH+jam>=24)
+    if (c1.HH+c2.HH+jm>=24)
     {
         c3.HH=(c1.HH+c2.HH)-24;
     }
     else
     {
-        c3.HH=c1.HH+c2.HH+jam;
+        c3.HH=c1.HH+c2.HH+jm;
     }
     return c3;
 }
@@ -102,5 +101,4 @@ Clock AddClock (Clock c1, Clock c2)
 void PrintClock (Clock c)
 {
     cout << c.HH << ":"<< c.MM << ":" << c.SS;
-
 }
