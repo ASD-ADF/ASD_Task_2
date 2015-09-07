@@ -1,4 +1,4 @@
-#include "headerr.h"
+#include "clock.h"
 #include <iostream>
 
 using namespace std;
