@@ -19,19 +19,11 @@ jam MakeClock (int HH,int MM,int SS){
     c.second=SS;
     return c;
 }
-int GetHour (jam c){
-    return c.hour;
-}
-int GetMinute (jam c){
-    return c.minute;
-}
-int GetSecond (jam c) {
-    return c.second;
-}
+
 void SetHour (int HH) {
     jam jam1;
     jam1.hour=HH;
-    cout <<"Jam sudah di ubah menjadi  "<<jam1.hour<<endl;
+    cout <<"Jam sudah diubah menjadi  "<<jam1.hour<<endl;
 }
 void SetMinute (int MM) {
     jam jam1;
@@ -53,8 +45,15 @@ bool IsEqual (jam c,jam c2 ) {
     }
     return valid;
 }
-
+int GetHour (jam c){
+    return c.hour;
+}
+int GetMinute (jam c){
+    return c.minute;
+}
+int GetSecond (jam c) {
+    return c.second;
+}
 void PrintClock(jam c) {
     cout<<c.hour<<":"<<c.minute<<":"<<c.second<<endl;
 }
-
