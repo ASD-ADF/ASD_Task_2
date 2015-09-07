@@ -16,16 +16,17 @@ int main()
     else if (vald==false) {
         cout<<"Jam yang invalid"<<endl;
     }
-    c=MakeClock(10,11,12);
-    c2=MakeClock(14,25,22);
-    cout<<" Jam yang telah diinput "<<c.hour<<":"<<c.minute<<":"<<c.second<<endl;
-    cout<<" Jam: "<< GetHour(c)<<endl;
-    cout<<" Menit : "<<GetMinute(c)<<endl;
-    cout<<" Detik : "<<GetSecond(c)<<endl;
 
     SetHour (17);
     SetMinute(10);
     SetSecond(30);
+    c=MakeClock(10,11,12);
+    c2=MakeClock(14,25,22);
+
+    cout<<" Jam yang telah diinput "<<c.hour<<":"<<c.minute<<":"<<c.second<<endl;
+    cout<<" Jam: "<< GetHour(c)<<endl;
+    cout<<" Menit : "<<GetMinute(c)<<endl;
+    cout<<" Detik : "<<GetSecond(c)<<endl;
 
         c=MakeClock(10,11,12);
         c2=MakeClock(14,25,22);
@@ -34,7 +35,7 @@ int main()
             cout << "Jam sama"<<endl;
         }
         else if (valid==false) {
-            cout<<"Jam Berbeda"<<endl;
+            cout<<"beda jam"<<endl;
         }
         PrintClock(c);
         return 0;
