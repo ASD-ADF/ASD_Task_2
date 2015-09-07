@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1441635501 source:c:\users\farhan_test\documents\github\task_2\task_2_finished\clock.cpp
+	"Clock.h"
+	<iostream>
+	<conio.h>
+
+1441634028 c:\users\farhan_test\documents\github\task_2\task_2_finished\clock.h
+
+1441635331 source:c:\users\farhan_test\documents\github\task_2\task_2_finished\main.cpp
+	<iostream>
+	"Clock.h"
+

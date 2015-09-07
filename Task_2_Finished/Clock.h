@@ -11,7 +11,7 @@ struct clock{
     second SS;
 };
 
-bool isValid(int &HH, int &MM, int &SS);
+bool isValid(int HH, int MM, int SS);
 clock makeClock(int HH, int MM, int SS);
 hour getHour(clock c);
 minute getMinute(clock c);
@@ -21,6 +21,5 @@ void setMinute(clock c, int newMM);
 void setSecond(clock c, int newSS);
 bool isEqual(clock c1, clock c2);
 clock addClock(clock c1, clock c2);
-
 
 #endif // CLOCK_H_INCLUDED
