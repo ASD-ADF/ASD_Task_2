@@ -2,7 +2,6 @@
 #include "Clock.h"
 
 int main(){
-    int jamk,menitk,detikl;
     clock c1,c2,c3;
 
     c1=makeclock(2,30,4);
