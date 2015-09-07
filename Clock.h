@@ -1,5 +1,5 @@
-#ifndef HEADERR_H_INCLUDED
-#define HEADERR_H_INCLUDED
+#ifndef CLOCK_H_INCLUDED
+#define CLOCK_H_INCLUDED
 #include <iostream>
 
 struct jam {
