@@ -1,76 +1,83 @@
 # Task_2
 ## Abstract Data Type
-Excercise in using ADT. Create a CLock ADT that separates between the Specification and Implementation using C++
 
-### Clock.h
-* Create a Clock ADT to store time (hour, minute, and second)
+1. fork dan clone repositori ASD_Task_1
+2. buka dan modifikasi isi project task2_2016 dari code::block
+3. tuliskan kode kalian pada bagian yang telah disediakan
+
+Buatlah aplikasi sederhana untuk menympan data tanggal lahir orang
+
+### tanggal.h
+* buatlah ADT tanggal sebagai berikut
 ```pascal
-TYPE Hour 	  : integer {0..23}
-TYPE Minute 	: integer {0..59}
-TYPE Second 	: integer {0..59}
-TYPE Clock : 
+TYPE tanggal : 
     <
-    	HH	: Hour,
-    	MM	: Minute,
-    	SS	: Second;
+    	dd	: integer,
+    	mm	: integer,
+    	yy	: integer;
     >
 ```
-* define the primitive function in Clock.h
+
+### tanggal.cpp
+* implementasikan fungsi primitif tanggal
 ```pascal
-Function IsValid(HH,MM,SS: integer) : boolean
-//return true if 0≤HH≤23, and 0≤MM≤59, and 0≤MM≤59
+	fungsi create_tanggal(dd,mm,yy : integer):tanggal
+	/** fungsi mengeset tanggal tgl dengan hari, bulan, dan tahun dan mengembalikan hasilnya **/
 
-Function MakeClock(HH, MN, SS: integer) : clock
-//return clock created from input 
+	fungsi cek_tanggal(tgl : tanggal) : boolean
+	/**
+	* fungsi mengecek tanggal
+	* fungsi mengembalikan nilai true jika isi tanggal sesuai dengan bulannya
+	* fungsi mengembalikan nilai false jika isi tanggal atau bulan atau tahun salah
+	**/
+	
+	prosedur show_tanggal(tgl : tanggal)
+	/**
+	* fungsi menampilkan tanggal bulan tahun dengan format menampilkan nama bulan
+	* contoh : 1 Januari 1980
+	**/
 
-//Selector function
-Function GetHour(c : clock) : hour
-Function GetMinute(c : clock) : minute
-Function GetSecond(c : clock) : second
+	prosedur edit_tanggal(i/o: tgl : tanggal, i: dd,mm,yy : integer)
+	/**
+	* fungsi mengubah isi tanggal dari variabel tgl
+	**/
 
-//Value changer
-Procedure SetHour(In/Out c : clock, newHH: integer)
-Procedure SetMinute(In/Out c : clock, newMM: integer)
-Procedure SetSecond(In/Out c : clock, newSS: integer)
-
-//Other Operation
-Function IsEqual (c1 : clock, c2  :clock) : boolean
-Function AddClock (c1 : clock, c2  :clock) : clock
-Procedure PrintClock ( c : clock );
+	fungsi selisih_hari(tgl1, tgl2 : tanggal) : integer
+	/**
+	* fungsi menghitung selisih hari dari variable tgl1 dan tgl2
+	* fungsi selalu mengembalikan selisih dalam nilai positif
+	* syarat tahun tgl1 dan tgl2 harus sama
+	* jika tahun pada tgl1 berbeda dengan tgl2, maka fungsi mengembalikan nilai -1
+	**/
 ```
 
-### Clock.cpp
-* Write the Function Implementation of Clock ADT
-
-### Main.cpp
-* Create the Driver application to try each function that you made
-
-###E Example
-```
-clock c1 = MakeClock(2,30,4)
-clock c2 = MakeClock(6,0,0)
-clock c3 = MakeClock(1,62,30) //should not be created as the input is invalid, use IsValid function
-
-PrintClock(c1)
-PrintClock(c2)
-
-output(getHour(c1))
-output(getSecond(c2))
-
-c3 = AddClock(c1, c2)
-PrintClock(c3)
-
-output(IsEqual(c1,c2))
-
-
+### orang.h
+* buatlah ADT tanggal sebagai berikut
+```pascal
+TYPE orang : 
+    <
+    	nama : string
+		tgl_lahir : tanggal
+    >
 ```
 
-The output should be like : 
+### orang.cpp
+* implementasikan fungsi primitif orang
+```pascal
+	fungsi create_orang(nama : string nama, tgl,bln,thn : integer): orang
+	/**
+	* fungsi mengeset orang org dengan nama, tgl, bln, thn, dan mengembalikan hasilnya
+	* fungsi memanggil fungsi create_tanggal untuk membuat tanggal lahir
+	**/
+
+	fungsi hitung_umur(org : orang) : integer
+	/** fungsi menghitung umur orang org berdasarkan tahun 2016	**/
+	
+	prosedur show_orang(org : orang)
+	/** fungsi menampilkan nama, tanggal lahir dan umur orang org **/
 ```
-c1 = 2:30:04
-c2 = 6:00:00
-2
-0
-8:30:04
-false
-```
+
+### main.cpp
+* jalankan main.cpp
+* ubahlah kode di dalam main.cpp sehingga terdapat proses untuk meminta input tanggal lahir kembali kepada user jika terjadi kesalahan dalam pengisian tanggal lahir
+* tampilkan pesan bahwa selisih tidak bisa dihitung jika tahun lahir orang1 dan orang2 berbeda
