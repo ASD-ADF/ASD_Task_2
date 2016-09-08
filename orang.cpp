@@ -1,8 +1,9 @@
 /**
-    KELAS     :
+    KELAS     : IF-39-06
     KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    NAMA(NIM) : [Faishal Rachman][1301154160] , [nama][nim] , [nama][nim] , [nama][nim]
 **/
+
 
 
 #include "orang.h"
@@ -46,7 +47,9 @@ void show_orang(orang org) {
     //=================================================
     // YOUR CODE STARTS HERE
     cout << "Nama : " << org.nama << endl;
-    cout << "Tanggal Lahir : " << org.tgl_lahir.dd << "-" << org.tgl_lahir.mm << "-" << org.tgl_lahir.yy << endl;
+    cout << "Tanggal Lahir : ";
+    show_tanggal(org.tgl_lahir);
+    cout << endl;
     cout << "Umur : " << hitung_umur(org) << endl;
 
     // YOUR CODE ENDS HERE

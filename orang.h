@@ -1,7 +1,7 @@
 /**
-    KELAS     :
+    KELAS     : IF-39-06
     KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    NAMA(NIM) : [Faishal Rachman][1301154160] , [nama][nim] , [nama][nim] , [nama][nim]
 **/
 
 
