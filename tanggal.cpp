@@ -142,21 +142,22 @@ int selisih_hari(tanggal tgl1, tanggal tgl2)
     int A,B;
     //=================================================
     // YOUR CODE STARTS HERE
-    if (tgl1.yy == tgl2.yy){
-        int X = 1;
+    if (tgl1.yy == tgl2.yy)
+    {
         A = 0;
         B = 0;
-        for (int i=0;i<=tgl1.mm;i++){
-                A +=bulankehari(i,tgl1.yy);
+        for (int i=0; i<=tgl1.mm; i++)
+        {
+            A +=bulankehari(i,tgl1.yy);
 
         }
-        for (int i = 0;i<=tgl2.mm;i++)
-               B +=bulankehari(i,tgl2.yy);
-    A += tgl1.dd;
-    B += tgl2.dd;
-    selisih = B-A;
-    if (selisih < 0)
-        selisih *= -1;
+        for (int i = 0; i<=tgl2.mm; i++)
+            B +=bulankehari(i,tgl2.yy);
+        A += tgl1.dd;
+        B += tgl2.dd;
+        selisih = B-A;
+        if (selisih < 0)
+            selisih *= -1;
     }
 
     // YOUR CODE ENDS HERE
