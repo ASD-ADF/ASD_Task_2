@@ -13,7 +13,8 @@
 struct orang {
     //=================================================
     // YOUR CODE STARTS HERE
-
+    string nama;
+    tanggal tgl_lahir;
 
     // YOUR CODE ENDS HERE
     //=================================================

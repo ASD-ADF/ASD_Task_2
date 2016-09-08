@@ -15,7 +15,7 @@ using namespace std;
 struct tanggal {
     //=================================================
     // YOUR CODE STARTS HERE
-
+    int dd, mm, yy;
 
     // YOUR CODE ENDS HERE
     //=================================================
