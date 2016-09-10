@@ -7,14 +7,13 @@
 
 #ifndef ORANG_H_INCLUDED
 #define ORANG_H_INCLUDED
-
 #include "tanggal.h"
 
 struct orang {
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    string nama;
+    tanggal tgl_lahir;
     // YOUR CODE ENDS HERE
     //=================================================
 };

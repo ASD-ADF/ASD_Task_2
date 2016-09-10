@@ -5,9 +5,12 @@
 **/
 
 #include <string>
+//#include <iostream>
+//#include <stdio.h>
 #include "tanggal.h"
 
-tanggal create_tanggal(int dd,int mm,int yy) {
+tanggal create_tanggal(int dd,int mm,int yy)
+{
     /**
     * fungsi mengeset tanggal tgl dengan hari, bulan, dan tahun dan mengembalikan hasilnya
     **/
@@ -15,6 +18,13 @@ tanggal create_tanggal(int dd,int mm,int yy) {
     tanggal tgl;
     //=================================================
     // YOUR CODE STARTS HERE
+    cout<<"Masukkan tanggal lahir Anda : ";
+    cin >>tgl.dd;
+    cout<<"Masukkan bulan lahir Anda : ";
+    cin >>tgl.mm;
+    cout<<"Masukkan tahun lahir Anda : ";
+    cin >>tgl.yy;
+    cout<<"Tanggal lahir Anda : "<< tgl.dd << " / " << tgl.mm <<" / "<< tgl.yy;
 
 
     // YOUR CODE ENDS HERE
@@ -22,48 +32,108 @@ tanggal create_tanggal(int dd,int mm,int yy) {
     return tgl;
 }
 
-bool cek_tanggal(tanggal tgl) {
+bool cek_tanggal(tanggal tgl)
+{
     /**
     * fungsi mengecek tanggal
     * fungsi mengembalikan nilai true jika isi tanggal sesuai dengan bulannya
     * fungsi mengembalikan nilai false jika isi tanggal atau bulan atau tahun salah
     **/
     bool ok = true;
+    int jml_dd;
     //=================================================
     // YOUR CODE STARTS HERE
+    if (tgl.mm == 1 || 3 || 5 || 7 || 8 || 10 || 12)
+    {
+        jml_dd = 31;
+    }
+    else if (tgl.mm == 4 || 6 || 9 || 11)
+    {
+        jml_dd = 30;
+    }
+    else if (tgl.mm == 2)
+    {
+        if ((tgl.yy % 4 == 0) && (tgl.yy % 100 == 0))
+        {
+            jml_dd = 29;
+        }
+        else
+        {
+            jml_dd = 28;
+        }
+    }
 
+    if (tgl.dd <= 31 ){
+        ok = true;
+    }
+    else {
+        ok = false;
+    }
 
     // YOUR CODE ENDS HERE
     //=================================================
     return ok;
 }
 
-void show_tanggal(tanggal tgl) {
+void show_tanggal(tanggal tgl)
+{
     /**
     * fungsi menampilkan tanggal bulan tahun dengan format menampilkan nama bulan
     * contoh : 1 Januari 1980
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    switch (tgl.mm){
+        case 1 : "Januari";
+        break;
+        case 2 : "Februari";
+        break;
+        case 3 : "Maret";
+        break;
+        case 4 : "April";
+        break;
+        case 5 : "Mei";
+        break;
+        case 6 : "Juni";
+        break;
+        case 7 : "Juli";
+        break;
+        case 8 : "Agustus";
+        break;
+        case 9 : "September";
+        break;
+        case 10 : "Oktober";
+        break;
+        case 11 : "November";
+        break;
+        case 12 : "Desember";
+        break;
+    }
+    cout << tgl.dd << " / " << tgl.mm << " / " << tgl.yy;
     // YOUR CODE ENDS HERE
     //=================================================
 }
 
-void edit_tanggal(tanggal &tgl, int dd, int mm, int yy) {
+void edit_tanggal(tanggal &tgl, int dd, int mm, int yy)
+{
     /**
     * fungsi mengubah isi tanggal dari variabel tgl
     **/
     //=================================================
     // YOUR CODE STARTS HERE
+    /*if ((tgl.dd != 0) && (tgl.mm != 0) && (tgl.yy != 0)){
+        tgl.dd = 0 ;
+        tgl.mm = 0 ;
+        tgl.yy = 0 ;
+    }**/
 
 
     // YOUR CODE ENDS HERE
     //=================================================
 }
 
-int selisih_hari(tanggal tgl1, tanggal tgl2) {
+int selisih_hari(tanggal tgl1, tanggal tgl2)
+{
     /**
     * fungsi menghitung selisih hari dari variable tgl1 dan tgl2
     * fungsi selalu mengembalikan selisih dalam nilai positif
