@@ -29,8 +29,8 @@
 			</Target>
 		</Build>
 		<Compiler>
-			<Add option="-std=c++11" />
-			<Add option="-std=c++0x" />
+			<Add option="-std=gnu++11" />
+			<Add option="-std=gnu++0x" />
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
