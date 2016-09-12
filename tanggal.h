@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF 39-06
+    KELOMPOK  : 8
+    NAMA(NIM) : [Aziza Hayupratiwi][1301150440] , [M. Luthfi A.S][1301154328] , [Rafi][nim] , [nama][nim]
 **/
 
 
@@ -10,12 +10,15 @@
 
 #include <string>
 #include <iostream>
+#include <stdlib.h>
+#include <math.h>
+
 using namespace std;
 
 struct tanggal {
     //=================================================
     // YOUR CODE STARTS HERE
-
+    int dd, mm, yy;
 
     // YOUR CODE ENDS HERE
     //=================================================

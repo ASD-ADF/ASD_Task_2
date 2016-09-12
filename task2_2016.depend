@@ -20,3 +20,24 @@
 	<string>
 	"tanggal.h"
 
+1473668787 source:c:\users\aziza\documents\github\asd_task_2\main.cpp
+	<iostream>
+	"orang.h"
+	"tanggal.h"
+
+1473661704 c:\users\aziza\documents\github\asd_task_2\orang.h
+	"tanggal.h"
+
+1473663743 c:\users\aziza\documents\github\asd_task_2\tanggal.h
+	<string>
+	<iostream>
+	<stdlib.h>
+	<math.h>
+
+1473667192 source:c:\users\aziza\documents\github\asd_task_2\orang.cpp
+	"orang.h"
+
+1473667739 source:c:\users\aziza\documents\github\asd_task_2\tanggal.cpp
+	<string>
+	"tanggal.h"
+
