@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF 39_06
+    KELOMPOK  : 9
+    NAMA(NIM) : [M. Yusuf Faishal][1301154174] , [Ni Putu Surya Febyanti Kusumadewi][1301154482] , [Wilson Immanuel Antonio][1301154104]
 **/
 
 
@@ -26,8 +26,15 @@ int main() {
     cout << "masukkan tahun lahir orang 1: ";
     cin>>thn;
 
-    o1 = create_orang(nama, tgl,bln,thn);
-    show_orang(o1);
+    o1 = create_orang(nama,tgl,bln,thn);
+
+    if (cek_tanggal(o1.tgl_lahir)==true){
+        show_orang(o1);
+    }
+    else
+    {
+        edit_tanggal(o1.tgl_lahir,tgl,bln,thn);
+    }
 
     cout << "masukkan nama orang 2: ";
     cin>>nama;
