@@ -15,11 +15,13 @@ using namespace std;
 struct tanggal {
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    int dd,mm,yy;
+    int dd1,mm1,yy1;
     // YOUR CODE ENDS HERE
     //=================================================
 };
+
+
 
 tanggal create_tanggal(int dd,int mm,int yy);
 bool cek_tanggal(tanggal tgl);
