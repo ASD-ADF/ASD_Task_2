@@ -20,3 +20,22 @@
 	<string>
 	"tanggal.h"
 
+1473682996 source:e:\dokumen\kuliah\asd\asd_task_2\main.cpp
+	<iostream>
+	"orang.h"
+	"tanggal.h"
+
+1473372780 e:\dokumen\kuliah\asd\asd_task_2\orang.h
+	"tanggal.h"
+
+1473372761 e:\dokumen\kuliah\asd\asd_task_2\tanggal.h
+	<string>
+	<iostream>
+
+1473372767 source:e:\dokumen\kuliah\asd\asd_task_2\orang.cpp
+	"orang.h"
+
+1473682996 source:e:\dokumen\kuliah\asd\asd_task_2\tanggal.cpp
+	<string>
+	"tanggal.h"
+
