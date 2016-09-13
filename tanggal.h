@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF 39-06
+    KELOMPOK  : 10
+    NAMA(NIM) : [nama][nim] , [M. Fadhlan Supriadi][1301154202] , [Hardo Fernando Silalahi][1301154216] , [Dhevi Larasati][1301154454]
 **/
 
 
@@ -15,8 +15,8 @@ using namespace std;
 struct tanggal {
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    int dd, mm, yy;
+    int dd1, mm1, yy1;
     // YOUR CODE ENDS HERE
     //=================================================
 };
