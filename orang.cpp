@@ -1,7 +1,7 @@
 /**
     KELAS     :IF 39-06
     KELOMPOK  :7
-    NAMA(NIM) : [RITA AJENG NUGRAHENI][1301154524] , [nama][nim] , [nama][nim] , [nama][nim]
+    NAMA(NIM) : [RITA AJENG NUGRAHENI][1301154524] , [ADAM TUA RAHMAN S][1301154286] , [RIDHO DWI PANGESTU][1301140110 ] , [nama][nim]
 **/
 
 
