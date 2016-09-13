@@ -1,7 +1,7 @@
 /**
     KELAS     : IF-39-06
-    KELOMPOK  :
-    NAMA(NIM) : [Faishal Rachman][1301154160] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELOMPOK  : 4
+    NAMA(NIM) : [Faishal Rachman][1301154160] , [I Ketut Sudika Kertayasa][1301154244] , [Arli Mutiara Gusriyanti][1301154538] , [nama][nim]
 **/
 
 
