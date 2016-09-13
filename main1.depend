@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1473781356 source:e:\semester 3\struktur data\tes\main1\main.cpp
+	<iostream>
+	"orang.h"
+	"tanggal.h"
+
+1473781356 e:\semester 3\struktur data\tes\main1\orang.h
+	"tanggal.h"
+
+1473781356 e:\semester 3\struktur data\tes\main1\tanggal.h
+	<string>
+	<iostream>
+
+1473781356 source:e:\semester 3\struktur data\tes\main1\tanggal.cpp
+	<string>
+	"tanggal.h"
+
+1473764773 source:e:\semester 3\struktur data\tes\main1\orang.cpp
+	"orang.h"
+	"tanggal.h"
+
