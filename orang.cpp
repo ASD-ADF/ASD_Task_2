@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF 39 06
+    KELOMPOK  : 10
+    NAMA(NIM) : [nama][nim] , [M. Fadhlan Supriadi][1301154202] , [HArdo Fernando Silalahi][1301154216] , [Dhevi Larasati][1301154454]
 **/
 
 
@@ -15,8 +15,8 @@ orang create_orang(string nama, int tgl, int bln, int thn) {
     orang org;
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    org.nama=nama;
+    org.tgl_lahir=create_tanggal(tgl, bln, thn);
     // YOUR CODE ENDS HERE
     //=================================================
     return org;
@@ -29,8 +29,7 @@ int hitung_umur(orang org) {
     int umur = 0;
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    umur=(2016-org.tgl_lahir.yy);
     // YOUR CODE ENDS HERE
     //=================================================
     return umur;
@@ -42,8 +41,12 @@ void show_orang(orang org) {
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    cout <<"Nama            : "<<org.nama<<endl;
+    cout <<"Tanggal lahir   : ";
+    cout <<org.tgl_lahir.dd;
+    show_tanggal(org.tgl_lahir);
+    cout <<org.tgl_lahir.yy<<endl;
+    cout <<"Umur            : "<<hitung_umur(org)<<endl;
     // YOUR CODE ENDS HERE
     //=================================================
 }
