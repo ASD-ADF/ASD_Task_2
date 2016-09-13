@@ -1,9 +1,8 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF 39-06
+    KELOMPOK  : 4
+    NAMA(NIM) : RAMA ADITYA MAULANA 1301150034 , Kharisma Oktavianing Herwanda 1301154496 , Hutomo Aji 1301154384 , Rizki hidayatullah 1301154118
 **/
-
 
 #include "orang.h"
 
@@ -15,7 +14,10 @@ orang create_orang(string nama, int tgl, int bln, int thn) {
     orang org;
     //=================================================
     // YOUR CODE STARTS HERE
-
+    org.nama = nama;
+    org.tgl_lahir.dd = tgl;
+    org.tgl_lahir.mm = bln;
+    org.tgl_lahir.yy = thn;
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -29,7 +31,7 @@ int hitung_umur(orang org) {
     int umur = 0;
     //=================================================
     // YOUR CODE STARTS HERE
-
+        umur = 2016 - org.tgl_lahir.yy;
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -42,7 +44,11 @@ void show_orang(orang org) {
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
+        cout<<"Nama: "<<org.nama<<endl;
+        cout<<"Tanggal Lahir: ";
+        show_tanggal(org.tgl_lahir);
+        cout<<endl;
+        cout<<"Umur: "<<hitung_umur(org)<<endl;;
 
     // YOUR CODE ENDS HERE
     //=================================================
