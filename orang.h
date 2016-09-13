@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF 39-06
+    KELOMPOK  : 1
+    NAMA(NIM) : [Muhammad Iqbal][13401154300] , [Vatana Rianti Aldefi][1301154566] , [Ibrahim Bimo Wicaksono][1301154356] , [Rian Pebi][1301154426]
 **/
 
 
@@ -13,6 +13,9 @@
 struct orang {
     //=================================================
     // YOUR CODE STARTS HERE
+    string nama;
+    tanggal tgl_lahir;
+
 
 
     // YOUR CODE ENDS HERE
