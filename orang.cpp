@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     :IF 39-06
+    KELOMPOK  :7
+    NAMA(NIM) : [RITA AJENG NUGRAHENI][1301154524] , [nama][nim] , [nama][nim] , [nama][nim]
 **/
 
 
@@ -15,8 +15,11 @@ orang create_orang(string nama, int tgl, int bln, int thn) {
     orang org;
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    org.nama=nama;
+    org.tgl_lahir.dd=tgl;
+    org.tgl_lahir.mm=bln;
+    org.tgl_lahir.yy=thn;
+    create_tanggal(tgl,bln,thn);
     // YOUR CODE ENDS HERE
     //=================================================
     return org;
@@ -30,6 +33,8 @@ int hitung_umur(orang org) {
     //=================================================
     // YOUR CODE STARTS HERE
 
+    umur = (2016-org.tgl_lahir.yy);
+
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -42,6 +47,10 @@ void show_orang(orang org) {
     **/
     //=================================================
     // YOUR CODE STARTS HERE
+    cout<<"Nama  :";
+    cout<<org.nama;
+    cout<<"Tanggal lahir "<<org.tgl_lahir.dd<<"-"<<org.tgl_lahir.mm<<"-"<<org.tgl_lahir.yy;
+    cout<<"Umur:"<<hitung_umur(org);
 
 
     // YOUR CODE ENDS HERE
