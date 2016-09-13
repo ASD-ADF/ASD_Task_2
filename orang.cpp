@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF 39-06
+    KELOMPOK  : 9
+    NAMA(NIM) : [M.Yusuf Faishal][1301154174] , [Ni Putu Surya Febyanti Kusumadewi][1301154482] , [Wilson Immanuel Antonio][1301154104]
 **/
 
 
@@ -14,10 +14,8 @@ orang create_orang(string nama, int tgl, int bln, int thn) {
     **/
     orang org;
     //=================================================
-    // YOUR CODE STARTS HERE
-
-
-    // YOUR CODE ENDS HERE
+    org.nama=nama;
+    org.tgl_lahir = create_tanggal(tgl,bln,thn);
     //=================================================
     return org;
 }
@@ -28,10 +26,7 @@ int hitung_umur(orang org) {
     **/
     int umur = 0;
     //=================================================
-    // YOUR CODE STARTS HERE
-
-
-    // YOUR CODE ENDS HERE
+    umur = (2016-org.tgl_lahir.yy);
     //=================================================
     return umur;
 }
@@ -41,9 +36,15 @@ void show_orang(orang org) {
     * fungsi menampilkan nama, tanggal lahir dan umur orang org
     **/
     //=================================================
-    // YOUR CODE STARTS HERE
+    cout<< "Nama anda : ";
+    cout<<org.nama<<endl;
 
+    cout<< "Tanggal lahir anda : ";
+    cout<<org.tgl_lahir.dd;
+    show_tanggal (org.tgl_lahir);
+    cout<<org.tgl_lahir.yy<<endl;
 
-    // YOUR CODE ENDS HERE
+    cout<< "Umur anda :";
+    cout<<hitung_umur(org)<<endl;
     //=================================================
 }
