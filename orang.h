@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF 39-06
+    KELOMPOK  : 6
+    NAMA(NIM) : [Sarah Fauziah Lestari][1301154552] , [Surya Fachri Idris Nasution][1301154230] , [nama][nim]
 **/
 
 
@@ -13,7 +13,8 @@
 struct orang {
     //=================================================
     // YOUR CODE STARTS HERE
-
+        string nama;
+        tanggal tgl_lahir;
 
     // YOUR CODE ENDS HERE
     //=================================================
