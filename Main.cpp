@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF 39-06
+    KELOMPOK  : 2
+    NAMA(NIM) : [Alfin Pratama S][1301154342] , [Hafizh][1301154272] , [Bella][1301154637] , [Amin][130115]
 **/
 
 
@@ -28,6 +28,7 @@ int main() {
 
     o1 = create_orang(nama, tgl,bln,thn);
     show_orang(o1);
+    cout<< endl;
 
     cout << "masukkan nama orang 2: ";
     cin>>nama;
@@ -40,6 +41,8 @@ int main() {
 
     o2 = create_orang(nama, tgl,bln,thn);
     show_orang(o2);
+
+    cout<< endl;
 
     cout<< "selisih hari : "<<selisih_hari(o1.tgl_lahir,o2.tgl_lahir)<<" hari";
     return 0;
