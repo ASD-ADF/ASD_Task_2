@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF 39-06
+    KELOMPOK  : 4
+    NAMA(NIM) : RAMA ADITYA MAULANA 1301150034 , Kharisma Oktavianing Herwanda 1301154496 , Hutomo Aji 1301154384 , Rizki hidayatullah 1301154118
 **/
 
 
@@ -13,7 +13,8 @@
 struct orang {
     //=================================================
     // YOUR CODE STARTS HERE
-
+    string nama;
+    tanggal tgl_lahir;
 
     // YOUR CODE ENDS HERE
     //=================================================

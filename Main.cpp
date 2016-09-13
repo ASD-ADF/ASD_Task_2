@@ -1,9 +1,8 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF 39-06
+    KELOMPOK  : 4
+    NAMA(NIM) : RAMA ADITYA MAULANA 1301150034 , Kharisma Oktavianing Herwanda 1301154496 , Hutomo Aji 1301154384 , Rizki hidayatullah 1301154118
 **/
-
 
 #include <iostream>
 #include "orang.h"
@@ -17,6 +16,7 @@ int tgl, bln, thn;
 
 int main() {
     cout << "Hello!" << endl;
+    do{
     cout << "masukkan nama orang 1: ";
     cin>>nama;
     cout << "masukkan tanggal lahir orang 1: ";
@@ -26,9 +26,18 @@ int main() {
     cout << "masukkan tahun lahir orang 1: ";
     cin>>thn;
 
+    if (tgl == 0 || tgl > 31|| bln > 12 || bln == 0 || tgl > jumlah_hari_bulan (bln,thn)){
+        cout<<"Maaf, Tanggal yang dimasukkan salah!\n\n";
+        }
+    }
+    while(tgl == 0 || tgl > 31 || bln > 12 || bln == 0 || tgl > jumlah_hari_bulan (bln,thn) );
+
+
     o1 = create_orang(nama, tgl,bln,thn);
     show_orang(o1);
 
+    do{
+    cout<<endl;
     cout << "masukkan nama orang 2: ";
     cin>>nama;
     cout << "masukkan tanggal lahir orang 2: ";
@@ -37,6 +46,12 @@ int main() {
     cin>>bln;
     cout << "masukkan tahun lahir orang 2: ";
     cin>>thn;
+  if (tgl == 0 || bln > 12 || bln == 0 || tgl > jumlah_hari_bulan (bln,thn)){
+        cout<<"Maaf, Tanggal yang dimasukkan salah!\n\n";
+        }
+    }
+    while(tgl == 0 || bln > 12 || bln == 0 || tgl > jumlah_hari_bulan (bln,thn) );
+
 
     o2 = create_orang(nama, tgl,bln,thn);
     show_orang(o2);
