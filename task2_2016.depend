@@ -20,3 +20,26 @@
 	<string>
 	"tanggal.h"
 
+1473787453 source:d:\data\tel-u\tugas\(asd) algoritma dan struktur data\github\asd_task_2\main.cpp
+	<iostream>
+	"orang.h"
+	"tanggal.h"
+
+1473782764 d:\data\tel-u\tugas\(asd) algoritma dan struktur data\github\asd_task_2\orang.h
+	"tanggal.h"
+
+1473782764 d:\data\tel-u\tugas\(asd) algoritma dan struktur data\github\asd_task_2\tanggal.h
+	<string>
+	<iostream>
+
+1473785500 source:d:\data\tel-u\tugas\(asd) algoritma dan struktur data\github\asd_task_2\orang.cpp
+	"orang.h"
+
+1473787011 source:d:\data\tel-u\tugas\(asd) algoritma dan struktur data\github\asd_task_2\tanggal.cpp
+	<string>
+	"tanggal.h"
+
+1473498864 d:\data\tel-u\tugas\(asd) algoritma dan struktur data\github\asd_task_2\tanggal.cpp
+	<string>
+	"tanggal.h"
+

@@ -1,20 +1,19 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF 39 06
+    KELOMPOK  : 10
+    NAMA(NIM) : [nama][nim] , [M. Fadhlan Supriadi][1301154202] , [HArdo Fernando Silalahi][1301154216] , [Dhevi Larasati][1301154454]
 **/
 
 
 #ifndef ORANG_H_INCLUDED
 #define ORANG_H_INCLUDED
-
 #include "tanggal.h"
 
 struct orang {
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    string nama, nama1, nama2;
+    tanggal tgl_lahir, tgl_lahir1, tgl_lahir2;
     // YOUR CODE ENDS HERE
     //=================================================
 };
