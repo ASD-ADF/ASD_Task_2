@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     :IF 39-06
+    KELOMPOK  :3
+    NAMA(NIM) : [I Ketut Sudika Kertayasa][1301154244] , [Faishal Rachman][1301154160] , [Arli Mutiara Gusriyanti][1301154538] , [nama][nim]
 **/
 
 
@@ -12,10 +12,11 @@
 #include <iostream>
 using namespace std;
 
-struct tanggal {
+struct tanggal
+{
     //=================================================
     // YOUR CODE STARTS HERE
-
+    int dd, mm, yy;
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -26,5 +27,6 @@ bool cek_tanggal(tanggal tgl);
 void show_tanggal(tanggal tgl);
 void edit_tanggal(tanggal &tgl, int dd, int mm, int yy);
 int selisih_hari(tanggal tgl1, tanggal tgl2);
+int bulankehari(int A, int B);
 
 #endif // TANGGAL_H_INCLUDED

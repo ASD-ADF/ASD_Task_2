@@ -5,6 +5,7 @@
 **/
 
 
+
 #include "orang.h"
 
 orang create_orang(string nama, int tgl, int bln, int thn)
