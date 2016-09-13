@@ -1,9 +1,8 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     :IF 39-06
+    KELOMPOK  :1
+    NAMA(NIM) : [Vatana RA][1301154566] , [Ibrahim Bimo][1301154356] , [M. Iqbal][1301154300] , [Rian P][1301154426]
 **/
-
 
 #ifndef ORANG_H_INCLUDED
 #define ORANG_H_INCLUDED
@@ -13,7 +12,8 @@
 struct orang {
     //=================================================
     // YOUR CODE STARTS HERE
-
+     string nama ;
+     tanggal tgl_lahir;
 
     // YOUR CODE ENDS HERE
     //=================================================
