@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF 39-06
+    KELOMPOK  : 6
+    NAMA(NIM) : [surya fachri idris nst][1301154230] , [sarah fauziah l][1301154552] , [abdul rahman safari][1301144380] , [nama][nim]
 **/
 
 
@@ -15,11 +15,12 @@ orang create_orang(string nama, int tgl, int bln, int thn) {
     orang org;
     //=================================================
     // YOUR CODE STARTS HERE
-
+     org.nama = nama;
+     org.tgl_lahir = create_tanggal(tgl,bln,thn);
 
     // YOUR CODE ENDS HERE
     //=================================================
-    return org;
+
 }
 
 int hitung_umur(orang org) {
@@ -29,7 +30,7 @@ int hitung_umur(orang org) {
     int umur = 0;
     //=================================================
     // YOUR CODE STARTS HERE
-
+        umur = 2016 - org.tgl_lahir.yy;
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -42,7 +43,10 @@ void show_orang(orang org) {
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
+        cout <<"Nama                           : "<< org.nama << endl;
+        cout <<"Tanggal Lahir                  : ";
+        show_tanggal(org.tgl_lahir);
+        cout <<"Umur                           : "<< hitung_umur(org)<<endl;
 
     // YOUR CODE ENDS HERE
     //=================================================
