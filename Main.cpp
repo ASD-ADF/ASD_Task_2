@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     :IF-39-06
+    KELOMPOK  : 5
+    NAMA(NIM) : [A.A Gde Ratu Pemayun][1301154412] , [KM Alfarabi][1301150076] , [Gisela Anggita Ashianti][1301154468] , [fiqhi agung][1301154132]
 **/
 
 
@@ -28,6 +28,7 @@ int main() {
 
     o1 = create_orang(nama, tgl,bln,thn);
     show_orang(o1);
+    cout<<endl;
 
     cout << "masukkan nama orang 2: ";
     cin>>nama;
