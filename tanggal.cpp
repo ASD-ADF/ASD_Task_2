@@ -123,7 +123,6 @@ int selisih_hari(tanggal tgl1, tanggal tgl2) {
     **/
     int selisih = -1;
     int x;
-    int y;
     //=================================================
     // YOUR CODE STARTS HERE
 	if (tgl1.yy==tgl2.yy){
