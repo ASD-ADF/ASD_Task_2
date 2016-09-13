@@ -121,21 +121,23 @@ int selisih_hari(tanggal tgl1, tanggal tgl2) {
     * syarat tahun tgl1 dan tgl2 harus sama
     * jika tahun pada tgl1 berbeda dengan tgl2, maka fungsi mengembalikan nilai -1
     **/
-    int selisih = -1;
-    int x;
-    //=================================================
-    // YOUR CODE STARTS HERE
-	if (tgl1.yy==tgl2.yy){
-	x=tgl1.mm-tgl2.mm;
-		if (x<0){
-		x=x*-1;
-		}
+     int selisih = -1;
+     int n;
+     int s;
+      //=================================================
+     // YOUR CODE STARTS HERE
+     // YOUR CODE STARTS HERE
+     if (tgl1.yy==tgl2.yy){
+     s=tgl1.dd - tgl2.dd;
+     if (s<0){
+         s=s*-1;
+     }
+     }
+     n=tgl1.mm-tgl2.mm;
+     if (n<0){
+         n=n*-1;
     }
-	selisih=x*30+(tgl2.dd-tgl1.dd);
-	if (selisih<0){
-        selisih=selisih*-1;
-	}
-
+     selisih=s+n;
     // YOUR CODE ENDS HERE
     //=================================================
     return selisih;
