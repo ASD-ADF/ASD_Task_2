@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF 39-06
+    KELOMPOK  : 7
+    NAMA(NIM) : [Adam Tua Rahman][1301154286] , [Rita Ajeng Nugraheni][1301154524] , [Ridho Dwi Pangestu][1301140110]
 **/
 
 
@@ -13,6 +13,9 @@
 struct orang {
     //=================================================
     // YOUR CODE STARTS HERE
+     string nama;
+    tanggal tgl_lahir;
+
 
 
     // YOUR CODE ENDS HERE
