@@ -53,43 +53,44 @@ void show_tanggal(tanggal tgl) {
     //=================================================
     // YOUR CODE STARTS HERE
 
-    if(tgl.mm=1){
-        cout<<"Januari";
+    string y=" ";
+    if(tgl.mm==1){
+        y="Januari";
       }
-      else if (tgl.mm=2){
-        cout<<"Februari";
+      else if (tgl.mm==2){
+        y="Februari";
       }
-      else if (tgl.mm=3){
-        cout<<"Maret";
+      else if (tgl.mm==3){
+        y="Maret";
       }
-      else if (tgl.mm=4){
-        cout<<"April";
+      else if (tgl.mm==4){
+        y="April";
       }
-      else if (tgl.mm=5){
-        cout<<"Mei";
+      else if (tgl.mm==5){
+        y="Mei";
       }
-      else if (tgl.mm=6){
-        cout<<"Juni";
+      else if (tgl.mm==6){
+        y="Juni";
       }
-      else if (tgl.mm=7){
-        cout<<"Juli";
+      else if (tgl.mm==7){
+        y="Juli";
       }
-      else if (tgl.mm=8){
-        cout<<"Agustus";
+      else if (tgl.mm==8){
+        y="Agustus";
       }
-      else if (tgl.mm=9){
-        cout<<"September";
+      else if (tgl.mm==9){
+        y="September";
       }
-      else if (tgl.mm=10){
-        cout<<"oktober";
+      else if (tgl.mm==10){
+        y="oktober";
       }
-      else if (tgl.mm=11){
-        cout<<"November";
+      else if (tgl.mm==11){
+        y="November";
       }
       else {
-        cout<<"Desember";
+        y="Desember";
       }
-	cout<<"Tanggal bulan dan tahun:"<<tgl.dd<<tgl.mm<<tgl.yy<<endl;
+	cout<<"Tanggal bulan dan tahun:"<<tgl.dd<<" "<<y<<" "<<tgl.yy<<endl;
 
 
     // YOUR CODE ENDS HERE
@@ -126,15 +127,15 @@ int selisih_hari(tanggal tgl1, tanggal tgl2) {
     //=================================================
     // YOUR CODE STARTS HERE
 	if (tgl1.yy==tgl2.yy){
-	x=tgl1.dd-tgl2.dd;
+	x=tgl1.mm-tgl2.mm;
 		if (x<0){
 		x=x*-1;
 		}
-}
-	y=(tgl1.mm-tgl2.mm);
-		if (y<0 ){
-		y=y*-1;
-		}
+    }
+	selisih=x*30+(tgl2.dd-tgl1.dd);
+	if (selisih<0){
+        selisih=selisih*-1;
+	}
 
     // YOUR CODE ENDS HERE
     //=================================================
