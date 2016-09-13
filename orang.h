@@ -11,12 +11,9 @@
 #include "tanggal.h"
 
 struct orang {
-    //=================================================
-    // YOUR CODE STARTS HERE
+   org.nama=nama;
 
-
-    // YOUR CODE ENDS HERE
-    //=================================================
+	org.tgl_lahir= create_tanggal(tgl,bln,thn);
 };
 
 orang create_orang(string nama, int tgl,int bln,int thn);

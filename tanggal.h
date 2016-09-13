@@ -13,12 +13,9 @@
 using namespace std;
 
 struct tanggal {
-    //=================================================
-    // YOUR CODE STARTS HERE
+    string nama;
+    tgl_lahir;
 
-
-    // YOUR CODE ENDS HERE
-    //=================================================
 };
 
 tanggal create_tanggal(int dd,int mm,int yy);
