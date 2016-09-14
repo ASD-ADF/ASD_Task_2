@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF 39-06
+    KELOMPOK  : 2
+    NAMA(NIM) : [Amin][1301154398] , [Alfin Pratama S][1301154342] , [Hafizh][1301154272] , [Bella][1301154637]
 **/
 
 
@@ -15,7 +15,8 @@ string nama;
 int tgl, bln, thn;
 
 
-int main() {
+int main()
+{
     cout << "Hello!" << endl;
     cout << "masukkan nama orang 1: ";
     cin>>nama;
@@ -28,6 +29,7 @@ int main() {
 
     o1 = create_orang(nama, tgl,bln,thn);
     show_orang(o1);
+    cout<< endl;
 
     cout << "masukkan nama orang 2: ";
     cin>>nama;
@@ -40,7 +42,18 @@ int main() {
 
     o2 = create_orang(nama, tgl,bln,thn);
     show_orang(o2);
+    cout<< endl;
 
     cout<< "selisih hari : "<<selisih_hari(o1.tgl_lahir,o2.tgl_lahir)<<" hari";
-    return 0;
+
+    if (o1.tgl_lahir.yy != o2.tgl_lahir.yy)
+    {
+        cout << "Tahun Lahir Harus Sama! Harap Masukkan Tahun Lahir Kembali";
+    }
+    else
+    {
+        cout<< "Selisih Hari : "<<selisih_hari(o1.tgl_lahir,o2.tgl_lahir)<<" hari" << endl;
+    }
 }
+while (o1.tgl_lahir.yy != o2.tgl_lahir.yy);
+return 0;
