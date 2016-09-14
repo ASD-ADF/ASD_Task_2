@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF 39-06
+    KELOMPOK  : 4
+    NAMA(NIM) : Hutomo Aji Prasetyo 1301154384, Rama Aditya Maulana 1301150034, Kharisma Oktavianing Herwanda 1301154496, Rizki Hidayatullah 1301154118
 **/
 
 #include <string>
@@ -134,6 +134,12 @@ int selisih_hari(tanggal tgl1, tanggal tgl2) {
     int selisih = -1;
     //=================================================
     // YOUR CODE STARTS HERE
+    if (o1.tgl_lahir.yy != o2.tgl_lahir.yy){
+        cout <<"Tahun lahir harus sama, harap masukkan kembali tahun lahir yg sama";
+    }else{
+        cout <<"Selisih hari : "<<selisih_hari(o1.tgl_lahir,o2.tgl_lahir)<<" hari "<<endl;
+    }
+    while (o1.tgl_lahir.yy != o2.tgl_lahir.yy);
 
 
     // YOUR CODE ENDS HERE

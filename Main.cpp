@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF 39-06
+    KELOMPOK  : 4
+    NAMA(NIM) : Hutomo Aji Prasetyo 1301154384, Rama Aditya Maulana 1301150034, Kharisma Oktavianing Herwanda 1301154496, Rizki Hidayatullah 1301154118
 **/
 
 
@@ -27,12 +27,6 @@ int main() {
     cout << "masukkan tahun lahir orang 1: ";
     cin>>thn;
 
-    if (tgl == 0 || tgl > 31 || bln > 12 || bln == 0 || tgl > jumlah_hari_bulan (bln,tgl)){
-        cout <<"Maaf, tanggal yang dimasukkan salah";
-        }
-    }
-    while(tgl == 0 || tgl > 31 || bln > 12 ||bln == 0 || tgl > jumlah_hari_bulan (bln,tgl));
-
     o1 = create_orang(nama, tgl,bln,thn);
     show_orang(o1);
 
@@ -47,14 +41,12 @@ int main() {
     cout << "masukkan tahun lahir orang 2: ";
     cin>>thn;
 
-    if (tgl == 0 || bln > 12 || bln == 0 || tgl > jumlah_hari_bulan (bln,tgl)){
-        cout <<"Maaf, tanggal yang dimasukkan salah";
-        }
-    while(tgl == 0 || bln > 12 ||bln == 0 || tgl > jumlah_hari_bulan (bln,tgl));
 
     o2 = create_orang(nama, tgl,bln,thn);
     show_orang(o2);
 
     cout<< "selisih hari : "<<selisih_hari(o1.tgl_lahir,o2.tgl_lahir)<<" hari";
-    return 0;
 }
+}
+    return 0;
+
