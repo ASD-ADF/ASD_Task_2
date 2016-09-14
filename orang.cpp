@@ -15,7 +15,10 @@ orang create_orang(string nama, int tgl, int bln, int thn) {
     orang org;
     //=================================================
     // YOUR CODE STARTS HERE
-
+    org.nama = nama;
+    org.tgl_lahir.dd = tgl;
+    org.tgl_lahir.mm = bln;
+    org.tgl_lahir.yy = thn;
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -29,7 +32,7 @@ int hitung_umur(orang org) {
     int umur = 0;
     //=================================================
     // YOUR CODE STARTS HERE
-
+    umur = 2016 - org.tgl_lahir.yy;
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -42,7 +45,11 @@ void show_orang(orang org) {
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
+    cout <<"Nama            : "<<org.nama<<endl;
+    cout <<"Tanggal Lahir   : ";
+    show_tanggal(org.tgl_lahir);
+    cout <<endl;
+    cout <<"Umur            : "<<hitung_umur(org)<<endl;
 
     // YOUR CODE ENDS HERE
     //=================================================

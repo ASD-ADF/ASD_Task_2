@@ -16,7 +16,9 @@ tanggal create_tanggal(int dd,int mm,int yy) {
     //=================================================
     // YOUR CODE STARTS HERE
 
-
+    tgl.dd = dd;
+    tgl.mm = mm;
+    tgl.yy = yy;
     // YOUR CODE ENDS HERE
     //=================================================
     return tgl;
@@ -29,9 +31,13 @@ bool cek_tanggal(tanggal tgl) {
     * fungsi mengembalikan nilai false jika isi tanggal atau bulan atau tahun salah
     **/
     bool ok = true;
+    int bulan = tgl.mm;
+    int tgl_sekarang = 0;
     //=================================================
     // YOUR CODE STARTS HERE
-
+    if (bulan != tgl_sekarang || tgl_sekarang == 100){
+        ok != ok;
+    }
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -45,8 +51,49 @@ void show_tanggal(tanggal tgl) {
     **/
     //=================================================
     // YOUR CODE STARTS HERE
+    cout << tgl.dd;
+    switch (tgl.mm){
+case 1:
+    cout <<"Januari";
+    break;
+case 2:
+    cout <<"Februari";
+    break;
+case 3:
+    cout <<"Maret";
+    break;
+case 4:
+    cout <<"April";
+    break;
+case 5:
+    cout <<"Mei";
+    break;
+case 6:
+    cout <<"Juni";
+    break;
+case 7:
+    cout <<"Juli";
+    break;
+case 8:
+    cout <<"Agustus";
+    break;
+case 9:
+    cout <<"September";
+    break;
+case 10:
+    cout <<"Oktober";
+    break;
+case 11:
+    cout <<"November";
+    break;
+case 12:
+    cout <<"Desember";
+    break;
+default:
+    cout <<"Bulan tidak sesuai";
+}
 
-
+cout << tgl.yy;
     // YOUR CODE ENDS HERE
     //=================================================
 }
@@ -57,7 +104,21 @@ void edit_tanggal(tanggal &tgl, int dd, int mm, int yy) {
     **/
     //=================================================
     // YOUR CODE STARTS HERE
+    cout<<"Tanggal sebelumnya       : ";
+    show_tanggal(tgl);
+    cout <<"Masukkan Tanggal Baru   : ";
+    cin >> dd;
+    cout <<"Masukkan Bulan Baru     : ";
+    cin >> mm;
+    cout <<"Masukkan Tahun Baru     : ";
+    cin >> yy;
 
+    tgl.dd = dd;
+    tgl.mm = mm;
+    tgl.yy = yy;
+
+    cout <<"Tanggal telah berubah menjadi   : ";
+    cout << tgl.dd <<" "<< tgl.mm <<" "<< tgl.yy;
 
     // YOUR CODE ENDS HERE
     //=================================================
