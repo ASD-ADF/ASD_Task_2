@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     :IF 39-06
+    KELOMPOK  :1
+    NAMA(NIM) : [Vatana RA][1301154566] , [Ibrahim Bimo][1301154356] , [M. Iqbal][1301154300] , [Rian P][1301154426]
 **/
 
 
@@ -15,8 +15,11 @@ orang create_orang(string nama, int tgl, int bln, int thn) {
     orang org;
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    org.nama=nama;
+    org.tgl_lahir.dd=tgl;
+    org.tgl_lahir.mm=bln;
+    org.tgl_lahir.yy=thn;
+    create_tanggal(tgl,bln,thn);
     // YOUR CODE ENDS HERE
     //=================================================
     return org;
@@ -29,8 +32,7 @@ int hitung_umur(orang org) {
     int umur = 0;
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    umur = (2016-org.tgl_lahir.yy);
     // YOUR CODE ENDS HERE
     //=================================================
     return umur;
@@ -42,6 +44,11 @@ void show_orang(orang org) {
     **/
     //=================================================
     // YOUR CODE STARTS HERE
+    cout<<"Nama  : \n";
+    cout<<org.nama;
+    cout<<"Tanggal lahir : \n";
+    show_tanggal(org.tgl_lahir);
+    cout<<"Umur : \n"<<hitung_umur(org);
 
 
     // YOUR CODE ENDS HERE
