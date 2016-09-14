@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF 39-06
+    KELOMPOK  : 2
+    NAMA(NIM) : [Hafizh Fauzandi] [1301154272] , [Alfin Pratama][130115] , [Isabella Vichita][1301154637] , [Amin Aenurahman][1301154398]
 **/
 
 
@@ -15,8 +15,7 @@ using namespace std;
 struct tanggal {
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    int tgl, bln, thn;
     // YOUR CODE ENDS HERE
     //=================================================
 };
