@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF 39-01
+    KELOMPOK  : 12
+    NAMA(NIM) : Rismada Gerra Nindya(1301154561), M. Rezky Alpin Gumay (1301154155),Baginda Praka G(1301154113)
 **/
 
 
@@ -15,7 +15,7 @@ using namespace std;
 struct tanggal {
     //=================================================
     // YOUR CODE STARTS HERE
-
+    int tgl,bln,thn;
 
     // YOUR CODE ENDS HERE
     //=================================================
