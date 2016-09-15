@@ -20,3 +20,45 @@
 	<string>
 	"tanggal.h"
 
+1473915314 source:e:\c++\asd_task_2-master\asd_task_2-master\main.cpp
+	<iostream>
+	<windows.h>
+	<conio.h>
+	"orang.h"
+	"tanggal.h"
+
+1473915773 e:\c++\asd_task_2-master\asd_task_2-master\orang.h
+	"tanggal.h"
+
+1473915771 e:\c++\asd_task_2-master\asd_task_2-master\tanggal.h
+	<string>
+	<iostream>
+
+1473915772 source:e:\c++\asd_task_2-master\asd_task_2-master\orang.cpp
+	"orang.h"
+
+1473915770 source:e:\c++\asd_task_2-master\asd_task_2-master\tanggal.cpp
+	<string>
+	"tanggal.h"
+
+1473858172 source:c:\users\ayiangio\downloads\new folder\asd_task_2-master\pppppp\asd_task_2-master\orang.cpp
+	"orang.h"
+
+1473858173 c:\users\ayiangio\downloads\new folder\asd_task_2-master\pppppp\asd_task_2-master\orang.h
+	"tanggal.h"
+
+1473909003 c:\users\ayiangio\downloads\new folder\asd_task_2-master\pppppp\asd_task_2-master\tanggal.h
+	<string>
+	<iostream>
+
+1473909003 source:c:\users\ayiangio\downloads\new folder\asd_task_2-master\pppppp\asd_task_2-master\main.cpp
+	<iostream>
+	<windows.h>
+	<conio.h>
+	"orang.h"
+	"tanggal.h"
+
+1473909003 source:c:\users\ayiangio\downloads\new folder\asd_task_2-master\pppppp\asd_task_2-master\tanggal.cpp
+	<string>
+	"tanggal.h"
+
