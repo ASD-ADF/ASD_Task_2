@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF-39-01
+    KELOMPOK  : 3
+    NAMA(NIM) : [Sugianto][1301154407] , [Abram][1301154169] , [Elza Fitria][1301154533] , [Muhammad Turmudzi][1301154667]
 **/
 
 
@@ -13,12 +13,7 @@
 using namespace std;
 
 struct tanggal {
-    //=================================================
-    // YOUR CODE STARTS HERE
-
-
-    // YOUR CODE ENDS HERE
-    //=================================================
+    int dd,mm,yy;
 };
 
 tanggal create_tanggal(int dd,int mm,int yy);
