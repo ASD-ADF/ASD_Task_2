@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF-39-01
+    KELOMPOK  : 11
+    NAMA(NIM) : Aditya Alif Nugraha 1301154183 , Rofif Irsyad F 1301150001 , Defa Eka Ardio 1301154281
 **/
 
 
@@ -15,8 +15,10 @@ orang create_orang(string nama, int tgl, int bln, int thn) {
     orang org;
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    org.nama = nama;
+    org.tgl_lahir.dd = tgl;
+    org.tgl_lahir.mm = bln;
+    org.tgl_lahir.yy = thn;
     // YOUR CODE ENDS HERE
     //=================================================
     return org;
@@ -29,8 +31,7 @@ int hitung_umur(orang org) {
     int umur = 0;
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    umur = 2016 - org.tgl_lahir.yy;
     // YOUR CODE ENDS HERE
     //=================================================
     return umur;
@@ -42,8 +43,10 @@ void show_orang(orang org) {
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    cout<<"Nama: "<<org.nama<<endl;
+    cout<<"Tanggal Lahir: ";
+    show_tanggal(org.tgl_lahir);
+    cout<<endl<<"Umur: "<<hitung_umur(org)<<endl;
     // YOUR CODE ENDS HERE
     //=================================================
 }
