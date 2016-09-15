@@ -20,3 +20,22 @@
 	<string>
 	"tanggal.h"
 
+1473875854 source:c:\users\ayiangio\downloads\compressed\asd_task_2-master\asd_task_2-master\main.cpp
+	<iostream>
+	"orang.h"
+	"tanggal.h"
+
+1473662676 c:\users\ayiangio\downloads\compressed\asd_task_2-master\asd_task_2-master\orang.h
+	"tanggal.h"
+
+1473661862 c:\users\ayiangio\downloads\compressed\asd_task_2-master\asd_task_2-master\tanggal.h
+	<string>
+	<iostream>
+
+1473873918 source:c:\users\ayiangio\downloads\compressed\asd_task_2-master\asd_task_2-master\orang.cpp
+	"orang.h"
+
+1473877938 source:c:\users\ayiangio\downloads\compressed\asd_task_2-master\asd_task_2-master\tanggal.cpp
+	<string>
+	"tanggal.h"
+
