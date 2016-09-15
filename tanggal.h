@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF-39-01
+    KELOMPOK  : 10
+    NAMA(NIM) : [Anjar Afrizal][1301154239] , [Fahru Adi Ramadhan][1301154141] , [Fauzi Kurniawan][1301154267] , [Regita Ratih P][1301150435]
 **/
 
 
@@ -12,10 +12,13 @@
 #include <iostream>
 using namespace std;
 
-struct tanggal {
+struct tanggal
+{
     //=================================================
     // YOUR CODE STARTS HERE
-
+    int tgl;     //*hari/tanggal
+    int bln;     //*bulan
+    int thn;     //*tahun
 
     // YOUR CODE ENDS HERE
     //=================================================

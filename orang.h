@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF-39-01
+    KELOMPOK  : 10
+    NAMA(NIM) : [Anjar Afrizal][1301154239] , [Fahru Adi Ramadhan][1301154141] , [Fauzi Kurniawan][1301154267] , [Regita Ratih P][1301150435]
 **/
 
 
@@ -10,10 +10,12 @@
 
 #include "tanggal.h"
 
-struct orang {
+struct orang
+{
     //=================================================
     // YOUR CODE STARTS HERE
-
+    string nama;
+    tanggal tgl_lahir; // variabel tgl_lahir dengan tipe data tanggal, struct tanggal terdapat pada file tanggal.h
 
     // YOUR CODE ENDS HERE
     //=================================================
