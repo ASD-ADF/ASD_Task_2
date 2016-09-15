@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF 39 01
+    KELOMPOK  : 6
+    NAMA(NIM) : [Rd.Havez Cahyan F.][1301154197] , [Rifell Noerfiansyah][1301150085] , [Rd. Muhammad Ichsan Al Rasyid][1301154295] , [Salma Assyifa][1301154505]
 **/
 
 
@@ -14,10 +14,7 @@ using namespace std;
 
 struct tanggal {
     //=================================================
-    // YOUR CODE STARTS HERE
-
-
-    // YOUR CODE ENDS HERE
+    int tgl,bln,thn ;
     //=================================================
 };
 
