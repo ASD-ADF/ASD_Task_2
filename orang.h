@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF 39-01
+    KELOMPOK  : - (Maaf kami lupa pak)
+    NAMA(NIM) : [Raden Rizky Falih P][1301154211] , [Dwiferdio Seagal P][1301154323] , [Dhevin Andrean Akbar][1301150015] , [Amelia Anis][1301154547]
 **/
 
 
@@ -10,10 +10,12 @@
 
 #include "tanggal.h"
 
-struct orang {
+struct orang
+{
     //=================================================
     // YOUR CODE STARTS HERE
-
+    string nama;
+    tanggal tgl_lahir;
 
     // YOUR CODE ENDS HERE
     //=================================================
