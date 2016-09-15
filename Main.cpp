@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+   KELAS     : IF 39-01
+   KELOMPOK  : 9
+   NAMA(NIM) : [Moh. abdul haris angio][1301154365] , [Nadine Azhalia][1301154519] , [Nabil Bagus Pratama][1301144365] , [nama][nim]
 **/
 
 

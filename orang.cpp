@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+   KELAS     : IF 39-01
+   KELOMPOK  : 9
+   NAMA(NIM) : [Moh. abdul haris angio][1301154365] , [Nadine Azhalia][1301154519] , [Nabil Bagus Pratama][1301144365] , [nama][nim]
 **/
 
 
@@ -15,7 +15,13 @@ orang create_orang(string nama, int tgl, int bln, int thn) {
     orang org;
     //=================================================
     // YOUR CODE STARTS HERE
+    org.nama=nama;
+    org.tgl_lahir.dd=tgl;
+    org.tgl_lahir.mm=bln;
+    org.tgl_lahir.yy=thn;
+    create_tanggal(tgl,bln,thn);
 
+    create_tanggal(tgl,bln,thn);
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -29,7 +35,7 @@ int hitung_umur(orang org) {
     int umur = 0;
     //=================================================
     // YOUR CODE STARTS HERE
-
+    umur = 2016-org.tgl_lahir.yy;
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -42,7 +48,10 @@ void show_orang(orang org) {
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
+    cout << "Nama           : "<< org.nama << endl;
+    cout << "Tanggal Lahir  : ";
+    show_tanggal(org.tgl_lahir);
+    cout << "Umur           : " << hitung_umur(org)<<endl;
 
     // YOUR CODE ENDS HERE
     //=================================================

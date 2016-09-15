@@ -1,9 +1,8 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+   KELAS     : IF 39-01
+   KELOMPOK  : 9
+   NAMA(NIM) : [Moh. abdul haris angio][1301154365] , [Nadine Azhalia][1301154519] , [Nabil Bagus Pratama][1301144365] , [nama][nim]
 **/
-
 
 #ifndef ORANG_H_INCLUDED
 #define ORANG_H_INCLUDED
@@ -13,7 +12,8 @@
 struct orang {
     //=================================================
     // YOUR CODE STARTS HERE
-
+    string nama;
+    tanggal tgl_lahir;
 
     // YOUR CODE ENDS HERE
     //=================================================
