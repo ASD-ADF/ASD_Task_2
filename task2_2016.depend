@@ -20,3 +20,60 @@
 	<string>
 	"tanggal.h"
 
+1473896018 source:g:\asd_task_2-master\main.cpp
+	<iostream>
+	"orang.h"
+	"tanggal.h"
+
+1473889859 g:\asd_task_2-master\orang.h
+	"tanggal.h"
+
+1473889859 g:\asd_task_2-master\tanggal.h
+	<string>
+	<iostream>
+
+1473889859 source:g:\asd_task_2-master\orang.cpp
+	"orang.h"
+
+1473895904 source:g:\asd_task_2-master\tanggal.cpp
+	<string>
+	"tanggal.h"
+
+1473889859 source:g:\asd_task_2-master (kami)(fixed)\orang.cpp
+	"orang.h"
+
+1473889859 g:\asd_task_2-master (kami)(fixed)\orang.h
+	"tanggal.h"
+
+1473889859 g:\asd_task_2-master (kami)(fixed)\tanggal.h
+	<string>
+	<iostream>
+
+1473899250 source:g:\asd_task_2-master (kami)(fixed)\tanggal.cpp
+	<string>
+	"tanggal.h"
+
+1473896376 source:g:\asd_task_2-master (kami)(fixed)\main.cpp
+	<iostream>
+	"orang.h"
+	"tanggal.h"
+
+1473896376 source:c:\users\seagal putra\downloads\asd_task_2-master\main.cpp
+	<iostream>
+	"orang.h"
+	"tanggal.h"
+
+1473889859 c:\users\seagal putra\downloads\asd_task_2-master\orang.h
+	"tanggal.h"
+
+1473889859 c:\users\seagal putra\downloads\asd_task_2-master\tanggal.h
+	<string>
+	<iostream>
+
+1473889859 source:c:\users\seagal putra\downloads\asd_task_2-master\orang.cpp
+	"orang.h"
+
+1473899250 source:c:\users\seagal putra\downloads\asd_task_2-master\tanggal.cpp
+	<string>
+	"tanggal.h"
+
