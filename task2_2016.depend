@@ -20,3 +20,60 @@
 	<string>
 	"tanggal.h"
 
+1473861733 source:c:\users\gians\google drive\tel-u\semester 3\struktur data (asd)\praktikum\asd_task_2-master\main.cpp
+	<iostream>
+	"orang.h"
+	"tanggal.h"
+
+1473857402 c:\users\gians\google drive\tel-u\semester 3\struktur data (asd)\praktikum\asd_task_2-master\orang.h
+	"tanggal.h"
+
+1473861158 c:\users\gians\google drive\tel-u\semester 3\struktur data (asd)\praktikum\asd_task_2-master\tanggal.h
+	<string>
+	<iostream>
+
+1473860603 source:c:\users\gians\google drive\tel-u\semester 3\struktur data (asd)\praktikum\asd_task_2-master\orang.cpp
+	"orang.h"
+
+1473862531 source:c:\users\gians\google drive\tel-u\semester 3\struktur data (asd)\praktikum\asd_task_2-master\tanggal.cpp
+	<string>
+	"tanggal.h"
+
+1473900532 source:c:\users\gians\google drive\tel-u\semester 3\struktur data (asd)\praktikum\asd_task_2-master(if3901_kel3)\tanggal.cpp
+	<string>
+	"tanggal.h"
+
+1473864850 c:\users\gians\google drive\tel-u\semester 3\struktur data (asd)\praktikum\asd_task_2-master(if3901_kel3)\tanggal.h
+	<string>
+	<iostream>
+
+1473865455 source:c:\users\gians\google drive\tel-u\semester 3\struktur data (asd)\praktikum\asd_task_2-master(if3901_kel3)\orang.cpp
+	"orang.h"
+
+1473864846 c:\users\gians\google drive\tel-u\semester 3\struktur data (asd)\praktikum\asd_task_2-master(if3901_kel3)\orang.h
+	"tanggal.h"
+
+1473865500 source:c:\users\gians\google drive\tel-u\semester 3\struktur data (asd)\praktikum\asd_task_2-master(if3901_kel3)\main.cpp
+	<iostream>
+	"orang.h"
+	"tanggal.h"
+
+1473865500 source:d:\c++\pr github\asd_task_2-master(if3901_kel3)\main.cpp
+	<iostream>
+	"orang.h"
+	"tanggal.h"
+
+1473864846 d:\c++\pr github\asd_task_2-master(if3901_kel3)\orang.h
+	"tanggal.h"
+
+1473864850 d:\c++\pr github\asd_task_2-master(if3901_kel3)\tanggal.h
+	<string>
+	<iostream>
+
+1473865455 source:d:\c++\pr github\asd_task_2-master(if3901_kel3)\orang.cpp
+	"orang.h"
+
+1473900734 source:d:\c++\pr github\asd_task_2-master(if3901_kel3)\tanggal.cpp
+	<string>
+	"tanggal.h"
+

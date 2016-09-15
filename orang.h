@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF-39-01
+    KELOMPOK  : 3
+    NAMA(NIM) : [Sugianto][1301154407] , [Abram][1301154169] , [Elza Fitria][1301154533] , [Muhammad Turmudzi][1301154667]
 **/
 
 
@@ -11,12 +11,8 @@
 #include "tanggal.h"
 
 struct orang {
-    //=================================================
-    // YOUR CODE STARTS HERE
-
-
-    // YOUR CODE ENDS HERE
-    //=================================================
+    string nama = " ";
+    tanggal tgl_orang;
 };
 
 orang create_orang(string nama, int tgl,int bln,int thn);
