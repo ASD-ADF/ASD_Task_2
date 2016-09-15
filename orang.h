@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF 39-01
+    KELOMPOK  : 9
+    NAMA(NIM) : [Moh. Abdul Haris Angio][nim] , [Nabil][nim] , [Nadine Azhalia][1301154519] , [Ressa Firmansyah Fatah][1301154105]
 **/
 
 
@@ -13,7 +13,8 @@
 struct orang {
     //=================================================
     // YOUR CODE STARTS HERE
-
+    string nama;
+    tanggal tgl_lahir;
 
     // YOUR CODE ENDS HERE
     //=================================================
