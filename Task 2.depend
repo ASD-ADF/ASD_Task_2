@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1473916706 source:f:\kuliah\task\task 2\main.cpp
+	<iostream>
+	"orang.h"
+	"tanggal.h"
+
+1473916706 f:\kuliah\task\task 2\orang.h
+	"tanggal.h"
+
+1473916706 f:\kuliah\task\task 2\tanggal.h
+	<string>
+	<iostream>
+
+1473916706 source:f:\kuliah\task\task 2\orang.cpp
+	"orang.h"
+
+1473916706 source:f:\kuliah\task\task 2\tanggal.cpp
+	<string>
+	"tanggal.h"
+
