@@ -51,18 +51,6 @@ void show_tanggal(tanggal tgl) {
     //=================================================
 }
 
-void edit_tanggal(tanggal &tgl, int dd, int mm, int yy) {
-    /**
-    * fungsi mengubah isi tanggal dari variabel tgl
-    **/
-    //=================================================
-    // YOUR CODE STARTS HERE
-
-
-    // YOUR CODE ENDS HERE
-    //=================================================
-}
-
 int selisih_hari(tanggal tgl1, tanggal tgl2) {
     /**
     * fungsi menghitung selisih hari dari variable tgl1 dan tgl2

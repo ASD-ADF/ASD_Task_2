@@ -1,7 +1,7 @@
 # Task_2
 ## Abstract Data Type
 
-1. fork dan clone repositori ASD_Task_1
+1. fork dan clone repositori ASD_Task_2
 2. buka dan modifikasi isi project task2_2016 dari code::block
 3. tuliskan kode kalian pada bagian yang telah disediakan
 

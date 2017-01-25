@@ -4,13 +4,12 @@
     NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
 **/
 
-
-#ifndef ORANG_H_INCLUDED
-#define ORANG_H_INCLUDED
+#ifndef BUKU_H_INCLUDED
+#define BUKU_H_INCLUDED
 
 #include "tanggal.h"
 
-struct orang {
+struct buku {
     //=================================================
     // YOUR CODE STARTS HERE
 
@@ -19,9 +18,10 @@ struct orang {
     //=================================================
 };
 
-orang create_orang(string nama, int tgl,int bln,int thn);
-int hitung_umur(orang org);
-void show_orang(orang org);
+buku create_buku(string judul, string pengarang);
+void pinjam_buku(buku &b, int tgl, int bln, int thn);
+int kembalikan_buku(buku &b, int tgl, int bln, int thn);
+void tampil_buku(buku b);
 
 
-#endif // ORANG_H_INCLUDED
+#endif // BUKU_H_INCLUDED
