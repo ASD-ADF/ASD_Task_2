@@ -1,3 +1,9 @@
+/**
+    KELAS     :
+    KELOMPOK  :
+    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+**/
+
 #include <iostream>
 #include "buku.h"
 #include "tanggal.h"

@@ -4,7 +4,6 @@
     NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
 **/
 
-
 #ifndef TANGGAL_H_INCLUDED
 #define TANGGAL_H_INCLUDED
 

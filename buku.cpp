@@ -4,6 +4,7 @@
     NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
 **/
 
+
 #include "buku.h"
 
 buku create_buku(string judul, string pengarang) {
@@ -14,7 +15,7 @@ buku create_buku(string judul, string pengarang) {
     buku b;
     //=================================================
     // YOUR CODE STARTS HERE
-	
+
 
     // YOUR CODE ENDS HERE
     //=================================================
