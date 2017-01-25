@@ -34,11 +34,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Main.cpp" />
 		<Unit filename="aplikasi.cpp" />
 		<Unit filename="aplikasi.h" />
 		<Unit filename="buku.cpp" />
 		<Unit filename="buku.h" />
-		<Unit filename="main.cpp" />
 		<Unit filename="tanggal.cpp">
 			<Option target="Debug" />
 		</Unit>

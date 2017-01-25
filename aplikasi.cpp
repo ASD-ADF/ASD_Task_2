@@ -1,25 +1,35 @@
 #include "aplikasi.h"
 
-void main_menu(){
+void main_menu() {
     /**
     * fungsi untuk menampilkan main menu
     * dan menerima input pilihan menu dari user
     **/
     int pil;
-    do{
+    do {
         cin>>pil;
-        switch(pil){
-            case 1: menu_create_buku();break;
-            case 2: menu_tampil();break;
-            case 3: menu_pinjam();break;
-            case 4: menu_kembali();break;
-            case 0: break;
-            default: break;
+        switch(pil) {
+        case 1:
+            menu_create_buku();
+            break;
+        case 2:
+            menu_tampil();
+            break;
+        case 3:
+            menu_pinjam();
+            break;
+        case 4:
+            menu_kembali();
+            break;
+        case 0:
+            break;
+        default:
+            break;
         }
-    }while pil!=0;
+    } while pil!=0;
 }
 
-void menu_create_buku(){
+void menu_create_buku() {
     /**
     * fungsi meminta input judul dan pengarang dari user
     * fungsi membuat buku baru dan menyimpannya ke dalam array daftar_buku
@@ -30,7 +40,7 @@ void menu_create_buku(){
     daftar_buku[jumlah_buku++] = create_buku(judul, pengarang);
 }
 
-void menu_pinjam(){
+void menu_pinjam() {
     /**
     * fungsi meminta input tanggal, bulan, tahun dari user
     * fungsi meminta input id buku berdasar urutan buku pada array daftar_buku
@@ -48,7 +58,7 @@ void menu_pinjam(){
     pinjam_buku(b,tgl,bln,thn);
 }
 
-void menu_kembali(){
+void menu_kembali() {
     /**
     * fungsi meminta input tanggal, bulan, tahun dari user
     * fungsi meminta input id buku berdasar urutan buku pada array daftar_buku
@@ -70,12 +80,12 @@ void menu_kembali(){
     cout<<selisih;
 }
 
-void menu_tampil(){
+void menu_tampil() {
     /**
     * fungsi menampilkan daftar buku yang ada di dalam array daftar_buku
     **/
     buku b;
-    for(int i=0; i<jumlah_buku; i++){
+    for(int i=0; i<jumlah_buku; i++) {
         cout<<i;
         b = daftar_buku[i];
         tampil_buku(b);

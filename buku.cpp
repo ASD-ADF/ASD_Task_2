@@ -35,7 +35,7 @@ void pinjam_buku(buku &b, int tgl, int bln, int thn) {
     //=================================================
 }
 
-int kembalikan_buku(buku &b, int tgl, int bln, int thn){
+int kembalikan_buku(buku &b, int tgl, int bln, int thn) {
     /**
     * fungsi mengeset status pinjam menjadi false
     * fungsi memanggil fungsi create_tanggal untuk membuat tanggal kembali
@@ -53,7 +53,7 @@ int kembalikan_buku(buku &b, int tgl, int bln, int thn){
 }
 
 
-void tampil_buku(buku b){
+void tampil_buku(buku b) {
     /**
     * fungsi menampilkan judul, pengarang, dan status dipinjam dari buku b
     * contoh output:
