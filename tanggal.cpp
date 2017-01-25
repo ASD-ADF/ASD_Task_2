@@ -38,7 +38,7 @@ bool cek_tanggal(tanggal tgl) {
     return ok;
 }
 
-void show_tanggal(tanggal tgl) {
+void tampil_tanggal(tanggal tgl) {
     /**
     * fungsi menampilkan tanggal bulan tahun dengan format menampilkan nama bulan
     * contoh : 1 Januari 1980

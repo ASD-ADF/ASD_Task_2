@@ -23,7 +23,7 @@ struct tanggal {
 
 tanggal create_tanggal(int dd,int mm,int yy);
 bool cek_tanggal(tanggal tgl);
-void show_tanggal(tanggal tgl);
+void tampil_tanggal(tanggal tgl);
 int selisih_hari(tanggal tgl1, tanggal tgl2);
 
 #endif // TANGGAL_H_INCLUDED

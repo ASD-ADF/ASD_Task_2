@@ -31,7 +31,7 @@ TYPE tanggal :
 	* fungsi mengembalikan nilai false jika isi tanggal atau bulan atau tahun salah
 	**/
 	
-	prosedur show_tanggal(tgl : tanggal)
+	prosedur tampil_tanggal(tgl : tanggal)
 	/**
 	* fungsi menampilkan tanggal bulan tahun dengan format menampilkan nama bulan
 	* contoh : 1 Januari 1980
@@ -43,6 +43,7 @@ TYPE tanggal :
 	* fungsi selalu mengembalikan selisih dalam nilai positif
 	* syarat tahun tgl1 dan tgl2 harus sama
 	* jika tahun pada tgl1 berbeda dengan tgl2, maka fungsi mengembalikan nilai -1
+	* asumsi selisih hari bulan semuanya sama = 30
 	**/
 ```
 
@@ -54,7 +55,7 @@ TYPE buku :
     	judul : string
     	pengarang : string
 		terakhir_dipinjam : tanggal
-		status_dipinjam : boolean = false
+		status_dipinjam : boolean
     >
 ```
 
@@ -63,7 +64,7 @@ TYPE buku :
 ```pascal
 	fungsi create_buku(judul, pengarang : string, tgl,bln,thn : integer) return buku
 	/**
-    * fungsi mengeset buku b dengan judul, dan pengarang 
+    * fungsi mengeset buku b dengan judul, pengarang, dan mengeset status=false
     * dan mengembalikan hasilnya
     **/
 
@@ -96,14 +97,14 @@ TYPE buku :
 
 ### main.cpp
 * jalankan main.cpp
-### aplikasi.cpp
 * tambahkan proses mengecek validitas tanggal setiap membuat tanggal pada fungsi pinjam dan kembali
 * ubahlah kode di dalam aplikasi.cpp sehingga terdapat proses untuk meminta input di setiap menu
 * percantik tampilan output sehingga menyerupai contoh example.exe
 
 ### Fungsi Tambahan
-* tambahkan sebuah menu atau edit menu pada aplikasi, sehingga memberikan suatu fungsionalitas baru, contohnya:
+* tambahkan sebuah menu atau edit menu pada aplikasi, sehingga memberikan suatu fungsionalitas baru, contohnya (pilih salah satu):
 	* fungsi mengoutputkan harga/denda pinjam
 	* fungsi tidak bisa meminjam buku yang sedang dipinjam
 	* fungsi menghitung jumlah buku yang sedang dipinjam
+	* mengecek id buku yang dipilih tersedia
 	* dll
