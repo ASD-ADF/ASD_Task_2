@@ -1,10 +1,3 @@
-/**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
-**/
-
-
 #include <iostream>
 #include "buku.h"
 #include "tanggal.h"
@@ -14,6 +7,14 @@ using namespace std;
 
 
 int main() {
+
+    /**
+    * fungsi main hanya memanggil main_menu
+    * clean coding
+    **/
+
     main_menu();
+
+
     return 0;
 }

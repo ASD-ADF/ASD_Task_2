@@ -8,7 +8,8 @@
 
 buku create_buku(string judul, string pengarang) {
     /**
-    * fungsi mengeset buku b dengan judul, dan pengarang dan mengembalikan hasilnya
+    * fungsi mengeset buku b dengan judul, dan pengarang
+    * dan mengembalikan hasilnya
     **/
     buku b;
     //=================================================

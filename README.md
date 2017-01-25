@@ -2,10 +2,10 @@
 ## Abstract Data Type
 
 1. fork dan clone repositori ASD_Task_2
-2. buka dan modifikasi isi project task2_2016 dari code::block
+2. buka dan modifikasi isi project task2_2017 dari code::block
 3. tuliskan kode kalian pada bagian yang telah disediakan
 
-Buatlah aplikasi sederhana untuk menympan data tanggal lahir orang
+Buatlah aplikasi sederhana untuk menympan data tanggal lahir buku
 
 ### tanggal.h
 * buatlah ADT tanggal sebagai berikut
@@ -37,11 +37,6 @@ TYPE tanggal :
 	* contoh : 1 Januari 1980
 	**/
 
-	prosedur edit_tanggal(i/o: tgl : tanggal, i: dd,mm,yy : integer)
-	/**
-	* fungsi mengubah isi tanggal dari variabel tgl
-	**/
-
 	fungsi selisih_hari(tgl1, tgl2 : tanggal) : integer
 	/**
 	* fungsi menghitung selisih hari dari variable tgl1 dan tgl2
@@ -51,33 +46,64 @@ TYPE tanggal :
 	**/
 ```
 
-### orang.h
-* buatlah ADT tanggal sebagai berikut
+### buku.h
+* buatlah ADT Buku sebagai berikut
 ```pascal
-TYPE orang : 
+TYPE buku : 
     <
-    	nama : string
-		tgl_lahir : tanggal
+    	judul : string
+    	pengarang : string
+		terakhir_dipinjam : tanggal
+		status_dipinjam : boolean = false
     >
 ```
 
-### orang.cpp
-* implementasikan fungsi primitif orang
+### buku.cpp
+* implementasikan fungsi primitif buku
 ```pascal
-	fungsi create_orang(nama : string nama, tgl,bln,thn : integer): orang
+	fungsi create_buku(judul, pengarang : string, tgl,bln,thn : integer) return buku
 	/**
-	* fungsi mengeset orang org dengan nama, tgl, bln, thn, dan mengembalikan hasilnya
-	* fungsi memanggil fungsi create_tanggal untuk membuat tanggal lahir
-	**/
+    * fungsi mengeset buku b dengan judul, dan pengarang 
+    * dan mengembalikan hasilnya
+    **/
 
-	fungsi hitung_umur(org : orang) : integer
-	/** fungsi menghitung umur orang org berdasarkan tahun 2016	**/
 	
-	prosedur show_orang(org : orang)
-	/** fungsi menampilkan nama, tanggal lahir dan umur orang org **/
+	prosedur pinjam_buku(i/o b : buku; tgl,bln,thn:integer) return integer
+    /**
+    * fungsi mengeset tanggal pinjam dari buku b dengan tgl, bln, thn,
+    * dan mengeset status pinjam menjadi true
+    * fungsi memanggil fungsi create_tanggal untuk membuat tanggal pinjam
+    **/
+
+	fungsi kembalikan_buku(i/o b : buku; tgl,bln,thn:integer)
+    /**
+    * fungsi mengeset status pinjam menjadi false
+    * fungsi memanggil fungsi create_tanggal untuk membuat tanggal kembali
+    * fungsi mengembalikan selisih hari dari tanggal pinjam ke tanggal kembali
+    * dengan menggunakan fungsi selisih_hari
+    **/
+
+
+	prosedur tampil_buku(b : buku)
+    /**
+    * fungsi menampilkan judul, pengarang, dan status dipinjam dari buku b
+    * contoh output:
+            Judul Buku : XXXXXXX,
+            Pengarang  : AAAA AAAAAAA,
+            Status     : dipinjam
+    **/
 ```
 
 ### main.cpp
 * jalankan main.cpp
-* ubahlah kode di dalam main.cpp sehingga terdapat proses untuk meminta input tanggal lahir kembali kepada user jika terjadi kesalahan dalam pengisian tanggal lahir
-* tampilkan pesan bahwa selisih tidak bisa dihitung jika tahun lahir orang1 dan orang2 berbeda
+### aplikasi.cpp
+* tambahkan proses mengecek validitas tanggal setiap membuat tanggal pada fungsi pinjam dan kembali
+* ubahlah kode di dalam aplikasi.cpp sehingga terdapat proses untuk meminta input di setiap menu
+* percantik tampilan output sehingga menyerupai contoh example.exe
+
+### Fungsi Tambahan
+* tambahkan sebuah menu atau edit menu pada aplikasi, sehingga memberikan suatu fungsionalitas baru, contohnya:
+	* fungsi mengoutputkan harga/denda pinjam
+	* fungsi tidak bisa meminjam buku yang sedang dipinjam
+	* fungsi menghitung jumlah buku yang sedang dipinjam
+	* dll

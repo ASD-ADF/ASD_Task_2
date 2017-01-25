@@ -1,6 +1,10 @@
 #include "aplikasi.h"
 
 void main_menu(){
+    /**
+    * fungsi untuk menampilkan main menu
+    * dan menerima input pilihan menu dari user
+    **/
     int pil;
     do{
         cin>>pil;
@@ -16,6 +20,10 @@ void main_menu(){
 }
 
 void menu_create_buku(){
+    /**
+    * fungsi meminta input judul dan pengarang dari user
+    * fungsi membuat buku baru dan menyimpannya ke dalam array daftar_buku
+    **/
     string judul,pengarang;
     cin>>judul;
     cin>>pengarang;
@@ -23,6 +31,11 @@ void menu_create_buku(){
 }
 
 void menu_pinjam(){
+    /**
+    * fungsi meminta input tanggal, bulan, tahun dari user
+    * fungsi meminta input id buku berdasar urutan buku pada array daftar_buku
+    * fungsi memanggil fungsi pinjam_buku
+    **/
     int tgl,bln,thn;
     int id_buku;
     buku b;
@@ -36,6 +49,13 @@ void menu_pinjam(){
 }
 
 void menu_kembali(){
+    /**
+    * fungsi meminta input tanggal, bulan, tahun dari user
+    * fungsi meminta input id buku berdasar urutan buku pada array daftar_buku
+    * fungsi memanggil fungsi kembalikan_buku dan menyimpan selisih hari
+    * fungsi menampilkan selisih hari pinjaman
+    **/
+
     int tgl,bln,thn;
     int id_buku;
     buku b;
@@ -51,6 +71,9 @@ void menu_kembali(){
 }
 
 void menu_tampil(){
+    /**
+    * fungsi menampilkan daftar buku yang ada di dalam array daftar_buku
+    **/
     buku b;
     for(int i=0; i<jumlah_buku; i++){
         cout<<i;
