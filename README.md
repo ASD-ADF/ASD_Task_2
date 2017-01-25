@@ -99,7 +99,7 @@ TYPE buku :
 * jalankan main.cpp
 * tambahkan proses mengecek validitas tanggal setiap membuat tanggal pada fungsi pinjam dan kembali
 * ubahlah kode di dalam aplikasi.cpp sehingga terdapat proses untuk meminta input di setiap menu
-* percantik tampilan output sehingga menyerupai contoh example.exe
+* percantik tampilan output sehingga menyerupai contoh `example task2_2017.exe`
 
 ### Fungsi Tambahan
 * tambahkan sebuah menu atau edit menu pada aplikasi, sehingga memberikan suatu fungsionalitas baru, contohnya (pilih salah satu):

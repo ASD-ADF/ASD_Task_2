@@ -77,14 +77,12 @@ void menu_pinjam() {
     **/
     int tgl,bln,thn;
     int id_buku;
-    buku b;
 
     cin>>tgl;
     cin>>bln;
     cin>>thn;
     cin>>id_buku;
-    b = daftar_buku[id_buku];
-    pinjam_buku(b,tgl,bln,thn);
+    pinjam_buku(daftar_buku[id_buku],tgl,bln,thn);
 }
 
 void menu_kembali() {
@@ -97,15 +95,13 @@ void menu_kembali() {
 
     int tgl,bln,thn;
     int id_buku;
-    buku b;
     int selisih;
 
     cin>>tgl;
     cin>>bln;
     cin>>thn;
     cin>>id_buku;
-    b = daftar_buku[id_buku];
-    selisih = kembalikan_buku(b,tgl,bln,thn);
+    selisih = kembalikan_buku(daftar_buku[id_buku],tgl,bln,thn);
     cout<<selisih;
 }
 
