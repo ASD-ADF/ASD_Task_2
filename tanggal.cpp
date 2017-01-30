@@ -16,8 +16,9 @@ tanggal create_tanggal(int dd,int mm,int yy) {
     tanggal tgl;
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    tgl.dd = dd;
+    tgl.mm = mm;
+    tgl.yy = yy;
     // YOUR CODE ENDS HERE
     //=================================================
     return tgl;
@@ -46,8 +47,7 @@ void tampil_tanggal(tanggal tgl) {
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    cout << tgl.dd << "/" << tgl.mm << "/" << tgl.yy << endl;
     // YOUR CODE ENDS HERE
     //=================================================
 }
@@ -63,7 +63,12 @@ int selisih_hari(tanggal tgl1, tanggal tgl2) {
     //=================================================
     // YOUR CODE STARTS HERE
 
+    // Jika tahun sama maka nilai selisih tetap -1
+    if (tgl2.yy == tgl1.yy) {
 
+        // Selisih hari
+        selisih = tgl2.dd - tgl1.dd;
+    }
     // YOUR CODE ENDS HERE
     //=================================================
     return selisih;
