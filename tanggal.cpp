@@ -8,7 +8,8 @@
 #include "tanggal.h"
 
 
-tanggal create_tanggal(int dd,int mm,int yy) {
+tanggal create_tanggal(int dd,int mm,int yy)
+{
     /**
     * fungsi mengeset tanggal tgl dengan hari, bulan, dan tahun dan mengembalikan hasilnya
     **/
@@ -25,7 +26,8 @@ tanggal create_tanggal(int dd,int mm,int yy) {
     return tgl;
 }
 
-bool cek_tanggal(tanggal tgl) {
+bool cek_tanggal(tanggal tgl)
+{
     /**
     * fungsi mengecek tanggal
     * fungsi mengembalikan nilai true jika isi tanggal sesuai dengan bulannya
@@ -34,99 +36,135 @@ bool cek_tanggal(tanggal tgl) {
     bool ok = true;
     //=================================================
     // YOUR CODE STARTS HERE
-    if (tgl.mm==1){
-        if (tgl.dd<31){
+    if (tgl.mm==1)
+    {
+        if (tgl.dd<31)
+        {
             ok = true;
         }
-        else {
+        else
+        {
             ok = false;
         }
     }
-    else if (tgl.mm==2){
-        if (tgl.dd<28){
+    else if (tgl.mm==2)
+    {
+        if (tgl.dd<28)
+        {
             ok = true;
         }
-        else {
+        else
+        {
             ok = false;
         }
     }
-    else if (tgl.mm==3){
-        if (tgl.dd<31){
+    else if (tgl.mm==3)
+    {
+        if (tgl.dd<31)
+        {
             ok = true;
         }
-        else {
+        else
+        {
             ok = false;
         }
     }
-    else if (tgl.mm==4){
-        if (tgl.dd<30){
+    else if (tgl.mm==4)
+    {
+        if (tgl.dd<30)
+        {
             ok = true;
         }
-        else {
+        else
+        {
             ok = false;
         }
     }
-    else if (tgl.mm==5){
-        if (tgl.dd<31){
+    else if (tgl.mm==5)
+    {
+        if (tgl.dd<31)
+        {
             ok = true;
         }
-        else {
+        else
+        {
             ok = false;
         }
     }
-    else if (tgl.mm==6){
-        if (tgl.dd<30){
+    else if (tgl.mm==6)
+    {
+        if (tgl.dd<30)
+        {
             ok = true;
         }
-        else {
+        else
+        {
             ok = false;
         }
     }
-    else if (tgl.mm==7){
-        if (tgl.dd<31){
+    else if (tgl.mm==7)
+    {
+        if (tgl.dd<31)
+        {
             ok = true;
         }
-        else {
+        else
+        {
             ok = false;
         }
     }
-    else if (tgl.mm==8){
-        if (tgl.dd<31){
+    else if (tgl.mm==8)
+    {
+        if (tgl.dd<31)
+        {
             ok = true;
         }
-        else {
+        else
+        {
             ok = false;
         }
     }
-    else if (tgl.mm==9){
-        if (tgl.dd<30){
+    else if (tgl.mm==9)
+    {
+        if (tgl.dd<30)
+        {
             ok = true;
         }
-        else {
+        else
+        {
             ok = false;
         }
     }
-    else if (tgl.mm==10){
-        if (tgl.dd<31){
+    else if (tgl.mm==10)
+    {
+        if (tgl.dd<31)
+        {
             ok = true;
         }
-        else {
+        else
+        {
             ok = false;
         }
     }
-    else if (tgl.mm==11){
-        if (tgl.dd<30){
+    else if (tgl.mm==11)
+    {
+        if (tgl.dd<30)
+        {
             ok = true;
         }
-        else {
+        else
+        {
             ok = false;
         }
     }
-    else if (tgl.mm==12){
-        if (tgl.dd<31){
+    else if (tgl.mm==12)
+    {
+        if (tgl.dd<31)
+        {
             ok = true;
         }
-        else {
+        else
+        {
             ok = false;
         }
     }
@@ -136,7 +174,8 @@ bool cek_tanggal(tanggal tgl) {
     return ok;
 }
 
-void tampil_tanggal(tanggal tgl) {
+void tampil_tanggal(tanggal tgl)
+{
     /**
     * fungsi menampilkan tanggal bulan tahun dengan format menampilkan nama bulan
     * contoh : 1 Januari 1980
@@ -144,40 +183,52 @@ void tampil_tanggal(tanggal tgl) {
     //=================================================
     // YOUR CODE STARTS HERE
     string con;
-    if (tgl.mm==1){
+    if (tgl.mm==1)
+    {
         con = "Januari";
     }
-    else if (tgl.mm==2){
+    else if (tgl.mm==2)
+    {
         con = "Februari";
     }
-    else if (tgl.mm==3){
+    else if (tgl.mm==3)
+    {
         con = "Maret";
     }
-    else if (tgl.mm==4){
+    else if (tgl.mm==4)
+    {
         con = "April";
     }
-    else if (tgl.mm==5){
+    else if (tgl.mm==5)
+    {
         con = "Mei";
     }
-    else if (tgl.mm==6){
+    else if (tgl.mm==6)
+    {
         con = "Juni";
     }
-    else if (tgl.mm==7){
+    else if (tgl.mm==7)
+    {
         con = "Juli";
     }
-    else if (tgl.mm==8){
+    else if (tgl.mm==8)
+    {
         con = "Agustus";
     }
-    else if (tgl.mm==9){
+    else if (tgl.mm==9)
+    {
         con = "September";
     }
-    else if (tgl.mm==10){
+    else if (tgl.mm==10)
+    {
         con = "Oktober";
     }
-    else if (tgl.mm==11){
+    else if (tgl.mm==11)
+    {
         con = "November";
     }
-    else if (tgl.mm==12){
+    else if (tgl.mm==12)
+    {
         con = "Desember";
     }
 
@@ -186,7 +237,8 @@ void tampil_tanggal(tanggal tgl) {
     //=================================================
 }
 
-int selisih_hari(tanggal tgl1, tanggal tgl2) {
+int selisih_hari(tanggal tgl1, tanggal tgl2)
+{
     /**
     * fungsi menghitung selisih hari dari variable tgl1 dan tgl2
     * fungsi selalu mengembalikan selisih dalam nilai positif

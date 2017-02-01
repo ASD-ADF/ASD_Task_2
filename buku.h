@@ -10,11 +10,12 @@
 #include "tanggal.h"
 
 
-struct buku {
+struct buku
+{
     //=================================================
 
-        int id,tgl,tgl2,bln,bln2,thn,thn2;
-        string judul,pengarang,pinjam="false";
+    int id,tgl,tgl2,bln,bln2,thn,thn2;
+    string judul,pengarang,pinjam="false";
     //=================================================
 };
 buku create_buku(string judul, string pengarang);

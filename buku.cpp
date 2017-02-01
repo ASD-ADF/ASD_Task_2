@@ -9,7 +9,8 @@
 #include "aplikasi.h"
 
 
-buku create_buku(string judul, string pengarang) {
+buku create_buku(string judul, string pengarang)
+{
     /**
     * fungsi mengeset buku b dengan judul, dan pengarang
     * dan mengembalikan hasilnya
@@ -23,7 +24,8 @@ buku create_buku(string judul, string pengarang) {
     return b;
 }
 
-void pinjam_buku(buku &b, int tgl, int bln, int thn) {
+void pinjam_buku(buku &b, int tgl, int bln, int thn)
+{
     /**
     * fungsi mengeset tanggal pinjam dari buku b dengan tgl, bln, thn,
     * dan mengeset status pinjam menjadi true
@@ -34,7 +36,8 @@ void pinjam_buku(buku &b, int tgl, int bln, int thn) {
     b.tgl = tgl;
     b.bln = bln;
     b.thn = thn;
-    if (b.bln>=13){
+    if (b.bln>=13)
+    {
         cout<<"Maaf bulan yang anda masukan tidak valid silahkan ulangi lagi\n";
         b.tgl = 0;
         b.bln = 0;
@@ -45,7 +48,8 @@ void pinjam_buku(buku &b, int tgl, int bln, int thn) {
     //=================================================
 }
 
-int kembalikan_buku(buku &b, int tgl, int bln, int thn) {
+int kembalikan_buku(buku &b, int tgl, int bln, int thn)
+{
     /**
     * fungsi mengeset status pinjam menjadi false
     * fungsi memanggil fungsi create_tanggal untuk membuat tanggal kembali
@@ -60,25 +64,31 @@ int kembalikan_buku(buku &b, int tgl, int bln, int thn) {
     b.tgl2 = tgl;
     b.bln2 = bln;
     b.thn2 = thn;
-    if (b.thn2>=b.thn){
-        if (b.bln2==b.bln){
-                if (b.bln2<=12){
-            selisih=(b.tgl2-b.tgl);
-                }
-                else {
-                    cout<<"Maaf bulan yang anda inputkan tidak valid, silahkan ulangi lagi\n";
-                    b.tgl2 = 0;
-                    b.bln2 = 0;
-                    b.thn2 = 0;
-                    b.pinjam = "true";
-                }
+    if (b.thn2>=b.thn)
+    {
+        if (b.bln2==b.bln)
+        {
+            if (b.bln2<=12)
+            {
+                selisih=(b.tgl2-b.tgl);
+            }
+            else
+            {
+                cout<<"Maaf bulan yang anda inputkan tidak valid, silahkan ulangi lagi\n";
+                b.tgl2 = 0;
+                b.bln2 = 0;
+                b.thn2 = 0;
+                b.pinjam = "true";
+            }
         }
-        else {
-                selisih=(((b.bln2-b.bln)*30)-b.tgl+b.tgl2);
+        else
+        {
+            selisih=(((b.bln2-b.bln)*30)-b.tgl+b.tgl2);
 
         }
     }
-    else {
+    else
+    {
         cout<<"Maaf Tahun yang anda inputkan tidak valid, silahkan ulangi lagi \n";
     }
 
@@ -89,7 +99,8 @@ int kembalikan_buku(buku &b, int tgl, int bln, int thn) {
 }
 
 
-void tampil_buku(buku b) {
+void tampil_buku(buku b)
+{
     /**
     * fungsi menampilkan judul, pengarang, dan status dipinjam dari buku b
     * contoh output:
@@ -101,10 +112,12 @@ void tampil_buku(buku b) {
     // YOUR CODE STARTS HERE
     cout<<"Judul Buku : "<<b.judul<<endl;
     cout<<"Pengarang  : "<<b.pengarang<<endl;
-    if(b.pinjam=="false"){
+    if(b.pinjam=="false")
+    {
         cout<<"Status   : Tersedia";
     }
-    else if(b.pinjam=="true"){
+    else if(b.pinjam=="true")
+    {
         cout<<"Status   : Dipinjam";
     }
 

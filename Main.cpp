@@ -87,10 +87,10 @@ void menu_create_buku()
     * fungsi membuat buku baru dan menyimpannya ke dalam array daftar_buku
     **/
     string judul,pengarang;
-    cout<<"Masukan Judul Buku     : ";
-    getline(cin,judul);
-    cout<<"Masukan Pengarang Buku : ";
-    getline(cin,pengarang);
+    cout<<"Masukan Judul Buku     : \n";
+    cin>>judul;
+    cout<<"Masukan Pengarang Buku : \n";
+    cin>>pengarang;
     daftar_buku[jumlah_buku++] = create_buku(judul,pengarang);
 }
 

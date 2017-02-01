@@ -12,7 +12,8 @@
 using namespace std;
 
 
-struct tanggal {
+struct tanggal
+{
     //=================================================
     // YOUR CODE STARTS HERE
     int dd,mm,yy;
