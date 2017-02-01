@@ -20,3 +20,26 @@
 	<string>
 	"tanggal.h"
 
+1485967350 source:c:\users\w10\documents\github\asd_task_2\buku.cpp
+	"buku.h"
+	"aplikasi.h"
+
+1485966727 c:\users\w10\documents\github\asd_task_2\buku.h
+	"tanggal.h"
+
+1485965722 c:\users\w10\documents\github\asd_task_2\tanggal.h
+	<string>
+	<iostream>
+
+1485965722 source:c:\users\w10\documents\github\asd_task_2\tanggal.cpp
+	<string>
+	"tanggal.h"
+
+1485966582 source:c:\users\w10\documents\github\asd_task_2\main.cpp
+	<iostream>
+	"buku.h"
+	"tanggal.h"
+	"aplikasi.h"
+
+1485794582 c:\users\w10\documents\github\asd_task_2\aplikasi.h
+

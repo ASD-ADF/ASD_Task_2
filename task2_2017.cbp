@@ -34,6 +34,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="aplikasi.h" />
 		<Unit filename="buku.cpp" />
 		<Unit filename="buku.h" />
 		<Unit filename="main.cpp" />

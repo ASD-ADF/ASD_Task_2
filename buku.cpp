@@ -1,11 +1,13 @@
 /**
-    KELAS     :
-    KELOMPOK  :
+    KELAS     : IF 40 02
+    KELOMPOK  : 6
     NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
 **/
 
 
 #include "buku.h"
+#include "aplikasi.h"
+
 
 buku create_buku(string judul, string pengarang) {
     /**
@@ -14,10 +16,9 @@ buku create_buku(string judul, string pengarang) {
     **/
     buku b;
     //=================================================
-    // YOUR CODE STARTS HERE
 
-
-    // YOUR CODE ENDS HERE
+    b.judul = judul;
+    b.pengarang = pengarang;
     //=================================================
     return b;
 }
@@ -29,10 +30,18 @@ void pinjam_buku(buku &b, int tgl, int bln, int thn) {
     * fungsi memanggil fungsi create_tanggal untuk membuat tanggal pinjam
     **/
     //=================================================
-    // YOUR CODE STARTS HERE
+    b.pinjam = "true";
+    b.tgl = tgl;
+    b.bln = bln;
+    b.thn = thn;
+    if (b.bln>=13){
+        cout<<"Maaf bulan yang anda masukan tidak valid silahkan ulangi lagi\n";
+        b.tgl = 0;
+        b.bln = 0;
+        b.thn = 0;
+        b.pinjam = "false";
+    }
 
-
-    // YOUR CODE ENDS HERE
     //=================================================
 }
 
@@ -44,8 +53,34 @@ int kembalikan_buku(buku &b, int tgl, int bln, int thn) {
     * dengan menggunakan fungsi selisih_hari
     **/
     int selisih;
+
     //=================================================
     // YOUR CODE STARTS HERE
+    b.pinjam = "false";
+    b.tgl2 = tgl;
+    b.bln2 = bln;
+    b.thn2 = thn;
+    if (b.thn2>=b.thn){
+        if (b.bln2==b.bln){
+                if (b.bln2<=12){
+            selisih=(b.tgl2-b.tgl);
+                }
+                else {
+                    cout<<"Maaf bulan yang anda inputkan tidak valid, silahkan ulangi lagi\n";
+                    b.tgl2 = 0;
+                    b.bln2 = 0;
+                    b.thn2 = 0;
+                    b.pinjam = "true";
+                }
+        }
+        else {
+                selisih=(((b.bln2-b.bln)*30)-b.tgl+b.tgl2);
+
+        }
+    }
+    else {
+        cout<<"Maaf Tahun yang anda inputkan tidak valid, silahkan ulangi lagi \n";
+    }
 
 
     // YOUR CODE ENDS HERE
@@ -64,7 +99,14 @@ void tampil_buku(buku b) {
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
+    cout<<"Judul Buku : "<<b.judul<<endl;
+    cout<<"Pengarang  : "<<b.pengarang<<endl;
+    if(b.pinjam=="false"){
+        cout<<"Status   : Tersedia";
+    }
+    else if(b.pinjam=="true"){
+        cout<<"Status   : Dipinjam";
+    }
 
     // YOUR CODE ENDS HERE
     //=================================================
