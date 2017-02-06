@@ -58,11 +58,10 @@ int kembalikan_buku(buku &b, int tgl, int bln, int thn) {
     // YOUR CODE STARTS HERE
     if(cek_tanggal (create_tanggal(tgl,bln,thn))== true){
          b.status_dipinjam = false;
-         selisih = create_tanggal(tgl, bln, thn);
-        }
-    else {
-        cout<<"Format tanggal salah"<<endl;
-    }
+         selisih = selisih_hari(b.terakhir_dipinjam, create_tanggal(tgl,bln,thn));
+    } else {
+        cout << "format tanggal salah" << endl;
+}
     // YOUR CODE ENDS HERE
     //=================================================
     return selisih;
