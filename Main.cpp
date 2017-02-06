@@ -1,13 +1,12 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF 40.02
+    KELOMPOK  : 9
+    NAMA(NIM) : Andini Salimah (1301164080), Fajar Alif (1301164274), Isnan Akbar (1301164490), Hanafi Abdullah Gusman (1301160362)
 **/
 
 #include <iostream>
 #include "buku.h"
 #include "tanggal.h"
-#include "aplikasi.h"
 
 using namespace std;
 
@@ -42,6 +41,13 @@ void main_menu() {
     **/
     int pil;
     do {
+        cout << " Daftar Menu"<<endl;
+        cout << "1. Create Buku"<<endl;
+        cout << "2. Tampilkan daftar buku"<<endl;
+        cout << "3. Pinjam buku"<<endl;
+        cout << "4. Kembalikan buku"<<endl;
+        cout << "5. Keluar"<<endl;
+        cout<<"Masukkan pilihan : "<<endl;
         cin>>pil;
         switch(pil) {
         case 1:
@@ -61,7 +67,7 @@ void main_menu() {
         default:
             break;
         }
-    } while pil!=0;
+    } while (pil != 0);
 }
 
 void menu_create_buku() {
@@ -70,7 +76,9 @@ void menu_create_buku() {
     * fungsi membuat buku baru dan menyimpannya ke dalam array daftar_buku
     **/
     string judul,pengarang;
+    cout << "Masukkan judul buku : ";
     cin>>judul;
+    cout <<"Masukkan nama pengarang : ";
     cin>>pengarang;
     daftar_buku[jumlah_buku++] = create_buku(judul, pengarang);
 }
@@ -84,9 +92,13 @@ void menu_pinjam() {
     int tgl,bln,thn;
     int id_buku;
 
+    cout<<" Masukkan Tanggal : ";
     cin>>tgl;
+    cout<<" Masukkan Bulan : ";
     cin>>bln;
+    cout<<" Masukkan Tahun : ";
     cin>>thn;
+    cout<<" Masukkan ID Buku : ";
     cin>>id_buku;
     pinjam_buku(daftar_buku[id_buku],tgl,bln,thn);
 }
@@ -103,12 +115,16 @@ void menu_kembali() {
     int id_buku;
     int selisih;
 
+    cout<<" Masukkan tanggal kembali buku : ";
     cin>>tgl;
+    cout<<" Masukkan bulan kembali buku : ";
     cin>>bln;
+    cout<<" Masukkan tahun kembali buku : ";
     cin>>thn;
+    cout<<" Masukkan ID buku: ";
     cin>>id_buku;
     selisih = kembalikan_buku(daftar_buku[id_buku],tgl,bln,thn);
-    cout<<selisih;
+    cout<< "Lama Meminjam : " <<selisih << " Hari";
 }
 
 void menu_tampil() {
