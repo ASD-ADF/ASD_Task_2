@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF 40.02
+    KELOMPOK  : 9
+    NAMA(NIM) : Andini Salimah (1301164080), Fajar Alif (1301164274), Isnan Akbar (1301164490), Hanafi Abdullah Gusman (1301160362)
 **/
 
 
@@ -15,7 +15,9 @@ buku create_buku(string judul, string pengarang) {
     buku b;
     //=================================================
     // YOUR CODE STARTS HERE
-
+    b.judul = judul;
+    b.pengarang = pengarang;
+    b.status_dipinjam = false;
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -30,7 +32,15 @@ void pinjam_buku(buku &b, int tgl, int bln, int thn) {
     **/
     //=================================================
     // YOUR CODE STARTS HERE
+    if (b.status_dipinjam == true) {
+        cout << "Sedang Dipinjam" << endl;
+    } else {
+        if(cek_tanggal (create_tanggal(tgl,bln,thn))== true){
+         b.status_dipinjam = true;
+        b.terakhir_dipinjam = create_tanggal(tgl, bln, thn);
+        }
 
+    }
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -46,8 +56,12 @@ int kembalikan_buku(buku &b, int tgl, int bln, int thn) {
     int selisih;
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    if(cek_tanggal (create_tanggal(tgl,bln,thn))== true){
+         b.status_dipinjam = false;
+         selisih = selisih_hari(b.terakhir_dipinjam, create_tanggal(tgl,bln,thn));
+    } else {
+        cout << "format tanggal salah" << endl;
+}
     // YOUR CODE ENDS HERE
     //=================================================
     return selisih;
@@ -64,8 +78,13 @@ void tampil_buku(buku b) {
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    cout << "Judul : " << b.judul << endl;
+    cout<< "Pengarang : "<<b.pengarang << endl;
+    if (b.status_dipinjam == true) {
+        cout << " Dipinjam" << endl;
+    } else {
+        cout << "Tersedia" << endl;
+    }
     // YOUR CODE ENDS HERE
     //=================================================
 }

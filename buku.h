@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF 40.02
+    KELOMPOK  : 9
+    NAMA(NIM) : Andini Salimah (1301164080), Fajar Alif (1301164274), Isnan Akbar (1301164490), Hanafi Abdullah Gusman (1301160362)
 **/
 
 #ifndef BUKU_H_INCLUDED
@@ -14,6 +14,10 @@ struct buku {
     //=================================================
     // YOUR CODE STARTS HERE
 
+    string judul;
+    string pengarang;
+    tanggal terakhir_dipinjam;
+    bool status_dipinjam;
 
     // YOUR CODE ENDS HERE
     //=================================================
