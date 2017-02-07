@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF 40-02
+    KELOMPOK  : 9
+    NAMA(NIM) : [HANAFI ABDULLAH GUSMAN][1301160362] , [MUCHAMMAD FAJAR ALIF][1301164274] , [ISNAN AKBAR IBRAHIM][1301164490] , [ANDINI SALIMAH][1301164080]
 **/
 
 
@@ -15,8 +15,9 @@ buku create_buku(string judul, string pengarang) {
     buku b;
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    b.judul = judul;
+    b.pengarang = pengarang;
+    b.status_pinjam = false;
     // YOUR CODE ENDS HERE
     //=================================================
     return b;
@@ -29,9 +30,17 @@ void pinjam_buku(buku &b, int tgl, int bln, int thn) {
     * fungsi memanggil fungsi create_tanggal untuk membuat tanggal pinjam
     **/
     //=================================================
-    // YOUR CODE STARTS HERE
-
-
+    // YOUR CODE STARTS HERE    
+    if (b.status_pinjam == true) {
+        cout << "Sedang Dipinjam" << endl;
+    } else {
+        if(cek_tanggal(create_tanggal(tgl,bln,thn)) == true) {
+            b.status_pinjam = true;
+            b.terakhir_dipinjam = create_tanggal(tgl,bln,thn);
+        } else {
+            cout << "Tanggal Salah" << endl;
+        }
+    }
     // YOUR CODE ENDS HERE
     //=================================================
 }
@@ -45,9 +54,13 @@ int kembalikan_buku(buku &b, int tgl, int bln, int thn) {
     **/
     int selisih;
     //=================================================
-    // YOUR CODE STARTS HERE
-
-
+    // YOUR CODE STARTS HERE    
+    if(cek_tanggal(create_tanggal(tgl,bln,thn)) == true) {
+        b.status_pinjam = false;
+        selisih = selisih_hari(b.terakhir_dipinjam, create_tanggal(tgl,bln,thn));
+    } else {
+        cout << "Format Tanggal Salah" << endl;
+    }
     // YOUR CODE ENDS HERE
     //=================================================
     return selisih;
@@ -64,8 +77,14 @@ void tampil_buku(buku b) {
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    cout << "   Judul : " << b.judul << endl;
+    cout << "   Pengarang : " << b.pengarang << endl;
+    if (b.status_pinjam == true) {
+        cout << "   Status : Dipinjam" << endl;
+        tampil_tanggal(b.terakhir_dipinjam);
+    } else {
+        cout << "   Status : Tidak Sedang Dipinjam" << endl;
+    }
     // YOUR CODE ENDS HERE
     //=================================================
 }

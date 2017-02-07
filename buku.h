@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF 40-02
+    KELOMPOK  : 9
+    NAMA(NIM) : [HANAFI ABDULLAH GUSMAN][1301160362] , [MUCHAMMAD FAJAR ALIF][1301164274] , [ISNAN AKBAR IBRAHIM][1301164490] , [ANDINI SALIMAH][1301164080]
 **/
 
 #ifndef BUKU_H_INCLUDED
@@ -13,8 +13,10 @@
 struct buku {
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    string judul;
+    string pengarang;
+    bool status_pinjam;
+    tanggal terakhir_dipinjam; 
     // YOUR CODE ENDS HERE
     //=================================================
 };
