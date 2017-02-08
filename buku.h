@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF 40-02
+    KELOMPOK  : 8
+    NAMA(NIM) : Andaresta Fauzan(1301164189), Mahendrawan Idris (1301164461), Ayu Wulandari (1301164104), M Hanur Yoga (1301164153)
 **/
 
 #ifndef BUKU_H_INCLUDED
@@ -13,7 +13,10 @@
 struct buku {
     //=================================================
     // YOUR CODE STARTS HERE
-
+    string judul;
+    string pengarang;
+    tanggal terakhir_dipinjam;
+    bool status_dipinjam;
 
     // YOUR CODE ENDS HERE
     //=================================================
