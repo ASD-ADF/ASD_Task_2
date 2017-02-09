@@ -1,7 +1,8 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF 40-02
+    KELOMPOK  : 10
+    NAMA(NIM) : [Ranggha Adytia][1301164017] , [Javiar Fasyah][1301164477] , [Rani Sari Murti][1301160544]
+                [Dianita Yustika Sari][1301164349] , [Try Arie Rahmat Insani][1301164513]
 **/
 
 #ifndef TANGGAL_H_INCLUDED
@@ -9,15 +10,13 @@
 
 #include <string>
 #include <iostream>
+
 using namespace std;
 
 struct tanggal {
-    //=================================================
-    // YOUR CODE STARTS HERE
-
-
-    // YOUR CODE ENDS HERE
-    //=================================================
+   int dd;
+   int mm;
+   int yy;
 };
 
 tanggal create_tanggal(int dd,int mm,int yy);
