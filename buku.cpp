@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF-40-02
+    KELOMPOK  : 7
+    NAMA(NIM) : [Seiba Shonia][1301164249] , [Wira Aditama][1301164068] , [Riandi Kartiko][1301164300] , [Ery Defriyanto S][1301164129]
 **/
 
 
@@ -15,8 +15,9 @@ buku create_buku(string judul, string pengarang) {
     buku b;
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    b.judul = judul;
+    b.pengarang = pengarang;
+    b.status = false;
     // YOUR CODE ENDS HERE
     //=================================================
     return b;
@@ -30,8 +31,16 @@ void pinjam_buku(buku &b, int tgl, int bln, int thn) {
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    if(b.status == true){
+            cout<<"Status Buku: Terpinjam /n";
+    }else{
+        if(cek_tanggal(create_tanggal(tgl,bln,thn)) == true){
+            b.status = true;
+            b.t_pinjam = create_tanggal(tgl,bln,thn);
+        }else{
+            cout<<"Tanggal Salah \n";
+        }
+    }
     // YOUR CODE ENDS HERE
     //=================================================
 }
@@ -46,8 +55,13 @@ int kembalikan_buku(buku &b, int tgl, int bln, int thn) {
     int selisih;
     //=================================================
     // YOUR CODE STARTS HERE
+    if(cek_tanggal(create_tanggal(tgl,bln,thn)) == true){
+        b.status = false;
+        selisih = selisih_hari(b.t_pinjam,create_tanggal(tgl,bln,thn));
+    } else {
+        cout << "Format Tanggal Salah !!"<<endl;
 
-
+    }
     // YOUR CODE ENDS HERE
     //=================================================
     return selisih;
@@ -64,8 +78,13 @@ void tampil_buku(buku b) {
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    cout <<" Judul Buku : "<<b.judul<<endl;
+    cout <<" Pengarang  : "<<b.pengarang<<endl;
+    if (b.status == true){
+        cout<<" Status   : Dipinjam ";
+    }else {
+        cout<<" Status  : Tidak Dipinjam ";
+    }
     // YOUR CODE ENDS HERE
     //=================================================
 }

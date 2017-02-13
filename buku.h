@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF-40-02
+    KELOMPOK  : 7
+    NAMA(NIM) : [Seiba Shonia][1301164249] , [Wira Aditama][1301164068] , [Riandi Kartiko][1301164300] , [Ery Defriyanto S][1301164129]
 **/
 
 #ifndef BUKU_H_INCLUDED
@@ -13,8 +13,9 @@
 struct buku {
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    string judul,pengarang;
+    bool status;
+    tanggal t_pinjam;
     // YOUR CODE ENDS HERE
     //=================================================
 };
