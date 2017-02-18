@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF 40-02
+    KELOMPOK  : 3
+    NAMA(NIM) : [TAUFIQ AKMAL DAWAMI][1301164426] , [FAHRUR ROZI SYARBINI][1301164213] , [FANNY RISCA W][1301164237] , [YEDIZA FRANS DHIKA][1301160622]
 **/
 
 #ifndef TANGGAL_H_INCLUDED
@@ -11,11 +11,11 @@
 #include <iostream>
 using namespace std;
 
-struct tanggal {
+struct tanggal
+{
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    int dd, mm, yy;
     // YOUR CODE ENDS HERE
     //=================================================
 };
