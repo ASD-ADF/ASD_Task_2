@@ -20,3 +20,22 @@
 	<string>
 	"tanggal.h"
 
+1486989298 source:d:\project c++\asd_task_2\buku.cpp
+	"buku.h"
+
+1486989151 d:\project c++\asd_task_2\buku.h
+	"tanggal.h"
+
+1486916058 d:\project c++\asd_task_2\tanggal.h
+	<string>
+	<iostream>
+
+1486989256 source:d:\project c++\asd_task_2\main.cpp
+	<iostream>
+	"buku.h"
+	"tanggal.h"
+
+1486914924 source:d:\project c++\asd_task_2\tanggal.cpp
+	<string>
+	"tanggal.h"
+
