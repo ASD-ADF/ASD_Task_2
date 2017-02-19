@@ -18,7 +18,7 @@ void menu_create_buku();
 void menu_pinjam();
 void menu_kembali();
 void menu_tampil();
-
+void buku_dipinjam();
 
 int main() {
 
@@ -46,6 +46,7 @@ void main_menu() {
         cout<<"2. List buku"<<endl;
         cout<<"3. Pinjam buku"<<endl;
         cout<<"4. Kembalikan buku"<<endl;
+        cout<<"5. Banyak buku yang dipinjam"<<endl;
         cout<<"pilihan:";
         cin>>pil;
         switch(pil) {
@@ -60,6 +61,9 @@ void main_menu() {
                 break;
             case 4:
                 menu_kembali();
+                break;
+            case 5:
+                 buku_dipinjam();
                 break;
             case 0:
                 break;
@@ -141,4 +145,24 @@ void menu_tampil() {
         tampil_buku(b);
         cout<<endl;
     }
+}
+
+void buku_dipinjam()
+{
+    int a,c;
+    buku b;
+    for (int i=1; i<jumlah_buku; i++)
+    {
+        b=daftar_buku[i];
+        if (b.tersedia==false)
+        {
+            a++;
+        }
+        else
+        {
+            c++;
+        }
+    }
+    cout<<"Banyak buku yang dipinjam: "<<c<<endl;
+
 }
