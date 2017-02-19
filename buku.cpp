@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+ KELAS     : IF 40 02
+ KELOMPOK  : Kelompok 4
+ NAMA(NIM) : [Joel Andrew][1301164165] , [Diah Hevyka][1301164336] , [Lucky Marbun][1301164055] , [Rangga Dwi Alamsyah][1301164030]
 **/
 
 
