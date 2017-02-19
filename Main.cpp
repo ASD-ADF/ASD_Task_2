@@ -149,9 +149,10 @@ void menu_tampil() {
 
 void buku_dipinjam()
 {
-    int a,c;
+    int a=0;
+    //int c=0;
     buku b;
-    for (int i=1; i<jumlah_buku; i++)
+    for (int i=0; i<jumlah_buku; i++)
     {
         b=daftar_buku[i];
         if (b.tersedia==false)
@@ -160,9 +161,9 @@ void buku_dipinjam()
         }
         else
         {
-            c++;
+            //c++;
         }
     }
-    cout<<"Banyak buku yang dipinjam: "<<c<<endl;
+    cout<<"Banyak buku yang dipinjam: "<<a<<endl;
 
 }
