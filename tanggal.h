@@ -1,5 +1,5 @@
 /**
-    KELAS     :
+    KELAS     : IF 40 02
     KELOMPOK  :
     NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
 **/
@@ -14,7 +14,7 @@ using namespace std;
 struct tanggal {
     //=================================================
     // YOUR CODE STARTS HERE
-
+    int dd,mm,yy;
 
     // YOUR CODE ENDS HERE
     //=================================================
