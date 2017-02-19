@@ -13,7 +13,10 @@
 struct buku {
     //=================================================
     // YOUR CODE STARTS HERE
-
+    string judul;
+    string pengarang;
+    tanggal Terakhir_dipinjam;
+    bool tersedia=true;
 
     // YOUR CODE ENDS HERE
     //=================================================

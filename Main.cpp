@@ -7,7 +7,6 @@
 #include <iostream>
 #include "buku.h"
 #include "tanggal.h"
-#include "aplikasi.h"
 
 using namespace std;
 
@@ -42,26 +41,32 @@ void main_menu() {
     **/
     int pil;
     do {
+        cout<<"Menu:"<<endl;
+        cout<<"1. tambah buku"<<endl;
+        cout<<"2. List buku"<<endl;
+        cout<<"3. Pinjam buku"<<endl;
+        cout<<"4. Kembalikan buku"<<endl;
+        cout<<"pilihan:";
         cin>>pil;
         switch(pil) {
-        case 1:
-            menu_create_buku();
-            break;
-        case 2:
-            menu_tampil();
-            break;
-        case 3:
-            menu_pinjam();
-            break;
-        case 4:
-            menu_kembali();
-            break;
-        case 0:
-            break;
-        default:
-            break;
+            case 1:
+                menu_create_buku();
+                break;
+            case 2:
+                menu_tampil();
+                break;
+            case 3:
+                menu_pinjam();
+                break;
+            case 4:
+                menu_kembali();
+                break;
+            case 0:
+                break;
+            default:
+                break;
         }
-    } while pil!=0;
+    } while (pil!=0);
 }
 
 void menu_create_buku() {
@@ -70,8 +75,11 @@ void menu_create_buku() {
     * fungsi membuat buku baru dan menyimpannya ke dalam array daftar_buku
     **/
     string judul,pengarang;
+    cout<< "Masukan judul : ";
     cin>>judul;
+    cout<< "Nama pengarang: ";
     cin>>pengarang;
+    cout<< "\n\n";
     daftar_buku[jumlah_buku++] = create_buku(judul, pengarang);
 }
 
@@ -81,14 +89,20 @@ void menu_pinjam() {
     * fungsi meminta input id buku berdasar urutan buku pada array daftar_buku
     * fungsi memanggil fungsi pinjam_buku
     **/
-    int tgl,bln,thn;
+    int tgl1,bln1,thn1;
     int id_buku;
 
-    cin>>tgl;
-    cin>>bln;
-    cin>>thn;
+    cout<< "Masukan tanggal : ";
+    cin>>tgl1;
+    cout<< "Masukan Bulan : ";
+    cin>>bln1;
+    cout<< "Masukan Tahun : ";
+    cin>>thn1;
+    cout<< "Id Buku : ";
     cin>>id_buku;
-    pinjam_buku(daftar_buku[id_buku],tgl,bln,thn);
+    cout<< "Buku telah dipinjam";
+    cout<< "\n\n";
+    pinjam_buku(daftar_buku[id_buku],tgl1,bln1,thn1);
 }
 
 void menu_kembali() {
@@ -103,12 +117,17 @@ void menu_kembali() {
     int id_buku;
     int selisih;
 
+    cout<<" Tanggal pengembalian : ";
     cin>>tgl;
+    cout<<" Bulan pengembalian : ";
     cin>>bln;
+    cout<<" Tahun pengembalian : ";
     cin>>thn;
+    cout<<" Id Buku : ";
     cin>>id_buku;
     selisih = kembalikan_buku(daftar_buku[id_buku],tgl,bln,thn);
-    cout<<selisih;
+    cout<< "Lama meminjam buku "<<selisih<< " Hari"<<endl;
+    cout<< "\n\n";
 }
 
 void menu_tampil() {
@@ -117,7 +136,7 @@ void menu_tampil() {
     **/
     buku b;
     for(int i=0; i<jumlah_buku; i++) {
-        cout<<i;
+        cout<< " Id buku : "<<i;
         b = daftar_buku[i];
         tampil_buku(b);
         cout<<endl;
