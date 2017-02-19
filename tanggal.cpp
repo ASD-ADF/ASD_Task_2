@@ -7,6 +7,7 @@
 #include <string>
 #include "tanggal.h"
 
+
 tanggal create_tanggal(int dd,int mm,int yy) {
     /**
     * fungsi mengeset tanggal tgl dengan hari, bulan, dan tahun dan mengembalikan hasilnya
@@ -38,22 +39,10 @@ bool cek_tanggal(tanggal tgl) {
     return ok;
 }
 
-void show_tanggal(tanggal tgl) {
+void tampil_tanggal(tanggal tgl) {
     /**
     * fungsi menampilkan tanggal bulan tahun dengan format menampilkan nama bulan
     * contoh : 1 Januari 1980
-    **/
-    //=================================================
-    // YOUR CODE STARTS HERE
-
-
-    // YOUR CODE ENDS HERE
-    //=================================================
-}
-
-void edit_tanggal(tanggal &tgl, int dd, int mm, int yy) {
-    /**
-    * fungsi mengubah isi tanggal dari variabel tgl
     **/
     //=================================================
     // YOUR CODE STARTS HERE
