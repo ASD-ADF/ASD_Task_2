@@ -1,21 +1,22 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF 40-02
+    KELOMPOK  : Kelompok 4
+    NAMA(NIM) : [Joel Andrew][1301164165Lucky Olivera][1301164055] , [Rangga Dwi A][1301164030] , [Diah Hevyka M][1301164336]
 **/
-
 
 #include "buku.h"
 
 buku create_buku(string judul, string pengarang) {
     /**
+
     * fungsi mengeset buku b dengan judul, dan pengarang
     * dan mengembalikan hasilnya
     **/
     buku b;
     //=================================================
     // YOUR CODE STARTS HERE
-
+    b.judul = judul;
+    b.pengarang = pengarang;
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -30,8 +31,8 @@ void pinjam_buku(buku &b, int tgl, int bln, int thn) {
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    b.Terakhir_dipinjam =  create_tanggal(tgl,bln,thn);
+    b.tersedia = false;
     // YOUR CODE ENDS HERE
     //=================================================
 }
@@ -46,7 +47,8 @@ int kembalikan_buku(buku &b, int tgl, int bln, int thn) {
     int selisih;
     //=================================================
     // YOUR CODE STARTS HERE
-
+    b.tersedia = true;
+    selisih = selisih_hari(b.Terakhir_dipinjam,create_tanggal(tgl,bln,thn));
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -64,6 +66,15 @@ void tampil_buku(buku b) {
     **/
     //=================================================
     // YOUR CODE STARTS HERE
+    cout<< "\nJudul buku : "<< b.judul<< endl;
+    cout<< "Pengarang : "<< b.pengarang<< endl;
+    if(b.tersedia == true){
+        cout<< "Tersedia\n";
+    } else {
+        cout<< " Dipinjam ";
+        tampil_tanggal(b.Terakhir_dipinjam);
+        cout<< endl;
+    }
 
 
     // YOUR CODE ENDS HERE

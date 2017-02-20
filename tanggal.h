@@ -1,7 +1,7 @@
 /**
-    KELAS     :
-    KELOMPOK  :
-    NAMA(NIM) : [nama][nim] , [nama][nim] , [nama][nim] , [nama][nim]
+    KELAS     : IF 40-02
+    KELOMPOK  : Kelompok 4
+    NAMA(NIM) : [Joel Andrew][1301164165Lucky Olivera][1301164055] , [Rangga Dwi A][1301164030] , [Diah Hevyka M][1301164336]
 **/
 
 #ifndef TANGGAL_H_INCLUDED
@@ -14,7 +14,7 @@ using namespace std;
 struct tanggal {
     //=================================================
     // YOUR CODE STARTS HERE
-
+    int dd,mm,yy;
 
     // YOUR CODE ENDS HERE
     //=================================================
