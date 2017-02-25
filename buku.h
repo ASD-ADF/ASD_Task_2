@@ -10,15 +10,14 @@
 #include "tanggal.h"
 
 
-struct buku {
+struct buku
+{
     //=================================================
-    // YOUR CODE STARTS HERE
 
-
-    // YOUR CODE ENDS HERE
+    int id,tgl,tgl2,bln,bln2,thn,thn2;
+    string judul,pengarang,pinjam="false";
     //=================================================
 };
-
 buku create_buku(string judul, string pengarang);
 void pinjam_buku(buku &b, int tgl, int bln, int thn);
 int kembalikan_buku(buku &b, int tgl, int bln, int thn);
