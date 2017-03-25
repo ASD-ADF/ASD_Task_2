@@ -16,7 +16,9 @@ tanggal create_tanggal(int dd,int mm,int yy) {
     tanggal tgl;
     //=================================================
     // YOUR CODE STARTS HERE
-
+    tgl.dd = dd;
+    tgl.mm = mm;
+    tgl.yy = yy;
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -33,7 +35,58 @@ bool cek_tanggal(tanggal tgl) {
     //=================================================
     // YOUR CODE STARTS HERE
 
-
+    if ((tgl.mm == 1) && (tgl.dd < 31))
+    {
+        ok = true;
+    }
+    else if ((tgl.mm == 2) && (tgl.dd < 28))
+    {
+        ok = true;
+    }
+    else if ((tgl.mm == 3) && (tgl.dd < 31))
+    {
+        ok = true;
+    }
+    else if ((tgl.mm == 4) && (tgl.dd < 30))
+    {
+        ok = true;
+    }
+    else if ((tgl.mm == 5) && (tgl.dd < 31))
+    {
+        ok = true;
+    }
+    else if ((tgl.mm == 6) && (tgl.dd < 30))
+    {
+        ok = true;
+    }
+    else if ((tgl.mm == 7) && (tgl.dd < 31))
+    {
+        ok = true;
+    }
+    else if ((tgl.mm == 8) && (tgl.dd < 31))
+    {
+        ok = true;
+    }
+    else if ((tgl.mm == 9) && (tgl.dd < 30))
+    {
+        ok = true;
+    }
+    else if ((tgl.mm == 10) && (tgl.dd < 31))
+    {
+        ok = true;
+    }
+    else if ((tgl.mm == 11) && (tgl.dd < 30))
+    {
+        ok = true;
+    }
+    else if ((tgl.mm == 12) && (tgl.dd < 31))
+    {
+        ok = true;
+    }
+    else
+    {
+        ok = false;
+    }
     // YOUR CODE ENDS HERE
     //=================================================
     return ok;
@@ -46,7 +99,7 @@ void tampil_tanggal(tanggal tgl) {
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
+    cout << tgl.dd <<"/"<< tgl.mm <<"/"<< tgl.yy << endl;
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -62,7 +115,10 @@ int selisih_hari(tanggal tgl1, tanggal tgl2) {
     int selisih = -1;
     //=================================================
     // YOUR CODE STARTS HERE
-
+    if (tgl1.yy == tgl2.yy)
+    {
+        selisih = tgl2.dd - tgl1.dd;
+    }
 
     // YOUR CODE ENDS HERE
     //=================================================
