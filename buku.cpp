@@ -16,7 +16,9 @@ buku create_buku(string judul, string pengarang) {
     //=================================================
     // YOUR CODE STARTS HERE
 
-
+    b.judul = judul;
+    b.pengarang = pengarang;
+    b.status_dipinjam = false;
     // YOUR CODE ENDS HERE
     //=================================================
     return b;
@@ -30,7 +32,22 @@ void pinjam_buku(buku &b, int tgl, int bln, int thn) {
     **/
     //=================================================
     // YOUR CODE STARTS HERE
-
+    if (cek_buku(b) == false)
+    {
+        cout << "Sedang tidak tersedia atau sedang dipinjam" << endl;
+    }
+    else
+    {
+        if(cek_tanggal(create_tanggal(tgl,bln,thn)) == true)
+        {
+            b.status_dipinjam = true;
+            b.terakhir_dipinjam = create_tanggal(tgl,bln,thn);
+        }
+        else
+        {
+            cout << "Anda memasukkan tanggal yang salah" << endl;
+        }
+    }
 
     // YOUR CODE ENDS HERE
     //=================================================
@@ -47,7 +64,15 @@ int kembalikan_buku(buku &b, int tgl, int bln, int thn) {
     //=================================================
     // YOUR CODE STARTS HERE
 
-
+    if(cek_tanggal(create_tanggal(tgl,bln,thn)) == true)
+    {
+        b.status_dipinjam = false;
+        selisih = selisih_hari(b.terakhir_dipinjam, create_tanggal(tgl,bln,thn));
+    }
+    else
+    {
+        cout << "Anda memasukkan tanggal yang salah" << endl;
+    }
     // YOUR CODE ENDS HERE
     //=================================================
     return selisih;
@@ -65,7 +90,32 @@ void tampil_buku(buku b) {
     //=================================================
     // YOUR CODE STARTS HERE
 
-
+    cout << "   Judul : " << b.judul << endl;
+    cout << "   Pengarang : " << b.pengarang << endl;
+    if (b.status_dipinjam == true)
+    {
+        cout << "   Status : Sedang tidak tersedia atau sedang dipinjam." << endl;
+        tampil_tanggal(b.terakhir_dipinjam);
+    }
+    else
+    {
+        cout << "   Status : Tersedia. Anda dapat meminjamnya." << endl;
+    }
     // YOUR CODE ENDS HERE
     //=================================================
+}
+bool cek_buku (buku b)
+{
+    bool cek;
+    if (b.status_dipinjam == true)
+    {
+        cek = false;
+    }
+    else
+    {
+        cek = true;
+    }
+
+    return cek;
+
 }
