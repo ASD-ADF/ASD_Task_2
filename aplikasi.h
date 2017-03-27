@@ -1,0 +1,6 @@
+#ifndef APLIKASI_H_INCLUDED
+#define APLIKASI_H_INCLUDED
+
+
+
+#endif // APLIKASI_H_INCLUDED
