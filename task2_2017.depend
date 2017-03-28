@@ -20,22 +20,22 @@
 	<string>
 	"tanggal.h"
 
-1490629918 source:c:\users\asus\documents\github\asd_task_2\buku.cpp
+1490710054 source:c:\users\asus\documents\github\asd_task_2\buku.cpp
 	"buku.h"
 
-1490630010 c:\users\asus\documents\github\asd_task_2\buku.h
+1490710054 c:\users\asus\documents\github\asd_task_2\buku.h
 	"tanggal.h"
 
-1490630010 c:\users\asus\documents\github\asd_task_2\tanggal.h
+1490710054 c:\users\asus\documents\github\asd_task_2\tanggal.h
 	<string>
 	<iostream>
 
-1490630010 source:c:\users\asus\documents\github\asd_task_2\main.cpp
+1490710053 source:c:\users\asus\documents\github\asd_task_2\main.cpp
 	<iostream>
 	"buku.h"
 	"tanggal.h"
 
-1490630010 source:c:\users\asus\documents\github\asd_task_2\tanggal.cpp
+1490710054 source:c:\users\asus\documents\github\asd_task_2\tanggal.cpp
 	<string>
 	"tanggal.h"
 
