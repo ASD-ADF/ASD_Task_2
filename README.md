@@ -1,110 +1,52 @@
-# Task_2
-## Abstract Data Type
+# Task_2 [2017/2018-II]
+Task 2 : Abstract Data Type
 
-1. fork dan clone repositori ASD_Task_2
-2. buka dan modifikasi isi project task2_2017 dari code::block
-3. tuliskan kode kalian pada bagian yang telah disediakan
+# DEADLINE = JANUARY 31ST, 2018 - 23:59
 
-Buatlah aplikasi sederhana untuk menympan data tanggal lahir buku
+## Reading Material
+* [git cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)
+* [markdown cheat sheet](https://enterprise.github.com/downloads/en/markdown-cheatsheet.pdf)
 
-### tanggal.h
-* buatlah ADT tanggal sebagai berikut
-```pascal
-TYPE tanggal : 
-    <
-    	dd	: integer,
-    	mm	: integer,
-    	yy	: integer;
-    >
-```
+## Workflow
+1. FORK and CLONE this repositori ASD_Task_2
+2. open and modify codes in *.cpp and *.h files inside project ASD_Task_2
+3. write your code inside the provided space in each functions/procedures 
+4. COMMIT and PUSH your project
+5. create a Pull Request
 
-### tanggal.cpp
-* implementasikan fungsi primitif tanggal
-```pascal
-	fungsi create_tanggal(dd,mm,yy : integer):tanggal
-	/** fungsi mengeset tanggal tgl dengan hari, bulan, dan tahun dan mengembalikan hasilnya **/
+## TO DO
+### mydata.h
+TODO:  create a new Data type with specification:
+		- an integer variable acted as an ID
+		- two other variables
+		- a float variable
 
-	fungsi cek_tanggal(tgl : tanggal) : boolean
-	/**
-	* fungsi mengecek tanggal
-	* fungsi mengembalikan nilai true jika isi tanggal sesuai dengan bulannya
-	* fungsi mengembalikan nilai false jika isi tanggal atau bulan atau tahun salah
-	**/
-	
-	prosedur tampil_tanggal(tgl : tanggal)
-	/**
-	* fungsi menampilkan tanggal bulan tahun dengan format menampilkan nama bulan
-	* contoh : 1 Januari 1980
-	**/
 
-	fungsi selisih_hari(tgl1, tgl2 : tanggal) : integer
-	/**
-	* fungsi menghitung selisih hari dari variable tgl1 dan tgl2
-	* fungsi selalu mengembalikan selisih dalam nilai positif
-	* syarat tahun tgl1 dan tgl2 harus sama
-	* jika tahun pada tgl1 berbeda dengan tgl2, maka fungsi mengembalikan nilai -1
-	* asumsi selisih hari bulan semuanya sama = 30
-	**/
-```
-
-### buku.h
-* buatlah ADT Buku sebagai berikut
-```pascal
-TYPE buku : 
-    <
-    	judul : string
-    	pengarang : string
-		terakhir_dipinjam : tanggal
-		status_dipinjam : boolean
-    >
-```
-
-### buku.cpp
-* implementasikan fungsi primitif buku
-```pascal
-	fungsi create_buku(judul, pengarang : string, tgl,bln,thn : integer) return buku
-	/**
-    * fungsi mengeset buku b dengan judul, pengarang, dan mengeset status=false
-    * dan mengembalikan hasilnya
-    **/
+### mydata.cpp
+* `mytype create_data()`<br>
+	TODO: receive input from user and assign the value of new data
+* `view_data(mytype d)`<br>
+	TODO:  view the content of data d
+* `edit_data(mytype &d)`<br>
+	TODO:  edit the value of data d, the ID must not be modified
 
 	
-	prosedur pinjam_buku(i/o b : buku; tgl,bln,thn:integer) return integer
-    /**
-    * fungsi mengeset tanggal pinjam dari buku b dengan tgl, bln, thn,
-    * dan mengeset status pinjam menjadi true
-    * fungsi memanggil fungsi create_tanggal untuk membuat tanggal pinjam
-    **/
-
-	fungsi kembalikan_buku(i/o b : buku; tgl,bln,thn:integer)
-    /**
-    * fungsi mengeset status pinjam menjadi false
-    * fungsi memanggil fungsi create_tanggal untuk membuat tanggal kembali
-    * fungsi mengembalikan selisih hari dari tanggal pinjam ke tanggal kembali
-    * dengan menggunakan fungsi selisih_hari
-    **/
-
-
-	prosedur tampil_buku(b : buku)
-    /**
-    * fungsi menampilkan judul, pengarang, dan status dipinjam dari buku b
-    * contoh output:
-            Judul Buku : XXXXXXX,
-            Pengarang  : AAAA AAAAAAA,
-            Status     : dipinjam
-    **/
-```
-
-### main.cpp
-* jalankan main.cpp
-* tambahkan proses mengecek validitas tanggal setiap membuat tanggal pada fungsi pinjam dan kembali
-* ubahlah kode di dalam aplikasi.cpp sehingga terdapat proses untuk meminta input di setiap menu
-* percantik tampilan output sehingga menyerupai contoh `example task2_2017.exe`
-
-### Fungsi Tambahan
-* tambahkan sebuah menu atau edit menu pada aplikasi, sehingga memberikan suatu fungsionalitas baru, contohnya (pilih salah satu):
-	* fungsi mengoutputkan harga/denda pinjam
-	* fungsi tidak bisa meminjam buku yang sedang dipinjam
-	* fungsi menghitung jumlah buku yang sedang dipinjam
-	* mengecek id buku yang dipilih tersedia
-	* dll
+	
+### array_based.cpp
+* `add_new_data(mytype database[10], int &n_data, mytype d)`<br>
+	TODO:   add the new data d inside the database, the new data will be located at the end of database array
+* `add_new_priority_data(mytype database[10], int &n_data, mytype d)`<br>
+	TODO:   add the new data d inside the database, the new data will be located at the front of database array
+* `find_data(mytype database[10], int n_data, int id_to_find)`<br>
+	TODO:   find a data inside the database based on its id the function will return the index of the searched data the function will return -1 if such data is not found
+* `remove_data(mytype database[10], int &n_data, int id_to_delete)`<br>
+	TODO:   find a data inside the database based on its id then remove such found data from database
+* `view_data(mytype database[10], int n_data)`<br>
+	TODO:  loop through database and view all data inside database
+* `sort_data(mytype database[10], int n_data)`<br>
+	TODO:  sort data inside database
+	
+	
+	
+### array_based.cpp
+* modify the menu so that user cannot insert two data with the same ID
