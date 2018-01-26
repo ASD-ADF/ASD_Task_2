@@ -8,11 +8,12 @@ Task 2 : Abstract Data Type
 * [markdown cheat sheet](https://enterprise.github.com/downloads/en/markdown-cheatsheet.pdf)
 
 ## Workflow
-1. FORK and CLONE this repositori ASD_Task_2
-2. open and modify codes in *.cpp and *.h files inside project ASD_Task_2
-3. write your code inside the provided space in each functions/procedures 
-4. COMMIT and PUSH your project
-5. create a Pull Request
+1. FORK this repositori ASD_Task_2 to your GitHub account
+2. CLONE ASD_Task_2 repository from YOUR OWN ACCOUNT
+3. open and modify codes in *.cpp and *.h files inside project ASD_Task_2
+4. write your code inside the provided space in each functions/procedures 
+5. COMMIT and PUSH your project to your account
+6. create a Pull Request
 
 ## TO DO
 ### mydata.h
