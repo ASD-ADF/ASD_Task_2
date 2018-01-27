@@ -30,7 +30,7 @@ void add_new_priority_data(mytype database[10], int &n_data, mytype d) {
 
     int i;
     for (i=n_data; i>0; i--) {
-        database[i+1] = database[i];
+        database[i] = database[i-1];
     }
     database[0] = d;
     n_data++;
@@ -48,7 +48,7 @@ int find_data(mytype database[10], int n_data, int id_to_find) {
     // YOUR CODE HERE
 
     int i=0;
-    while ((database[i].id!=id_to_find)&& (i<n_data)) {
+    while ((database[i].id!=id_to_find) && (i<n_data)) {
         i++;
     }
 
@@ -77,6 +77,7 @@ void remove_data(mytype database[10], int &n_data, int id_to_delete) {
         for (i=idx; i<n_data; i++) {
             database[i] = database[i+1];
         }
+        cout<<"Delete Succeeded";
     }
     else {
         cout<<"ID not found"<<endl;
@@ -98,7 +99,7 @@ void view_data(mytype database[10], int n_data) {
         cout<<"ID       : "<<database[i].id<<endl;
         cout<<"Name     : "<<database[i].name<<endl;
         cout<<"Class    : "<<database[i].classroom<<endl;
-        cout<<"Score    : "<<database[i].score<<endl;
+        cout<<"Score    : "<<database[i].score<<endl<<endl;
     }
 
     // ===========================
@@ -109,14 +110,37 @@ void sort_data(mytype database[10], int n_data) {
      TODO:  sort data inside database
     */
     mytype d;
+    int i, j;
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
 
-
-
-
+    for (i=1; i<n_data; i++) {
+        d = database[i];
+        j = i;
+        while ((j>0) && (d.id < database[j-1].id)) {
+            database[j] = database[j-1];
+            j--;
+        }
+        database[j] = d;
+    }
 
     // ===========================
 }
 
+bool check_data(mytype database[10], mytype d, int n_data) {
+    /**
+     modify the menu so that user cannot insert two data with the same ID
+    */
+
+    int i=0;
+    while ((database[i].id!=d.id) && (i<n_data)) {
+        i++;
+    }
+
+    if (database[i].id==d.id) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}

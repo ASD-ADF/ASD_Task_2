@@ -10,5 +10,6 @@ int find_data(mytype database[10], int n_data, int id_to_find);
 void remove_data(mytype database[10], int &n_data, int id_to_delete);
 void view_data(mytype database[10], int n_data);
 void sort_data(mytype database[10], int n_data);
+bool check_data(mytype database[10], mytype d, int n_data);
 
 #endif // ARRAY_BASED_H_INCLUDED

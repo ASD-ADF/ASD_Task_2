@@ -52,6 +52,10 @@ int main() {
     cout<<endl;
 
     cout<<"Test Array Based Application Data"<<endl;
+
+    cout<<endl<<"press enter to continue"<<endl;
+    cin.get();
+    cin.get();
     menu();
     return 0;
 }
@@ -73,19 +77,44 @@ void menu() {
         cout<<"6. remove a data based on its ID"<<endl;
         cout<<"7. sort data based on its float variable"<<endl;
         cout<<"0. exit aplication"<<endl;
-        cout<<"input choice:";
+        cout<<"input choice : ";
         cin>>ch;
+        cout<<endl<<endl;
         switch(ch) {
         case 1:
             d = create_data();
-            add_new_data(database, n_data, d);
+            if ((check_data(database, d, n_data)) && (n_data!=0)) {
+                cout<<"Cannot insert two data with the same ID"<<endl;
+            }
+            else {
+                add_new_data(database, n_data, d);
+                cout<<"Create data succeed"<<endl;
+            }
+            cout<<endl<<"press enter to continue"<<endl;
+            cin.get();
+            cin.get();
+            cout<<endl<<endl<<endl;
             break;
         case 2:
             d = create_data();
-            add_new_priority_data(database, n_data, d);
+            if ((check_data(database, d, n_data)) && (n_data!=0)) {
+                cout<<"Cannot insert two data with the same ID"<<endl;
+            }
+            else {
+                add_new_priority_data(database, n_data, d);
+                cout<<"Create data succeed"<<endl;
+            }
+            cout<<endl<<"press enter to continue"<<endl;
+            cin.get();
+            cin.get();
+            cout<<endl<<endl<<endl;
             break;
         case 3:
             view_data( database,  n_data);
+            cout<<"press enter to continue"<<endl;
+            cin.get();
+            cin.get();
+            cout<<endl<<endl<<endl;
             break;
         case 4:
             cout<<"insert ID to find: ";
@@ -94,8 +123,12 @@ void menu() {
             if(idx!=-1) {
                 view_data(database[idx]);
             } else {
-                cout<<"data not found"<<endl;
+                cout<<"Data not found"<<endl;
             }
+            cout<<endl<<"press enter to continue"<<endl;
+            cin.get();
+            cin.get();
+            cout<<endl<<endl<<endl;
             break;
         case 5:
             cout<<"insert ID to edit: ";
@@ -103,24 +136,40 @@ void menu() {
             idx = find_data( database,  n_data,  id_to_find);
             if(idx!=-1) {
                 edit_data(database[idx]);
+                cout<<"Edit data succeed";
             } else {
-                cout<<"data not found"<<endl;
+                cout<<"Data not found"<<endl;
             }
+            cout<<endl<<"press enter to continue"<<endl;
+            cin.get();
+            cin.get();
+            cout<<endl<<endl<<endl;
             break;
         case 6:
             cout<<"insert ID to remove: ";
             cin>>id_to_remove;
             remove_data( database,  n_data,  id_to_remove);
+            cout<<endl<<"press enter to continue"<<endl;
+            cin.get();
+            cin.get();
+            cout<<endl<<endl<<endl;
             break;
         case 7:
             sort_data( database,  n_data);
             cout<<"Data Sorted"<<endl;
+            cout<<endl<<"press enter to continue"<<endl;
+            cin.get();
+            cin.get();
+            cout<<endl<<endl<<endl;
             break;
         case 0:
             cout<<"Thank You"<<endl;
             break;
         default:
             cout<<"Wrong Input"<<endl;
+            cout<<"press enter to continue"<<endl<<endl;
+            cin.get();
+            cin.get();
             break;
         }
     } while (ch!=0);
