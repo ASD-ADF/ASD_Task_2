@@ -2,9 +2,9 @@
 #include "my_data.h"
 
 /**
-    CLASS      :
-    NAME       :
-    STUDENT ID :
+    CLASS      : IF-41-08
+    NAME       : Nuurshadieq
+    STUDENT ID : 1301171087
 **/
 
 mytype create_data() {
@@ -15,9 +15,14 @@ mytype create_data() {
     mytype d;
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
+    cout<<"ID: ";
+    cin>>d.id;
+    cout<<"Name: ";
+    cin>>d.name;
+    cout<<"NIM: ";
+    cin>>d.nim;
+    cout<<"Nilai: ";
+    cin>>d.nilai;
 
 
 
@@ -32,7 +37,10 @@ void view_data(mytype d) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    cout<<"ID: "<<d.id<<endl;
+    cout<<"Name: "<<d.name<<endl;
+    cout<<"NIM: "<<d.nim<<endl;
+    cout<<"Nilai: "<<d.nilai<<endl;
 
 
 
@@ -50,7 +58,29 @@ void edit_data(mytype &d) {
 
     // ===========================
     // YOUR CODE HERE
-        cout<<"your code here"<<endl;
+        mytype temp;
+        string new_name;
+        string new_nim;
+        float new_nilai;
+        temp.id = d.id;
+        cout<<"Old Name: "<<d.name<<endl;
+        cout<<"New Name: ";
+        cin>>new_name;
+        temp.name = new_name;
+        cout<<endl;
+        cout<<"Old NIM: "<<d.nim<<endl;
+        cout<<"New NIM: ";
+        cin>>new_nim;
+        temp.nim = new_nim;
+        cout<<endl;
+        cout<<"Old Nilai: "<<d.nilai<<endl;
+        cout<<"New Nilai: ";
+        cin>>new_nilai;
+        temp.nilai = new_nilai;
+        cout<<endl;
+
+        d = temp;
+
 
 
 

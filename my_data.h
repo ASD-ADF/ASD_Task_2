@@ -20,10 +20,16 @@ struct mytype {
     //=================================================
     // YOUR CODE STARTS HERE
 
+    int id;
+    string name;
+    string nim;
+    float nilai;
+
 
     // YOUR CODE ENDS HERE
     //=================================================
 };
+
 
 
 mytype create_data();
