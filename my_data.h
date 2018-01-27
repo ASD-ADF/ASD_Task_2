@@ -10,7 +10,8 @@ using namespace std;
     STUDENT ID :
 **/
 
-struct mytype {
+struct mytype
+{
     /**
      TODO:  create a new Data type with specification:
             - an integer variable acted as an ID
@@ -19,8 +20,9 @@ struct mytype {
     */
     //=================================================
     // YOUR CODE STARTS HERE
-
-
+    int stdntid;
+    string stdntclass, stdntname;
+    float stdntgpa;
     // YOUR CODE ENDS HERE
     //=================================================
 };
