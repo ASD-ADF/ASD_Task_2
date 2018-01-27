@@ -13,11 +13,9 @@ void add_new_data(mytype database[10], int &n_data, mytype d) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
 
-
-
-
+    database[n_data] = d;
+    n_data++;
 
     // ===========================
 }
@@ -29,11 +27,13 @@ void add_new_priority_data(mytype database[10], int &n_data, mytype d) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
 
-
-
-
+    int i;
+    for (i=n_data; i>0; i--) {
+        database[i+1] = database[i];
+    }
+    database[0] = d;
+    n_data++;
 
     // ===========================
 }
@@ -46,14 +46,20 @@ int find_data(mytype database[10], int n_data, int id_to_find) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
 
+    int i=0;
+    while ((database[i].id!=id_to_find)&& (i<n_data)) {
+        i++;
+    }
 
-
-
+    if (database[i].id==id_to_find) {
+        return i;
+    }
+    else {
+        return -1;
+    }
 
     // ===========================
-    return -1;
 }
 
 void remove_data(mytype database[10], int &n_data, int id_to_delete) {
@@ -63,11 +69,18 @@ void remove_data(mytype database[10], int &n_data, int id_to_delete) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
 
+    int i, idx;
+    idx = find_data( database,  n_data,  id_to_delete);
 
-
-
+    if (idx!=-1) {
+        for (i=idx; i<n_data; i++) {
+            database[i] = database[i+1];
+        }
+    }
+    else {
+        cout<<"ID not found"<<endl;
+    }
 
     // ===========================
 }
@@ -79,11 +92,14 @@ void view_data(mytype database[10], int n_data) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
 
-
-
-
+    int i;
+    for(i=0; i<n_data; i++) {
+        cout<<"ID       : "<<database[i].id<<endl;
+        cout<<"Name     : "<<database[i].name<<endl;
+        cout<<"Class    : "<<database[i].classroom<<endl;
+        cout<<"Score    : "<<database[i].score<<endl;
+    }
 
     // ===========================
 }
