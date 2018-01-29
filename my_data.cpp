@@ -13,15 +13,15 @@ mytype create_data() {
             and assign the value of new data
     */
     mytype d;
-    // ===========================
-    // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    cout<<"Masukkan nama  : ";
+    cin>>d.nama;
+    cout<<"Masukkan nim   : ";
+    cin>>d.id;
+    cout<<"Masukkan kelas : ";
+    cin>>d.kelas;
+    cout<<"Masukkan nilai : ";
+    cin>>d.nilai;
 
-
-
-
-
-    // ===========================
     return d;
 }
 
@@ -29,16 +29,11 @@ void view_data(mytype d) {
     /**
      TODO:  view the content of data d
     */
+ cout<<"nama  : "<<d.nama<<" "<<endl;
+ cout<<"nim   : "<<d.id<<" "<<endl;
+ cout<<"kelas : "<<d.kelas<<" "<<endl;
+ cout<<"nilai : "<<d.nilai<<" "<<endl;
 
-    // ===========================
-    // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
-    // ===========================
 }
 
 
@@ -48,14 +43,11 @@ void edit_data(mytype &d) {
             the ID must not be modified
     */
 
-    // ===========================
-    // YOUR CODE HERE
-        cout<<"your code here"<<endl;
-
-
-
-
-
-    // ===========================
+   cout<<"Masukkan nama   : ";
+    cin>>d.nama;
+    cout<<"Masukkan kelas : ";
+    cin>>d.kelas;
+    cout<<"Masukkan nilai : ";
+    cin>>d.nilai;
 }
 

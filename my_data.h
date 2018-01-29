@@ -17,12 +17,11 @@ struct mytype {
             - two other variables
             - a float variable
     */
-    //=================================================
-    // YOUR CODE STARTS HERE
+    string nama;
+    int id;
+    string kelas;
+    float nilai;
 
-
-    // YOUR CODE ENDS HERE
-    //=================================================
 };
 
 

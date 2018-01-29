@@ -17,8 +17,6 @@ void add_new_data(mytype database[10], int &n_data, mytype d) {
 
 
 
-
-
     // ===========================
 }
 
