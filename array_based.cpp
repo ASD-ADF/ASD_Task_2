@@ -1,8 +1,8 @@
 #include "array_based.h"
 /**
-    CLASS      :
-    NAME       :
-    STUDENT ID :
+    CLASS      :    IF-41-08
+    NAME       :    Intania Effendi
+    STUDENT ID :    1103130301
 **/
 
 
@@ -13,11 +13,13 @@ void add_new_data(mytype database[10], int &n_data, mytype d) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
 
+    database[n_data].id = d.id;
+    database[n_data].nama = d.nama;
+    database[n_data].kelas = d.kelas;
+    database[n_data].nilai = d.nilai;
 
-
-
+    n_data = n_data + 1;
 
     // ===========================
 }
@@ -29,12 +31,19 @@ void add_new_priority_data(mytype database[10], int &n_data, mytype d) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int i=0; mytype tmp[10];
+    while (i<=n_data) {
+        tmp[i]=database[i];
+        i++;
+    }
 
+    database[0]=d;
 
-
-
-
+    int j=0; n_data++;
+    while (j<=n_data) {
+        database[j+1] = tmp[j];
+        j++;
+    }
     // ===========================
 }
 
@@ -46,12 +55,14 @@ int find_data(mytype database[10], int n_data, int id_to_find) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    int i=0;
+    int found = -1;
+    while(found <0){
+        if(database[i].id == id_to_find){
+            return i;
+        }
+        i++;
+    }
     // ===========================
     return -1;
 }
@@ -63,12 +74,17 @@ void remove_data(mytype database[10], int &n_data, int id_to_delete) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int index = find_data( database,  n_data,  id_to_delete);
 
-
-
-
-
+    int j=index; n_data++;
+    if (index!=n_data) {
+        while (j<=n_data) {
+        database[j] = database[j+1];
+        j++;
+        }
+    }
+    n_data = n_data-2;
+    cout << n_data;
     // ===========================
 }
 
@@ -79,12 +95,11 @@ void view_data(mytype database[10], int n_data) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    int i = 0;
+    while (i<n_data) {
+        view_data(database[i]);
+        i++;
+    }
     // ===========================
 }
 
@@ -95,12 +110,16 @@ void sort_data(mytype database[10], int n_data) {
     mytype d;
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    for(int i=1;i<n_data;++i)
+    {
+        for(int j=0;j<(n_data-i);++j)
+            if(database[j].id>database[j+1].id)
+            {
+                d=database[j];
+                database[j]=database[j+1];
+                database[j+1]=d;
+            }
+    }
     // ===========================
 }
 
