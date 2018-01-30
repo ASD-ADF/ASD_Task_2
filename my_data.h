@@ -5,9 +5,9 @@
 using namespace std;
 
 /**
-    CLASS      :
-    NAME       :
-    STUDENT ID :
+    CLASS      :IF-41-08
+    NAME       : Muchtarom Yahya
+    STUDENT ID : 1301174052
 **/
 
 struct mytype {
