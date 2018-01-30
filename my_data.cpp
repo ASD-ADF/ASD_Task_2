@@ -2,7 +2,7 @@
 #include "my_data.h"
 
 /**
-     CLASS      : IF 41-08
+     CLASS     : IF 41-08
     NAME       : Muhammad Rayhan Alifinzi Ghiffari
     STUDENT ID : 1301174145
 **/
@@ -15,12 +15,20 @@ mytype create_data() {
     mytype d;
     // ===========================
     // YOUR CODE HERE
-    cout<<"Hello ! Please input your user data here : "<<endl;
-    cin>>
+    cout<<"Hello ! Please input your user data here : "<<endl<<endl;
+    cout<<"Student's Name : ";
+    cin>>d.nama;
 
+    cout<<"Student's Class : ";
+    cin>>d.kelas;
 
+    cout<<"Student's ID Number : ";
+    cin>>d.nim;
 
+    cout<<"Student's GPA : ";
+    cin>>d.nim;
 
+    cout<<endl;
 
     // ===========================
     return d;
@@ -33,11 +41,10 @@ void view_data(mytype d) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
+    cout<<"Student's Name : "<<d.nama<<endl;
+    cout<<"Student's Class : "<<d.kelas<<endl;
+    cout<<"Student's ID Number : "<<d.nim<<endl;
+    cout<<"Student's GPA : "<<d.nilai<<endl;
 
     // ===========================
 }
@@ -51,9 +58,20 @@ void edit_data(mytype &d) {
 
     // ===========================
     // YOUR CODE HERE
-        cout<<"your code here"<<endl;
 
+    cout<<" Student's Name : ";
+    cin>>d.nama;
 
+    cout<<"Student's Class : ";
+    cin>>d.kelas;
+
+    cout<<"Student's ID Number : ";
+    cin>>d.nim;
+
+    cout<<"Student's GPA : ";
+    cin>>d.nilai;
+
+    cout<<endl;
 
 
 

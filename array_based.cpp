@@ -13,11 +13,22 @@ void add_new_data(mytype database[10], int &n_data, mytype d) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int i;
+    bool duplicate = false;
+    for (i=0; i<=n_data; i++) {
+        if (database[i].nim==d.nim) {
 
+            cout<<"Hello, you cannot insert the data with the same ID."<<endl;<<endl;
+            duplicate = true;
+        }
+    }
 
-
-
+    if ( duplicate == false) {
+        database [n_data].nim = d.nim;
+        database [n_data].nama = d.nama;
+        database [n_data].kelas = d.kelas;
+        database [n_data].nilai = d.nilai;
+    }
 
     // ===========================
 }
