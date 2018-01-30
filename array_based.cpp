@@ -80,7 +80,21 @@ void remove_data(mytype database[10], int &n_data, int id_to_delete) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int i=0;
+    while ((i>=0) && (database[i].ID!=id_to_delete))
+    {
+        i++;
+    }
+
+    if ((i>=0) && (i<n_data))
+    {
+        while (i<n_data)
+        {
+            database[i++]=database[i];
+        }
+        n_data--;
+    }
+
 
 
 
@@ -120,7 +134,19 @@ void sort_data(mytype database[10], int n_data) {
     mytype d;
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    for (int i=n_data-1; i>=1; i--)
+    {
+        for (int j=1; j<=i; j++)
+        {
+            if (database[j-1].ID>database[j].ID)
+            {
+                d[1]=database[j-1];
+                database[j-1]=database[j];
+                database[j]=d[1];
+            }
+        }
+    }
+
 
 
 
