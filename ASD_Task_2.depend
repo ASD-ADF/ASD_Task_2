@@ -14,18 +14,19 @@
 1516979690 source:c:\users\andityaarifianto\documents\github\asd_task_2\my_data.cpp
 	"my_data.h"
 
-1517037650 source:e:\telkom university\github\asd_task_2\main.cpp
+1517326066 source:e:\telkom university\github\asd_task_2\main.cpp
 	"array_based.h"
 
 1517034773 e:\telkom university\github\asd_task_2\array_based.h
 	"my_data.h"
 
-1517031388 e:\telkom university\github\asd_task_2\my_data.h
+1517325883 e:\telkom university\github\asd_task_2\my_data.h
 	<iostream>
+	<stdio.h>
 
-1517038131 source:e:\telkom university\github\asd_task_2\array_based.cpp
+1517327191 source:e:\telkom university\github\asd_task_2\array_based.cpp
 	"array_based.h"
 
-1517031388 source:e:\telkom university\github\asd_task_2\my_data.cpp
+1517327007 source:e:\telkom university\github\asd_task_2\my_data.cpp
 	"my_data.h"
 

@@ -2,6 +2,7 @@
 #define MY_DATA_H_INCLUDED
 
 #include <iostream>
+#include <stdio.h>
 using namespace std;
 
 /**
@@ -21,7 +22,7 @@ struct mytype {
     // YOUR CODE STARTS HERE
 
     int id;
-    string name, classroom;
+    char name[30], classroom[10];
     float score;
 
     // YOUR CODE ENDS HERE

@@ -18,9 +18,12 @@ int main() {
 
     cout<<"Test Edit My New Data"<<endl;
     edit_data(d);
+    cout<<endl;
+
     cout<<"edit result"<<endl;
     view_data(d);
     cout<<endl;
+
     cout<<"is the data really edited? "<<endl;
     cout<<"make sure it can actually edit your data"<<endl;
     cout<<endl<<"press enter to continue"<<endl;
@@ -32,9 +35,11 @@ int main() {
     cout<<"Test Add Data to Database, Twice"<<endl;
     d = create_data();
     add_new_data(database, n_data, d);
+    cout<<endl;
     d = create_data();
     add_new_data(database, n_data, d);
     cout<<endl;
+
     cout<<"Test View Database"<<endl;
     view_data(database, n_data);
     cout<<endl;
@@ -42,19 +47,18 @@ int main() {
     cout<<"Test Add Priority Data to Database, Twice"<<endl;
     d = create_data();
     add_new_priority_data(database, n_data, d);
+    cout<<endl;
     d = create_data();
     add_new_priority_data(database, n_data, d);
     cout<<endl;
+
     cout<<"Test View Database"<<endl;
     view_data(database, n_data);
     cout<<endl;
     cin.get();
-    cout<<endl;
 
     cout<<"Test Array Based Application Data"<<endl;
-
     cout<<endl<<"press enter to continue"<<endl;
-    cin.get();
     cin.get();
     menu();
     return 0;
@@ -137,6 +141,7 @@ void menu() {
             if(idx!=-1) {
                 edit_data(database[idx]);
                 cout<<"Edit data succeed";
+                cout<<endl;
             } else {
                 cout<<"Data not found"<<endl;
             }
@@ -149,6 +154,7 @@ void menu() {
             cout<<"insert ID to remove: ";
             cin>>id_to_remove;
             remove_data( database,  n_data,  id_to_remove);
+            cout<<endl;
             cout<<endl<<"press enter to continue"<<endl;
             cin.get();
             cin.get();

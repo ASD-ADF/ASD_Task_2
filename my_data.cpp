@@ -17,8 +17,9 @@ mytype create_data() {
     // YOUR CODE HERE
 
     cout<<"Enter your ID    : "; cin>>d.id;
-    cout<<"Enter your Name  : "; cin>>d.name;
-    cout<<"Enter your Class : "; cin>>d.classroom;
+    cin.get();
+    cout<<"Enter your Name  : "; cin.getline(d.name, 30);
+    cout<<"Enter your Class : "; cin.getline(d.classroom, 10);
     cout<<"Enter your Score : "; cin>>d.score;
 
     // ===========================
@@ -51,8 +52,9 @@ void edit_data(mytype &d) {
     // ===========================
     // YOUR CODE HERE
 
-    cout<<"Enter your new Name  : "; cin>>d.name;
-    cout<<"Enter your new Class : "; cin>>d.classroom;
+    cin.get();
+    cout<<"Enter your new Name  : "; cin.getline(d.name, 30);
+    cout<<"Enter your new Class : "; cin.getline(d.classroom, 30);
     cout<<"Enter your new Score : "; cin>>d.score;
 
     // ===========================

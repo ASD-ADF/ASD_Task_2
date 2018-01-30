@@ -14,8 +14,7 @@ void add_new_data(mytype database[10], int &n_data, mytype d) {
     // ===========================
     // YOUR CODE HERE
 
-    database[n_data] = d;
-    n_data++;
+    database[n_data++] = d;
 
     // ===========================
 }
@@ -77,6 +76,7 @@ void remove_data(mytype database[10], int &n_data, int id_to_delete) {
         for (i=idx; i<n_data; i++) {
             database[i] = database[i+1];
         }
+        n_data--;
         cout<<"Delete Succeeded";
     }
     else {
@@ -117,7 +117,7 @@ void sort_data(mytype database[10], int n_data) {
     for (i=1; i<n_data; i++) {
         d = database[i];
         j = i;
-        while ((j>0) && (d.id < database[j-1].id)) {
+        while ((j>0) && (d.score < database[j-1].score)) {
             database[j] = database[j-1];
             j--;
         }
