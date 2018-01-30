@@ -96,7 +96,15 @@ void view_data(mytype database[10], int n_data) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int i=0;
+    while(i<n_data){
+        cout<<"NIM      : "<<database[i].id<<endl;
+        cout<<"Nama     : "<<database[i].name<<endl;
+        cout<<"Kelas    : "<<database[i].kel<<endl;
+        cout<<"Nilai    : "<<database[i].nilai<<endl;
+        i++;
+    }
+    cout<<endl;
 
 
 
