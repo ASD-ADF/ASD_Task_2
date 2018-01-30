@@ -4,6 +4,7 @@
 #include "my_data.h"
 
 
+
 void add_new_data(mytype database[10], int &n_data, mytype d);
 void add_new_priority_data(mytype database[10], int &n_data, mytype d);
 int find_data(mytype database[10], int n_data, int id_to_find);

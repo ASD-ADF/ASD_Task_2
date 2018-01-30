@@ -1,4 +1,5 @@
 #include "array_based.h"
+
 /**
     CLASS      :
     NAME       :
@@ -13,7 +14,8 @@ void add_new_data(mytype database[10], int &n_data, mytype d) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    database[n_data]=d;
+    n_data++;
 
 
 
@@ -29,7 +31,20 @@ void add_new_priority_data(mytype database[10], int &n_data, mytype d) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int x=0;
+    int i=0;
+    database[n_data]=d;
+    int n=n_data;
+    mytype temp[10];
+    for (n;n>i;n--){
+        temp[x]=database[n];
+        database[n]=database[n-1];
+        database[n-1]=temp[x];
+    }
+    while (database[i].ID!=0) {
+        i++;
+    }
+    n_data=i;
 
 
 
@@ -46,8 +61,11 @@ int find_data(mytype database[10], int n_data, int id_to_find) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
+    for (int i=0;i<n_data;i++) {
+        if (database[i].ID==id_to_find) {
+            return i;
+        }
+    }
 
 
 
@@ -79,7 +97,15 @@ void view_data(mytype database[10], int n_data) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int i=0;
+    while (i<n_data) {
+            cout<<"ID    :"<<database[i].ID<<endl;
+            cout<<"Nama  :"<<database[i].nama<<endl;
+            cout<<"Kelas :"<<database[i].kelas<<endl;
+            cout<<"Nilai :"<<database[i].nilai<<endl;
+            i++;
+            }
+            cout<<endl;
 
 
 
