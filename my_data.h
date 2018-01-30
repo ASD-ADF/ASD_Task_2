@@ -19,10 +19,10 @@ struct mytype {
     */
     //=================================================
     // YOUR CODE STARTS HERE
-    string kelas;
-    string nama;
-    int nim;
-    float nilai;
+    string nama; //The name for the Student
+    string kelas; // The class for the student
+    int nim; // The ID Number for the said Student
+    float nilai; // The GPA or Final score for the Student
 
     // YOUR CODE ENDS HERE
     //=================================================
