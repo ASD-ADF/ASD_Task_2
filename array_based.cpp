@@ -1,8 +1,8 @@
 #include "array_based.h"
 /**
-    CLASS      :
-    NAME       :
-    STUDENT ID :
+    CLASS      : IF-41-08
+    NAME       : Arbi Nourman Baruni
+    STUDENT ID : 1301174030
 **/
 
 
