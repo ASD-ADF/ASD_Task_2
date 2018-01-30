@@ -6,37 +6,44 @@
 **/
 
 
-void add_new_data(mytype database[10], int &n_data, mytype d) {
+void add_new_data(mytype database[10], int &n_data, mytype d)
+{
     /**
     TODO:   add the new data d inside the database,
             the new data will be located at the end of database array
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    database[n_data++] = d;
 
 
 
     // ===========================
 }
 
-void add_new_priority_data(mytype database[10], int &n_data, mytype d) {
+void add_new_priority_data(mytype database[10], int &n_data, mytype d)
+{
     /**
     TODO:   add the new data d inside the database,
             the new data will be located at the front of database array
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
+    int jmldata = n_data++;
+    while (jmldata>=0)
+    {
+        database[jmldata] = database[jmldata-1];
+        jmldata--;
+    }
+    database[0] = d;
 
 
 
     // ===========================
 }
 
-int find_data(mytype database[10], int n_data, int id_to_find) {
+int find_data(mytype database[10], int n_data, int id_to_find)
+{
     /**
     TODO:   find a data inside the database based on its id
             the function will return the index of the searched data
@@ -44,24 +51,41 @@ int find_data(mytype database[10], int n_data, int id_to_find) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
+    int i = 0;
+    while (i<=n_data && database[i].id != id_to_find)
+    {
+        i++;
+    }
+    if (i<=n_data)
+    {
+        return i;
+    }
 
     // ===========================
     return -1;
 }
 
-void remove_data(mytype database[10], int &n_data, int id_to_delete) {
+void remove_data(mytype database[10], int &n_data, int id_to_delete)
+{
     /**
     TODO:   find a data inside the database based on its id
             then remove such found data from database
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int i = find_data(database, n_data, id_to_delete);
+    if (i!=-1)
+    {
+        for(int j = i; j <= n_data; j++)
+        {
+            database[j] = database[j-1];
+        }
+    }
+    else
+    {
+        cout<<"What the hell is that?"<<endl;
+    }
+    n_data--;
 
 
 
@@ -70,35 +94,49 @@ void remove_data(mytype database[10], int &n_data, int id_to_delete) {
     // ===========================
 }
 
-void view_data(mytype database[10], int n_data) {
+void view_data(mytype database[10], int n_data)
+{
     /**
      TODO:  loop through database
             and view all data inside database
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
+    int i;
+    for (i=0; i<n_data; i++)
+    {
+        cout<<"Hasil Pencarian Data Mahasiswa: "<<endl;
+        cout<<"Nama : "<<database[i].nama<<endl;
+        cout<<"NIM  : "<<database[i].id<<endl;
+        cout<<"Kelas: "<<database[i].kelas<<endl;
+        cout<<"Nilai: "<<database[i].nilai<<endl;
+    }
 
     // ===========================
 }
 
-void sort_data(mytype database[10], int n_data) {
+void sort_data(mytype database[10], int n_data)
+{
     /**
      TODO:  sort data inside database
     */
     mytype d;
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int i,j;
+    for (i=1; i<=n_data; i++)
+    {
+        d = database[i];
+        int j=i;
+        while(j>0 && d.nilai > database[j-1].nilai)
+        {
+            database[j] = database[j-1];
+            j--;
+        }
+        database[j] = d;
+    }
 
 
-
-
-
-    // ===========================
+        // ===========================
 }
 

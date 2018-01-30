@@ -43,7 +43,7 @@ void edit_data(mytype &d) {
             the ID must not be modified
     */
 
-   cout<<"Masukkan nama   : ";
+   cout<<"Masukkan nama  : ";
     cin>>d.nama;
     cout<<"Masukkan kelas : ";
     cin>>d.kelas;
