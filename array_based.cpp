@@ -14,8 +14,19 @@ void add_new_data(mytype database[10], int &n_data, mytype d) {
     */
     // ===========================
     // YOUR CODE HERE
+    int i=0;
+    bool t=false;
+    while (i<=n_data) {
+        if(database[i].ID==d.ID) {
+                cout<<"tidak boleh menginput id yang sama"<<endl;
+                t=true;
+        }
+        i++;
+    }
+    if (t==false) {
     database[n_data]=d;
     n_data++;
+    }
 
 
 
@@ -31,20 +42,32 @@ void add_new_priority_data(mytype database[10], int &n_data, mytype d) {
     */
     // ===========================
     // YOUR CODE HERE
+
     int x=0;
     int i=0;
-    database[n_data]=d;
-    int n=n_data;
-    mytype temp[10];
-    for (n;n>i;n--){
-        temp[x]=database[n];
-        database[n]=database[n-1];
-        database[n-1]=temp[x];
+    int j=0;
+    bool t=false;
+    while (j<=n_data) {
+        if(database[i].ID==d.ID) {
+                cout<<"tidak boleh menginput id yang sama"<<endl;
+                t=true;
+        }
+        j++;
     }
-    while (database[i].ID!=0) {
-        i++;
+    if (t==false) {
+        database[n_data]=d;
+        int n=n_data;
+        mytype temp[10];
+        for (n;n>i;n--){
+            temp[x]=database[n];
+            database[n]=database[n-1];
+            database[n-1]=temp[x];
+        }
+        while (database[i].ID!=0) {
+            i++;
+        }
+        n_data=i;
     }
-    n_data=i;
 
 
 
@@ -81,7 +104,18 @@ void remove_data(mytype database[10], int &n_data, int id_to_delete) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int i=0;
+    while ((i>=0) && (database[i].ID!=id_to_delete)) {
+        i++;
+    }
+
+    if ((i>=0) && (i<n_data)) {
+        while (i<n_data) {
+            database[i++]=database[i];
+        }
+        n_data--;
+    }
+
 
 
 
@@ -118,10 +152,18 @@ void sort_data(mytype database[10], int n_data) {
     /**
      TODO:  sort data inside database
     */
-    mytype d;
+    mytype d[10];
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    for (int i=n_data-1;i>=1;i--) {
+        for (int j=1;j<=i;j++) {
+            if (database[j-1].ID>database[j].ID) {
+                d[1]=database[j-1];
+                database[j-1]=database[j];
+                database[j]=d[1];
+            }
+        }
+    }
 
 
 
