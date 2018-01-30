@@ -48,7 +48,7 @@ void add_new_priority_data(mytype database[10], int &n_data, mytype d) {
     int j=0;
     bool t=false;
     while (j<=n_data) {
-        if(database[i].ID==d.ID) {
+        if(database[j].ID==d.ID) {
                 cout<<"tidak boleh menginput id yang sama"<<endl;
                 t=true;
         }
