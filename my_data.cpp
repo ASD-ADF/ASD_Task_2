@@ -2,9 +2,9 @@
 #include "my_data.h"
 
 /**
-    CLASS      :
-    NAME       :
-    STUDENT ID :
+     CLASS      : IF 41-08
+    NAME       : Muhammad Rayhan Alifinzi Ghiffari
+    STUDENT ID : 1301174145
 **/
 
 mytype create_data() {
@@ -15,7 +15,8 @@ mytype create_data() {
     mytype d;
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    cout<<"Hello ! Please input your user data here : "<<endl;
+    cin>>
 
 
 
