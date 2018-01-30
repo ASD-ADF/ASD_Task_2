@@ -13,8 +13,12 @@ void add_new_data(mytype database[10], int &n_data, mytype d) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
+    /**cin<<database.id[n_data++]<<endl;
+    cin<<database.nama[n_data++]<<endl;
+    cin<<database.nim[n_data++]<<endl;
+    cin<<database.ip[n_data++]<<endl;
+    */
+    cout<<"hi"<<endl;
 
 
 
@@ -29,8 +33,11 @@ void add_new_priority_data(mytype database[10], int &n_data, mytype d) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
+/**    cin<<database.id[n_data--]<<endl;
+    cin<<database.nama[n_data--]<<endl;
+    cin<<database.nim[n_data--]<<endl;
+    cin<<database.ip[n_data--]<<endl;
+*/
 
 
 
@@ -46,8 +53,12 @@ int find_data(mytype database[10], int n_data, int id_to_find) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
+/**    for(int i = 0; i<=n_data;i++){
+        if (database.id[i] == database.id[id_to_find]){
+            return id_to_find;
+        }
+    }
+*/
 
 
 
@@ -69,6 +80,7 @@ void remove_data(mytype database[10], int &n_data, int id_to_delete) {
 
 
 
+
     // ===========================
 }
 
@@ -79,7 +91,14 @@ void view_data(mytype database[10], int n_data) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int i = 0;
+    while (i <= n_data){
+        cout<<database.id[i]<<endl;
+        cout<<database.nama[i]<<endl;
+        cout<<database.nim[i]<<endl;
+        cout<<database.ip[i]<<endl;
+        i++;
+    }
 
 
 
