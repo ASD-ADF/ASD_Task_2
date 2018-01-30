@@ -53,8 +53,6 @@ void edit_data(mytype &d)
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"Student ID    : ";
-    cin>>d.stdntid;
     cout<<"Student Name  : ";
     cin>>d.stdntname;
     cout<<"Student Class : ";
