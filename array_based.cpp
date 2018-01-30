@@ -1,8 +1,8 @@
 #include "array_based.h"
 /**
-    CLASS      :
-    NAME       :
-    STUDENT ID :
+    CLASS      : IF-39-INT
+    NAME       : ALIFIANDO DESTARA YUSUF
+    STUDENT ID : 1301153621
 **/
 
 
@@ -13,12 +13,9 @@ void add_new_data(mytype database[10], int &n_data, mytype d) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    d.i=(float)n_data;
+    database[n_data]=d;
+    n_data++;
     // ===========================
 }
 
@@ -28,13 +25,17 @@ void add_new_priority_data(mytype database[10], int &n_data, mytype d) {
             the new data will be located at the front of database array
     */
     // ===========================
-    // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    mytype tmpa, tmpb;
+    d.i=(float)n_data;
+    tmpb=d;
+    int i=0;
+    while (i<=n_data) {
+        tmpa=database[i];
+        database[i]=tmpb;
+        tmpb=tmpa;
+        i++;
+    }
+    n_data++;
     // ===========================
 }
 
@@ -45,13 +46,16 @@ int find_data(mytype database[10], int n_data, int id_to_find) {
             the function will return -1 if such data is not found
     */
     // ===========================
-    // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    int i = 0;
+	while (i <= n_data && database[i].id != id_to_find) {
+		i++;
+	}
+	if (i <= n_data) {
+		return i;
+	}
+	else {
+		return -1;
+	}
     // ===========================
     return -1;
 }
@@ -62,13 +66,12 @@ void remove_data(mytype database[10], int &n_data, int id_to_delete) {
             then remove such found data from database
     */
     // ===========================
-    // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    int i = find_data(database, n_data, id_to_delete);
+	while (i <= n_data) {
+		database[i] = database[i + 1];
+		i++;
+	}
+	n_data--;
     // ===========================
 }
 
@@ -78,13 +81,9 @@ void view_data(mytype database[10], int n_data) {
             and view all data inside database
     */
     // ===========================
-    // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    for (int i = 0; i < n_data; i++) {
+		view_data(database[i]);
+	}
     // ===========================
 }
 
@@ -94,13 +93,17 @@ void sort_data(mytype database[10], int n_data) {
     */
     mytype d;
     // ===========================
-    // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    for (int i = 0; i <= n_data; i++) {
+		for (int j = 0; j <= n_data; i++) {
+			if (database[i].i > database[j].i) {
+				d = database[i];
+				database[i] = database[j];
+				database[j] = d;
+			}
+			j++;
+		}
+		i++;
+	}
     // ===========================
 }
 
