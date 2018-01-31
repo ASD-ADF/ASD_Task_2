@@ -7,18 +7,18 @@ int n_data = 0;         // integer to trach the number of data inside database a
 
 
 int main() {
-    cout<<"Test My Data"<<endl;
+    cout<<"***** Test My Data *****"<<endl;
     mytype d;
     d = create_data();
     cout<<endl;
 
-    cout<<"Test View My New Data"<<endl;
+    cout<<"***** Test View My New Data *****"<<endl;
     view_data(d);
     cout<<endl;
 
-    cout<<"Test Edit My New Data"<<endl;
+    cout<<"***** Test Edit My New Data *****"<<endl;
     edit_data(d);
-    cout<<"edit result"<<endl;
+    cout<<"***** Edit Result *****"<<endl;
     view_data(d);
     cout<<endl;
     cout<<"is the data really edited? "<<endl;
@@ -29,35 +29,34 @@ int main() {
     cout<<endl;
 
     n_data = 0;
-    cout<<"Test Add Data to Database, Twice"<<endl;
+    cout<<"***** Test Add Data to Database, Twice *****"<<endl;
     d = create_data();
     add_new_data(database, n_data, d);
     d = create_data();
     add_new_data(database, n_data, d);
     cout<<endl;
-    cout<<"Test View Database"<<endl;
+    cout<<"***** Test View Database *****"<<endl;
     view_data(database, n_data);
     cout<<endl;
 
-    cout<<"Test Add Priority Data to Database, Twice"<<endl;
+    cout<<"***** Test Add Priority Data to Database, Twice *****"<<endl;
     d = create_data();
     add_new_priority_data(database, n_data, d);
     d = create_data();
     add_new_priority_data(database, n_data, d);
     cout<<endl;
-    cout<<"Test View Database"<<endl;
+    cout<<"***** Test View Database *****"<<endl;
     view_data(database, n_data);
     cout<<endl;
     cin.get();
     cout<<endl;
 
-    cout<<"Test Array Based Application Data"<<endl;
+    cout<<"***** Test Array Based Application Data *****"<<endl;
     menu();
     return 0;
 }
 
 void menu() {
-    n_data = 0;
     mytype d;
     int idx;
     int ch;
