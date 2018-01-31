@@ -5,12 +5,19 @@
 using namespace std;
 
 /**
-    CLASS      :
-    NAME       :
-    STUDENT ID :
+    CLASS      : IF-40-INT
+    NAME       : Randy Kustiwa Koesma
+    STUDENT ID : 1301162472
 **/
 
 struct mytype {
+    typedef int number;
+    typedef string nmc;
+    typedef float real;
+    number nim;
+    nmc nama;
+    nmc kelas;
+    real berat;
     /**
      TODO:  create a new Data type with specification:
             - an integer variable acted as an ID
@@ -19,7 +26,6 @@ struct mytype {
     */
     //=================================================
     // YOUR CODE STARTS HERE
-
 
     // YOUR CODE ENDS HERE
     //=================================================
