@@ -14,7 +14,7 @@
 1516979690 source:c:\users\andityaarifianto\documents\github\asd_task_2\my_data.cpp
 	"my_data.h"
 
-1517293072 source:c:\users\gl553vd\downloads\documents\dap\strukdat\asd task_1\asd_task_2\array_based.cpp
+1517334580 source:c:\users\gl553vd\downloads\documents\dap\strukdat\asd task_1\asd_task_2\array_based.cpp
 	"array_based.h"
 
 1517293072 c:\users\gl553vd\downloads\documents\dap\strukdat\asd task_1\asd_task_2\array_based.h
@@ -23,6 +23,12 @@
 1517294800 c:\users\gl553vd\downloads\documents\dap\strukdat\asd task_1\asd_task_2\my_data.h
 	<iostream>
 
-1517293072 source:c:\users\gl553vd\downloads\documents\dap\strukdat\asd task_1\asd_task_2\main.cpp
+1517335390 source:c:\users\gl553vd\downloads\documents\dap\strukdat\asd task_1\asd_task_2\main.cpp
 	"array_based.h"
+
+1517406472 source:c:\users\gl553vd\downloads\documents\dap\strukdat\asd task_1\asd_task_2\my_data.cpp
+	<conio.h>
+	<string>
+	"my_data.h"
+	<stdio.h>
 

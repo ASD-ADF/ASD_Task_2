@@ -1,10 +1,12 @@
-
+#include <conio.h>
+#include <string>
 #include "my_data.h"
+#include <stdio.h>
 
 /**
-    CLASS      :
-    NAME       :
-    STUDENT ID :
+    CLASS      : IF-41-08
+    NAME       : Hafizh Fadhilah R B
+    STUDENT ID : 1301170404
 **/
 
 mytype create_data() {
@@ -16,13 +18,13 @@ mytype create_data() {
     // ===========================
     // YOUR CODE HERE
     cout<<" ID  : ";
-    cin>>mytype.id>>endl;
+    cin>>d.id;
     cout<<"Nama : ";
-    cin>>mytype.nama>>endl;
+    cin>>d.nama;
     cout<<"NIM  : ";
-    cin>>mytype.nim>>endl;
+    cin>>d.nim;
     cout<<"IPK  : ";
-    cin>>mytype.ip>>endl;
+    cin>>d.ip;
 
 
 
@@ -39,10 +41,10 @@ void view_data(mytype d) {
 
     // ===========================
     // YOUR CODE HERE
-    cout<<"ID   : "<<mytype.id<<endl;
-    cout<<"Nama : "<<mytype.nama<<endl;
-    cout<<"NIM  : "<<mytype.nim<<endl;
-    cout<<"IPK  : "<<mytype.ip<<endl;
+    cout<<"ID   : "<<d.id<<endl;
+    cout<<"Nama : "<<d.nama<<endl;
+    cout<<"NIM  : "<<d.nim<<endl;
+    cout<<"IPK  : "<<d.ip<<endl;
 
 
 
@@ -60,9 +62,12 @@ void edit_data(mytype &d) {
 
     // ===========================
     // YOUR CODE HERE
-        cout<<"Nama : "; cin<<mytype.nama<<endl;
-        cout<<"NIM  : "; cin<<mytype.nim<<endl;
-        cout<<"IPK  : "; cin<<mytype.ip<<endl;
+        cout<<"Nama : ";
+        cin>>d.nama;
+        cout<<"NIM  : ";
+        cin>>d.nim;
+        cout<<"IPK  : ";
+        cin>>d.ip;
 
 
 

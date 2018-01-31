@@ -1,8 +1,8 @@
 #include "array_based.h"
 /**
-    CLASS      :
-    NAME       :
-    STUDENT ID :
+    CLASS      :IF- 41-08
+    NAME       :hafizh fadhilah radi briantama
+    STUDENT ID :1301170404
 **/
 
 
@@ -13,12 +13,9 @@ void add_new_data(mytype database[10], int &n_data, mytype d) {
     */
     // ===========================
     // YOUR CODE HERE
-    /**cin<<database.id[n_data++]<<endl;
-    cin<<database.nama[n_data++]<<endl;
-    cin<<database.nim[n_data++]<<endl;
-    cin<<database.ip[n_data++]<<endl;
-    */
-    cout<<"hi"<<endl;
+    database[n_data]=d;
+    n_data++;
+
 
 
 
@@ -33,11 +30,20 @@ void add_new_priority_data(mytype database[10], int &n_data, mytype d) {
     */
     // ===========================
     // YOUR CODE HERE
-/**    cin<<database.id[n_data--]<<endl;
-    cin<<database.nama[n_data--]<<endl;
-    cin<<database.nim[n_data--]<<endl;
-    cin<<database.ip[n_data--]<<endl;
-*/
+    int x=0;
+    int i=0;
+    database[n_data]=d;
+    int n=n_data;
+    mytype temp[10];
+    for (n;n>i;n--){
+        temp[x]=database[n-1];
+        database[n]=database[n-1];
+        database[n-1]=temp[x];
+    }
+    while (database[i].id!=0){
+        i++;
+    }
+    n_data=i;
 
 
 
@@ -53,12 +59,11 @@ int find_data(mytype database[10], int n_data, int id_to_find) {
     */
     // ===========================
     // YOUR CODE HERE
-/**    for(int i = 0; i<=n_data;i++){
-        if (database.id[i] == database.id[id_to_find]){
-            return id_to_find;
+    for(int i = 0;i=n_data;i++){
+        if (database[i].id==id_to_find){
+            return i;
         }
     }
-*/
 
 
 
@@ -74,8 +79,16 @@ void remove_data(mytype database[10], int &n_data, int id_to_delete) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
+    int i=0;
+    while((i>=0)&&(database[i].id!=id_to_delete)){
+        i++;
+    }
+    if((i>=0)&&(i<n_data)){
+        while (i<n_data){
+            database[i++]=database[i];
+        }
+        n_data--;
+    }
 
 
 
@@ -91,14 +104,13 @@ void view_data(mytype database[10], int n_data) {
     */
     // ===========================
     // YOUR CODE HERE
-    int i = 0;
-    while (i <= n_data){
-        cout<<database.id[i]<<endl;
-        cout<<database.nama[i]<<endl;
-        cout<<database.nim[i]<<endl;
-        cout<<database.ip[i]<<endl;
-        i++;
-    }
+       for(int i=0; i<n_data; i++){
+       cout<<"ID   : "<<database[i].id<<endl;
+       cout<<"Nama : "<<database[i].nama<<endl;
+       cout<<"NIM  : "<<database[i].nim<<endl;
+       cout<<"IPK  : "<<database[i].ip<<endl;
+   }
+
 
 
 
@@ -111,12 +123,17 @@ void sort_data(mytype database[10], int n_data) {
     /**
      TODO:  sort data inside database
     */
-    mytype d;
+    mytype d[10];
+    int j;
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
+    for (int i=n_data-1;i>=1;i--){
+        for (int j=1;j<=i;j++){
+            d[1]=database[j-1];
+            database[j-1]=database[j];
+            database[j]=d[1];
+        }
+    }
 
 
 
