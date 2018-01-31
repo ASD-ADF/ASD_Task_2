@@ -81,7 +81,7 @@ void remove_data(mytype database[10], int &n_data, int id_to_delete) {
     // ===========================
     // YOUR CODE HERE
     int i=0;
-    while ((i>=0) && (database[i].ID!=id_to_delete))
+    while ((i>=0) && (database[i].id!=id_to_delete))
     {
         i++;
     }
@@ -138,7 +138,7 @@ void sort_data(mytype database[10], int n_data) {
     {
         for (int j=1; j<=i; j++)
         {
-            if (database[j-1].ID>database[j].ID)
+            if (database[j-1].id>database[j].id)
             {
                 d[1]=database[j-1];
                 database[j-1]=database[j];
