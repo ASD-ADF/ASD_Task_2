@@ -18,10 +18,13 @@ struct mytype {
             - a float variable
     */
     //=================================================
-    // YOUR CODE STARTS HERE
+    string name;
+    string stat;
+    int ID;
+    float i;
 
 
-    // YOUR CODE ENDS HERE
+
     //=================================================
 };
 

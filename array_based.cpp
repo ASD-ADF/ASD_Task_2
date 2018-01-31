@@ -13,9 +13,9 @@ void add_new_data(mytype database[10], int &n_data, mytype d) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
+    d.i = (float)n_data;
+    database[n_data] = d;
+    n_data++;
 
 
 
@@ -29,7 +29,17 @@ void add_new_priority_data(mytype database[10], int &n_data, mytype d) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    mytype swap, place;
+    d.i = (float)n_data;
+    place = d;
+    for (int i = 0; i <= n_data; i++) {
+        swap = database[i];
+        database[i] = place;
+        place = swap;
+
+    }
+    n_data++;
+
 
 
 
@@ -46,7 +56,16 @@ int find_data(mytype database[10], int n_data, int id_to_find) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int i = 0;
+    while (i <= n_data && database[i].id != id_to_find) {
+        i++;
+    }
+    if (i <= n_data) {
+        return i;
+    }
+    else {
+        return -1;
+    }
 
 
 
@@ -62,8 +81,13 @@ void remove_data(mytype database[10], int &n_data, int id_to_delete) {
             then remove such found data from database
     */
     // ===========================
-    // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int i = find_data(database, n_data, id_to_delete);
+    while (i <= n_data) {
+        database[i] = database[i + 1];
+        i++;
+    }
+    n_data--;
+
 
 
 
@@ -79,7 +103,9 @@ void view_data(mytype database[10], int n_data) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    for (int i= 0; i < n_data; i++) {
+        view_data(database[i]);
+    }
 
 
 
@@ -95,7 +121,16 @@ void sort_data(mytype database[10], int n_data) {
     mytype d;
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    for (int i = 0; i <= n_data; i++) {
+        for (int j = 0; j <= n_data; i++)
+        if (database[i].i>database[j].i) {
+            d = database[i];
+            database[i] = database[j];
+            database[j] = d;
+        }
+        j++;
+    }
+    i++;
 
 
 
