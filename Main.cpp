@@ -7,6 +7,7 @@ int n_data = 0;         // integer to trach the number of data inside database a
 
 
 int main() {
+    menu();
     cout<<"Test My Data"<<endl;
     mytype d;
     d = create_data();

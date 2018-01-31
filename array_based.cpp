@@ -19,12 +19,12 @@ void add_new_priority_data(mytype database[10], int &n_data, mytype d) {
     TODO:   add the new data d inside the database,
             the new data will be located at the front of database array
     */
- int ndata;
- for (ndata= n_data; ndata>=0; ndata--)
- {
-     database[ndata+1] = database[ndata];
- }
+for (int i = n_data; i>= 0; i--)
+{
+    database[i] = database[i-1];
+}
  database[0] = d;
+ n_data++;
 }
 
 int find_data(mytype database[10], int n_data, int id_to_find) {
@@ -33,16 +33,20 @@ int find_data(mytype database[10], int n_data, int id_to_find) {
             the function will return the index of the searched data
             the function will return -1 if such data is not found
     */
-    int i=0;
-    while ( i<= n_data)
+    int i = 0;
+    while ((id_to_find != database[i].id) && (i<n_data))
     {
-        if(database[i].id == id_to_find)
-        {
-            return i;
-        }
         i++;
     }
-    return -1;
+    if (id_to_find == database[i].id)
+    {
+        return i;
+    }
+    else
+    {
+        return -1;
+    }
+
 }
 
 void remove_data(mytype database[10], int &n_data, int id_to_delete) {
@@ -50,26 +54,21 @@ void remove_data(mytype database[10], int &n_data, int id_to_delete) {
     TODO:   find a data inside the database based on its id
             then remove such found data from database
     */
-    int i=0;
-    int x;
-    while ( i<= n_data)
-    {
-        if(database[i].id == id_to_delete)
-        {
-             x=i;
-        }
-        i++;
-    }
+  int idx_delete = find_data(database, n_data, id_to_delete);
+  if (idx_delete != -1)
+  {
+      for (int i = idx_delete; i< n_data; i++)
+      {
+          database[i++] = database[i+1];
+      }
+      n_data--;
+  }
+      else
+      {
+          cout<<"Data Not Found"<<endl;
+      }
+  }
 
- if(x>0&&x<n_data)
- {
-     while(x<n_data)
-     {
-         database[x++] = database[x];
-     }
-     n_data--;
- }
-}
 
 void view_data(mytype database[10], int n_data) {
     /**
@@ -94,11 +93,11 @@ void sort_data(mytype database[10], int n_data) {
     */
     mytype d;
     int i,j;
-    for(i=1; i<= n_data; i++)
+    for(i=0; i<= n_data; i++)
     {
         d = database[i];
         int j=i;
-        while (j>0 && d.nilai > database[j-1].nilai)
+        while (j>1 && d.nilai > database[j-1].nilai)
         {
             database[j] = database[j-1];
             j--;
