@@ -61,8 +61,8 @@ void menu() {
     mytype d;
     int idx;
     int ch;
-    int id_to_find;
-    int id_to_remove;
+    int idf;
+    int idr;
     do {
         cout<<"MENU"<<endl;
         cout<<"1. add new data to the end of database"<<endl;
@@ -89,8 +89,8 @@ void menu() {
             break;
         case 4:
             cout<<"insert ID to find: ";
-            cin>>id_to_find;
-            idx = find_data( database,  n_data,  id_to_find);
+            cin>>idf;
+            idx = find_data( database,  n_data,  idf);
             if(idx!=-1) {
                 view_data(database[idx]);
             } else {
@@ -99,8 +99,8 @@ void menu() {
             break;
         case 5:
             cout<<"insert ID to edit: ";
-            cin>>id_to_find;
-            idx = find_data( database,  n_data,  id_to_find);
+            cin>>idf;
+            idx = find_data( database,  n_data,  idf);
             if(idx!=-1) {
                 edit_data(database[idx]);
             } else {
@@ -109,8 +109,8 @@ void menu() {
             break;
         case 6:
             cout<<"insert ID to remove: ";
-            cin>>id_to_remove;
-            remove_data( database,  n_data,  id_to_remove);
+            cin>>idr;
+            remove_data( database,  n_data,  idr);
             break;
         case 7:
             sort_data( database,  n_data);
