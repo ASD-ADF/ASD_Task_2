@@ -6,7 +6,8 @@ mytype database[10];
 int n_data = 0;         // integer to trach the number of data inside database array
 
 
-int main() {
+int main()
+ {
     cout<<"Test My Data"<<endl;
     mytype d;
     d = create_data();
