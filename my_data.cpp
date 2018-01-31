@@ -16,6 +16,7 @@ mytype create_data() {
     // ===========================
     // YOUR CODE HERE
     cout<<"Hello ! Please input your user data here : "<<endl<<endl;
+    cout<<endl;
     cout<<"Student's Name : ";
     cin>>d.nama;
 
