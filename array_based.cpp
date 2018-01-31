@@ -1,8 +1,8 @@
 #include "array_based.h"
 /**
-    CLASS      :
-    NAME       :
-    STUDENT ID :
+    CLASS      : IF-40-INT
+    NAME       : Muhammad Naimullah
+    STUDENT ID : 1301160449
 **/
 
 
@@ -13,14 +13,21 @@ void add_new_data(mytype database[10], int &n_data, mytype d) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int i = n_data;
+    if(database[n_data].id==0 && n_data<11){
+        database[n_data] = d;
+        n_data++;
+    }else {
+        add_new_data(database,n_data,d);
+    }
+}
 
 
 
 
 
     // ===========================
-}
+
 
 void add_new_priority_data(mytype database[10], int &n_data, mytype d) {
     /**
@@ -29,11 +36,17 @@ void add_new_priority_data(mytype database[10], int &n_data, mytype d) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
+    int i=n_data;
+    if(database[0].id!=0){
+        n_data++;
+        while(i>=0){
+            database[i+1]=database[i];
+            i--;
+        }
+        database[0]=d;
+    }else{
+        add_new_data(database,n_data,d);
+    }
 
     // ===========================
 }
@@ -46,12 +59,14 @@ int find_data(mytype database[10], int n_data, int id_to_find) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    int found = -1;
+    for(int i=1; i=n_data; i++){
+        while(found != 1){
+            if(database[i].id==id_to_find){
+                    found = 1;
+            }i++;
+        }
+    }return found;
     // ===========================
     return -1;
 }
@@ -63,14 +78,24 @@ void remove_data(mytype database[10], int &n_data, int id_to_delete) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int target = find_data(database,n_data,id_to_delete);
+    if(target!=-1){
+        int i = target;
+        for(i;i<n_data;i++){
+            database[i]=database[i+1];
+        }
+        n_data--;
+    }else {
+        cout<<"ID Not Found or Wrong"<<endl;
+    }
+}
 
 
 
 
 
     // ===========================
-}
+
 
 void view_data(mytype database[10], int n_data) {
     /**
@@ -79,12 +104,12 @@ void view_data(mytype database[10], int n_data) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    for(int i=1; i=n_data ; i++){
+        cout<<"Nama ="<<database[i].nama<<endl;
+        cout<<"ID ="<<database[i].id<<endl;
+        cout<<"Class ="<<database[i].kelas<<endl;
+        cout<<"Score ="<<database[i].nilai<<endl;
+    }
     // ===========================
 }
 
@@ -92,15 +117,25 @@ void sort_data(mytype database[10], int n_data) {
     /**
      TODO:  sort data inside database
     */
-    mytype d;
+    mytype temp;
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
-
-
-
+    int i = 0;
+    int j = 1;
+    if(database[i].id != 0){
+        for (i=0;i<n_data-1;i++){
+            for(j=i+1;j<n_data;j++){
+                if(database[i].nilai>database[j].nilai){
+                    temp = database[i];
+                    database[i]=database[j];
+                    database[j]=temp;
+                }
+            }
+        }
+    }else{
+        cout<<"Empty"<<endl;
+    }
     // ===========================
 }
+
 
