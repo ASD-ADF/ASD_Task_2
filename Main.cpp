@@ -57,7 +57,6 @@ int main() {
 }
 
 void menu() {
-    n_data = 0;
     mytype d;
     int idx;
     int ch;
