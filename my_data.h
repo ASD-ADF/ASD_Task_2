@@ -21,7 +21,9 @@ struct mytype {
     // YOUR CODE STARTS HERE
     int id;
     string nama;
-    string nim;
+    string matkul;
+    int nilai;
+
 
     // YOUR CODE ENDS HERE
     //=================================================

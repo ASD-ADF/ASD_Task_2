@@ -17,12 +17,15 @@
 1517312653 source:c:\users\yogi\documents\struktur data\asd_task_2\main.cpp
 	"array_based.h"
 
-1517317196 c:\users\yogi\documents\struktur data\asd_task_2\array_based.h
+1517401091 c:\users\yogi\documents\struktur data\asd_task_2\array_based.h
 	"my_data.h"
 
-1517316740 c:\users\yogi\documents\struktur data\asd_task_2\my_data.h
+1517401091 c:\users\yogi\documents\struktur data\asd_task_2\my_data.h
 	<iostream>
 
-1517318833 source:c:\users\yogi\documents\struktur data\asd_task_2\my_data.cpp
+1517401173 source:c:\users\yogi\documents\struktur data\asd_task_2\my_data.cpp
 	"my_data.h"
+
+1517401118 source:c:\users\yogi\documents\struktur data\asd_task_2\array_based.cpp
+	"array_based.h"
 
