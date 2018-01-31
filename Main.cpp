@@ -72,7 +72,7 @@ void menu() {
         cout<<"5. find and edit a data based on its ID"<<endl;
         cout<<"6. remove a data based on its ID"<<endl;
         cout<<"7. sort data based on its float variable"<<endl;
-        cout<<"0. exit aplication"<<endl;
+        cout<<"0. exit application"<<endl;
         cout<<"input choice:";
         cin>>ch;
         switch(ch) {
