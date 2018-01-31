@@ -7,6 +7,7 @@ int n_data = 0;         // integer to trach the number of data inside database a
 
 
 int main() {
+
     cout<<"Test My Data"<<endl;
     mytype d;
     d = create_data();
@@ -50,15 +51,15 @@ int main() {
     cout<<endl;
     cin.get();
     cout<<endl;
-
     cout<<"Test Array Based Application Data"<<endl;
     menu();
     return 0;
 }
 
 void menu() {
-    n_data = 0;
-    mytype d;
+
+    //n_data = 0;
+    mytype d ;
     int idx;
     int ch;
     int id_to_find;
