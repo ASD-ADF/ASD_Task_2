@@ -1,8 +1,8 @@
 #include "array_based.h"
 /**
-    CLASS      :
-    NAME       :
-    STUDENT ID :
+    CLASS      : IF-41-08
+    NAME       : Aanisah Rifda Rusjdy
+    STUDENT ID : 1301174057
 **/
 
 
@@ -13,7 +13,8 @@ void add_new_data(mytype database[10], int &n_data, mytype d) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    database[n_data++] = d;
+
 
 
 
@@ -29,9 +30,12 @@ void add_new_priority_data(mytype database[10], int &n_data, mytype d) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
-
-
+    for (int i = n_data; i >=0; i--)
+    {
+        database[i] = database[i-1];
+    }
+    database[0] = d;
+    n_data++;
 
 
 
@@ -46,14 +50,22 @@ int find_data(mytype database[10], int n_data, int id_to_find) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int i = 0;
 
+    while ((id_to_find != database[i].id) && (i < n_data))
+    {
+        i++;
+    }
 
-
-
-
-    // ===========================
-    return -1;
+    if (id_to_find == database[i].id)
+    {
+        return i;
+    }
+    else
+    {
+        return -1;
+    }
+        // ===========================
 }
 
 void remove_data(mytype database[10], int &n_data, int id_to_delete) {
@@ -63,7 +75,18 @@ void remove_data(mytype database[10], int &n_data, int id_to_delete) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int idx_delete = find_data(database, n_data, id_to_delete);
+    if (idx_delete != -1)
+    {
+        for (int i = idx_delete; i < n_data; i++)
+        {
+            database[i++] = database[i+1];
+        }
+        n_data--;
+    }
+    else {
+        cout<<"Data tidak ditemukan";
+    }
 
 
 
@@ -79,7 +102,15 @@ void view_data(mytype database[10], int n_data) {
     */
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int i;
+    for ( i = 0; i<n_data; i++)
+    {
+        cout<<"Results: "<<endl;
+        cout<<"Name      : "<<database[i].name<<endl;
+        cout<<"ID        : "<<database[i].id<<endl;
+        cout<<"Classroom : "<<database[i].kls<<endl;
+        cout<<"Score     : "<<database[i].score<<endl;
+    }
 
 
 
@@ -95,7 +126,18 @@ void sort_data(mytype database[10], int n_data) {
     mytype d;
     // ===========================
     // YOUR CODE HERE
-    cout<<"your code here"<<endl;
+    int i,j;
+    for (i=0; i<=n_data; i++)
+    {
+        int j=i;
+        d = database[i];
+        while (j>0 && d.score > database[j-1].score)
+        {
+            database[j] = database[j-1];
+            j--;
+        }
+        database[j] = d;
+    }
 
 
 
