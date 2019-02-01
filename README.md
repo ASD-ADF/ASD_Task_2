@@ -1,7 +1,7 @@
-# Task_2 [2017/2018-II]
-Task 2 : Abstract Data Type
+# Task_2 [2019]
+Task 2 : Linked List Introduction
 
-# DEADLINE = JANUARY 31ST, 2018 - 23:59
+# DEADLINE = FEBRUARY 8th, 2019 - 23:59
 
 ## Reading Material
 * [git cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)
@@ -15,39 +15,42 @@ Task 2 : Abstract Data Type
 5. COMMIT and PUSH your project to your account
 6. create a Pull Request
 
+
+Create a program to store and manage a data using single linear linked list
+
+
 ## TO DO
-### mydata.h
-TODO:  create a new Data type with specification:
-		- an integer variable acted as an ID
-		- two other variables
-		- a float variable
 
 
-### mydata.cpp
-* `mytype create_data()`<br>
-	TODO: receive input from user and assign the value of new data
-* `view_data(mytype d)`<br>
-	TODO:  view the content of data d
-* `edit_data(mytype &d)`<br>
-	TODO:  edit the value of data d, the ID must not be modified
+### list.h
+* **TODO**: Define the elmlist and list data structure
+* Define functions and procedures of single linked list ***[already done for you]***
+	* `function allocate(in: x : infotype) : address`
+	* `procedure deallocate( i/o: P : address )`
+	* `procedure insertFirst( i/o: L : List, i: P : address )`
+	* `procedure insertLast( i/o: L : List, i: P : address )`
+	* `procedure insertAfter( i/o: L : List, i: Prec : address, P : address )`
+	* `procedure deleteFirst( i/o: L : List, i/o: P : address )`
+	* `procedure deleteLast( i/o: L : List, i/o: P : address )`
+	* `procedure deleteAfter( i/o: L : List, i: Prec : address, i/o: P : address )`
+	* `function findElm( i: L : List, x : infotype ) : address`
+	* `procedure printInfo( i: L : List )`
+   
+### list.cpp
+**TODO**: Implement all functions and procedures defined in list.h
 
-	
-	
-### array_based.cpp
-* `add_new_data(mytype database[10], int &n_data, mytype d)`<br>
-	TODO:   add the new data d inside the database, the new data will be located at the end of database array
-* `add_new_priority_data(mytype database[10], int &n_data, mytype d)`<br>
-	TODO:   add the new data d inside the database, the new data will be located at the front of database array
-* `find_data(mytype database[10], int n_data, int id_to_find)`<br>
-	TODO:   find a data inside the database based on its id the function will return the index of the searched data the function will return -1 if such data is not found
-* `remove_data(mytype database[10], int &n_data, int id_to_delete)`<br>
-	TODO:   find a data inside the database based on its id then remove such found data from database
-* `view_data(mytype database[10], int n_data)`<br>
-	TODO:  loop through database and view all data inside database
-* `sort_data(mytype database[10], int n_data)`<br>
-	TODO:  sort data inside database
-	
-	
-	
-### array_based.cpp
-* modify the menu so that user cannot insert two data with the same ID
+
+### operation.h
+* `procedure insert_sorted( i/o : L : List, x : infotype )`
+  * **TODO**: insert x into an already sorted-by-ID list L so that
+    * the list is sorted ascending order
+    * no duplicate number in the List
+	* allocate new element only if the conditions are met
+
+### operation.cpp
+Implement function and procedure defined in operation.h
+
+### main.cpp
+**TODO**: Run `main.cp` to check your implementation
+
+

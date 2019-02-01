@@ -32,11 +32,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="array_based.cpp" />
-		<Unit filename="array_based.h" />
-		<Unit filename="main.cpp" />
-		<Unit filename="my_data.cpp" />
-		<Unit filename="my_data.h" />
+		<Unit filename="Main.cpp" />
+		<Unit filename="list.cpp" />
+		<Unit filename="list.h" />
+		<Unit filename="operation.cpp" />
+		<Unit filename="operation.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

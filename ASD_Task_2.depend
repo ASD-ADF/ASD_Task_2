@@ -14,3 +14,18 @@
 1516979690 source:c:\users\andityaarifianto\documents\github\asd_task_2\my_data.cpp
 	"my_data.h"
 
+1548991559 source:c:\users\andityaarifianto\documents\asd 2019\asd_task_2\operation.cpp
+	"list.h"
+	"operation.h"
+
+1548992023 c:\users\andityaarifianto\documents\asd 2019\asd_task_2\list.h
+	<iostream>
+
+1548991038 c:\users\andityaarifianto\documents\asd 2019\asd_task_2\operation.h
+	"list.h"
+
+1548991796 source:c:\users\andityaarifianto\documents\asd 2019\asd_task_2\main.cpp
+	<iostream>
+	"list.h"
+	"operation.h"
+
