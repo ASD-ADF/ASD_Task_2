@@ -2,7 +2,8 @@
 #include "operation.h"
 
 
-void insert_sorted(List &L, infotype x) {
+void insert_sorted(List &L, infotype x)
+{
     /**
     * IS : List may be empty
     * PR : insert an infotype x into an already sorted List L
@@ -13,8 +14,13 @@ void insert_sorted(List &L, infotype x) {
     */
 
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
+    if (first(L) != NULL) {
 
+    }
+    else
+    {
+        cout << "List Kosong" << endl;
+    }
 
     //----------------------------------------
 }
