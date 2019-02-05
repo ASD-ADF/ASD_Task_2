@@ -14,45 +14,69 @@ void insert_sorted(List &L, infotype x)
     */
 
     //-------------your code here-------------
-    if (first(L) == NULL) {
+    if (first(L) == NULL)
+    {
         address P = allocate(x);
         insertFirst(L, P);
     }
-    else {
+    else
+    {
         address P = allocate(x);
         insertFirst(L,P);
         address A, B, Duplikat;
         A = first(L);
-        while (A != NULL && next(A) != NULL) {
+        while (A != NULL && next(A) != NULL)
+        {
             B = A;
-            while (next(B) != NULL) {
-                if (info(A) == info(next(B))) {
+            while (next(B) != NULL)
+            {
+                if (info(A) == info(next(B)))
+                {
                     Duplikat = next(B);
                     next(B) = next(next(B));
                     delete Duplikat;
                 }
-                else {
+                else
+                {
                     B = next(B);
                 }
             }
             A = next(A);
         }
     }
-    /*address A, B, temp;
-    A = first(L);
-    while (A != NULL && next(A) != NULL) {
-        B = A;
-        while (next(B) != NULL) {
-            if (info(A) > info(next(B))) {
-                temp = next(B);
-                next(B) = A;
-                A = temp;
+    List L2;
+    createList(L2);
+    while (first(L) != NULL)
+    {
+        address Max = first(L);
+        address P = next(Max);
+        while (P != NULL)
+        {
+            if (info(P) > info(Max))
+            {
+                Max = P;
             }
-            else {
-                B = next(B);
-            }
+            P = next(P);
         }
-        A = next(A);
-    }*/
+        if (Max == first(L))
+        {
+            deleteFirst(L, P);
+        }
+        else if (next(Max) == NULL)
+        {
+            deleteLast(L, P);
+        }
+        else
+        {
+            address Prec = first(L);
+            while (next(Prec) != Max)
+            {
+                Prec = next(Prec);
+            }
+            deleteAfter(L, Prec, P);
+        }
+        insertFirst(L2, P);
+    }
+    L = L2;
     //----------------------------------------
 }
