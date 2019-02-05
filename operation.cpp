@@ -14,13 +14,45 @@ void insert_sorted(List &L, infotype x)
     */
 
     //-------------your code here-------------
-    if (first(L) != NULL) {
-
+    if (first(L) == NULL) {
+        address P = allocate(x);
+        insertFirst(L, P);
     }
-    else
-    {
-        cout << "List Kosong" << endl;
+    else {
+        address P = allocate(x);
+        insertFirst(L,P);
+        address A, B, Duplikat;
+        A = first(L);
+        while (A != NULL && next(A) != NULL) {
+            B = A;
+            while (next(B) != NULL) {
+                if (info(A) == info(next(B))) {
+                    Duplikat = next(B);
+                    next(B) = next(next(B));
+                    delete Duplikat;
+                }
+                else {
+                    B = next(B);
+                }
+            }
+            A = next(A);
+        }
     }
-
+    /*address A, B, temp;
+    A = first(L);
+    while (A != NULL && next(A) != NULL) {
+        B = A;
+        while (next(B) != NULL) {
+            if (info(A) > info(next(B))) {
+                temp = next(B);
+                next(B) = A;
+                A = temp;
+            }
+            else {
+                B = next(B);
+            }
+        }
+        A = next(A);
+    }*/
     //----------------------------------------
 }
