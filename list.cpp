@@ -21,6 +21,7 @@ address allocate(infotype x) {
     //cout<<"your code here"<<endl;
     P = new elmlist;
     info(P) = x;
+    next(P) = NULL;
     //----------------------------------------
     return P;
 }
