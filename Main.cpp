@@ -13,7 +13,7 @@ int main() {
     createList(L);
 
     //==================================================
-    // TEST INSERT FIRST
+    //TEST INSERT FIRST
     P = allocate(6);
     insertFirst(L, P);
     printInfo(L);
@@ -25,7 +25,7 @@ int main() {
     cout<<"output should be: 8, 3, 6,"<<endl;
 
     //==================================================
-    // TEST INSERT LAST
+    //TEST INSERT LAST
     insertLast(L, allocate(4));
     insertLast(L, allocate(2));
     printInfo(L);
@@ -34,7 +34,7 @@ int main() {
     //==================================================
     // TEST INSERT AFTER
     P = findElm(L, 6);
-    insertLast(L, allocate(5));
+    insertAfter(L,P, allocate(5));
     printInfo(L);
     cout<<"output should be: 8, 3, 6, 5, 4, 2,"<<endl;
 
