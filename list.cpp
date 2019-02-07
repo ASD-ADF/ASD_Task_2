@@ -64,7 +64,7 @@ void insertLast(List &L, address P)
     }
     else
     {
-        insertFirst(L,P);
+        first(L) = P;
     }
     //----------------------------------------
 }
@@ -96,8 +96,11 @@ void deleteFirst(List &L, address &P)
     */
     //-------------your code here-------------
     P = first(L);
-    first(L) = next(P);
-    next(P) = NULL;
+    if(P != NULL)
+    {
+        first(L) = next(P);
+        next(P) = NULL;
+    }
     //----------------------------------------
 }
 
@@ -108,19 +111,23 @@ void deleteLast(List &L, address &P)
     * FS : last element in List L is removed and is pointed by P
     */
     //-------------your code here-------------
-    if (next(first(L)) != NULL)
+    address Q = first(L);
+    if (Q != NULL)
     {
-        address Q = first(L);
+        if (next(Q) == NULL)
+        {
+            P = Q;
+            first(L) = NULL;
+        }
+    }
+    else
+    {
         while (next(next(Q)) != NULL)
         {
             Q = next(Q);
         }
         P = next(Q);
         next(Q) = NULL;
-    }
-    else
-    {
-        deleteFirst(L,P);
     }
     //----------------------------------------
 }
@@ -158,8 +165,11 @@ void insertAfter(List &L, address Prec, address P)
     *      pointed by pointer Prec
     */
     //-------------your code here-------------
-    next(P) = next(Prec);
-    next(Prec) = P;
+    if((Prec != NULL) && (P != NULL))
+    {
+        next(P) = next(Prec);
+        next(Prec) = P;
+    }
     //----------------------------------------
 
 }
@@ -171,9 +181,15 @@ void deleteAfter(List &L, address Prec, address &P)
     *      is removed and pointed by pointer P
     */
     //-------------your code here-------------
-    P = next(Prec);
-    next(Prec) = next(P);
-    next(P) = NULL;
+    if(Prec != NULL)
+    {
+        if(next(Prec) != NULL)
+        {
+            P = next(Prec);
+            next(Prec) = next(P);
+            next(P) = NULL;
+        }
+    }
     //----------------------------------------
 }
 
