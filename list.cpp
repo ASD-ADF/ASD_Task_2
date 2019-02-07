@@ -15,10 +15,11 @@ address allocate(infotype x)
     /**
     * FS : return new list element with info = x and next element is Null
     */
-
-    address P = new elmlist;
+    address P = NULL;
     //-------------your code here-------------
+    P = new elmlist;
     info(P) = x;
+    next(P) = NULL;
     //----------------------------------------
     return P;
 }
