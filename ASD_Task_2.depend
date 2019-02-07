@@ -42,3 +42,8 @@
 1549556885 c:\users\user\documents\github\asd_task_2\operation.h
 	"list.h"
 
+1549556885 source:c:\users\user\documents\github\asd_task_2\main.cpp
+	<iostream>
+	"list.h"
+	"operation.h"
+
