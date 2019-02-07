@@ -23,21 +23,19 @@ using namespace std;
 *
 **/
 
-
-
 typedef int infotype;
 typedef struct elmlist *address;
 
 struct elmlist{
     //------------- your code here -----------
-
-
+    infotype info;
+    address next;
     //----------------------------------------
 };
 
 struct List{
     //------------- your code here -----------
-
+    address first;
     //----------------------------------------
 };
 

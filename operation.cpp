@@ -13,7 +13,6 @@ void insert_sorted(List &L, infotype x) {
     */
 
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
 
 
     //----------------------------------------
