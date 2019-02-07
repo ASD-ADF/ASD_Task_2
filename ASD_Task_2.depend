@@ -29,3 +29,22 @@
 	"list.h"
 	"operation.h"
 
+1549560304 source:d:\github\asd_task_2\list.cpp
+	"list.h"
+	"operation.h"
+
+1549559108 d:\github\asd_task_2\list.h
+	<iostream>
+
+1549570074 source:d:\github\asd_task_2\operation.cpp
+	"list.h"
+	"operation.h"
+
+1549558467 d:\github\asd_task_2\operation.h
+	"list.h"
+
+1549570108 source:d:\github\asd_task_2\main.cpp
+	<iostream>
+	"list.h"
+	"operation.h"
+
