@@ -185,9 +185,10 @@ void insertAfter(List &L, address Prec, address P)
     */
     //-------------your code here-------------
     //cout<<"your code here"<<endl;
-    infotype x;
-    next(P) = next(Prec);
-    next(Prec) = P;
+    if ((Prec != NULL) && (P != NULL)){
+        next(P) = next(Prec);
+        next(Prec) = P;
+    }
     //----------------------------------------
 
 }
