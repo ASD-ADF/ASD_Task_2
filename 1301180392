@@ -1,0 +1,392 @@
+(list.h)
+#ifndef LIST_H_INCLUDED
+#define LIST_H_INCLUDED
+
+#include <iostream>
+
+#define first(L) L.first
+#define next(P) P->next
+#define info(P) P->info
+
+using namespace std;
+
+
+/**
+* Type infotype : integer
+* Type address  : pointer to ElmList
+*
+* Type ElmList <
+*	info : infotype
+*	next : address
+* >
+*
+* Type List : < First : address >
+*
+**/
+
+
+
+typedef int infotype;
+typedef struct elmlist *address;
+
+struct elmlist{
+    //------------- your code here -----------
+
+
+    //----------------------------------------
+};
+
+struct List{
+    //------------- your code here -----------
+
+    //----------------------------------------
+};
+
+
+
+// define a function and a procedure to allocate and deallocate an element list
+void createList(List &L);
+address allocate(infotype x);
+void deallocate(address &P);
+
+// define insert and delete procedure
+void insertFirst(List &L, address P);
+void insertLast(List &L, address P);
+void deleteFirst(List &L, address &P);
+void deleteLast(List &L, address &P);
+void insertAfter(List &L, address Prec, address P);
+void deleteAfter(List &L, address Prec, address &P);
+
+// define search-by-ID function and view procedure
+address findElm(List L, infotype x);
+void printInfo(List L);
+
+
+#endif // LIST_H_INCLUDED
+
+
+(list.cpp)
+#include "list.h"
+
+void createList(List &L) {
+    /**
+    * FS : set first(L) with Null
+    */
+    //-------------your code here-------------
+    first(L)=NULL;
+    cout<<"your code here"<<endl;
+
+
+    //----------------------------------------
+}
+
+address allocate(infotype x) {
+    /**
+    * FS : return new list element with info = x and next element is Null
+    */
+
+    address P = NULL;
+    //-------------your code here-------------
+
+    cout<<"your code here"<<endl;
+
+
+    //----------------------------------------
+    return P;
+}
+
+void deallocate(address &P) {
+    /**
+    * FS : delete element pointed by P
+    */
+    //-------------your code here-------------
+    delete P;
+    cout<<"your code here"<<endl;
+
+
+    //----------------------------------------
+}
+
+void insertFirst(List &L, address P) {
+    /**
+    * IS : List L may be empty
+    * FS : element pointed by P became the first element in List L
+    */
+    //-------------your code here-------------
+    next(P)= first(L);
+    first(L)= P;
+    cout<<"your code here"<<endl;
+
+
+
+    //----------------------------------------
+}
+
+void insertLast(List &L, address P) {while(next(Q) != NULL){
+        Q= next(Q);
+        next(Q)=P;
+    /**
+    * IS : List L may be empty
+    * FS : element pointed by P became the last element in List L
+    */
+    //-------------your code here-------------
+    address Q
+    Q= first(L)
+    if(first(L)!=NULL){
+        while(next(Q)!=NULL){
+            Q=next(Q);
+            next(Q)=P;
+        }
+    }else(insertFirst(L,P))
+    cout<<"your code here"<<endl;
+
+
+    //----------------------------------------
+}
+
+address findElm(List L, infotype x) {
+    /**
+    * IS : List L may be empty
+    * FS : returns element with info.ID = x.ID,
+           return Null if such ID is not found
+    */
+
+    address P;
+    //-------------your code here-------------
+    P= first(L);
+    while(P!=NULL){
+        IF(info(P)=x){
+            return P:
+        }else(P=next(P))
+    }
+    cout<<"your code here"<<endl;
+
+
+    //----------------------------------------
+    return P;
+}
+return NULL;
+void deleteFirst(List &L, address &P) {
+    /**
+    * IS : List L may be empty
+    * FS : first element in List L is removed and is pointed by P
+    */
+    //-------------your code here-------------
+    if(first(L)!=NULL){
+        P= first(L);
+        first(L)=next first(L);
+        next(P)= NULL;
+    }
+    cout<<"your code here"<<endl;
+
+
+
+    //----------------------------------------
+}
+
+void deleteLast(List &L, address &P) {
+    /**
+    * IS : List L may be empty
+    * FS : last element in List L is removed and is pointed by P
+    */
+    //-------------your code here-------------
+    if(first(L)!=NULL){
+        Q= first(L);
+        while(next(next(Q))!=NULL){
+            Q= next(Q);
+            P= next(Q);
+            next (Q)=NULL;
+        }
+    }
+    cout<<"your code here"<<endl;
+
+
+
+    //----------------------------------------
+}
+
+void printInfo(List L) {
+    /**
+    * FS : view info of all element inside List L,
+    *      call the view_data function from my_data.h to print the info
+    */
+    //-------------your code here-------------
+    cout<<"your code here"<<endl;
+
+
+    //----------------------------------------
+    cout<<endl;
+}
+
+
+void insertAfter(List &L, address Prec, address P) {
+    /**
+    * IS : Prec and P is not NULL
+    * FS : element pointed by P is placed behind the element
+    *      pointed by pointer Prec
+    */
+    //-------------your code here-------------
+    next(P)= next (prec);
+    next(prec)= P;
+    cout<<"your code here"<<endl;
+
+    //----------------------------------------
+
+}
+void deleteAfter(List &L, address Prec, address &P) {
+    /**
+    * IS : Prec is not NULL
+    * FS : element which was before behind an element pointed by Prec
+    *      is removed and pointed by pointer P
+    */
+    //-------------your code here-------------
+    P= next(prec);
+    next(prec)= next(P);
+    next(P)= NULL;
+    cout<<"your code here"<<endl;
+
+
+    //----------------------------------------
+}
+
+
+(operation.h)
+#ifndef OPERATION_H_INCLUDED
+#define OPERATION_H_INCLUDED
+
+#include "list.h"
+
+void insert_sorted(List &L, infotype x);
+
+#endif // OPERATION_H_INCLUDED
+
+
+(opertation.cpp)
+#include "list.h"
+#include "operation.h"
+
+
+void insert_sorted(List &L, infotype x) {
+    /**
+    * IS : List may be empty
+    * PR : insert an infotype x into an already sorted List L
+    *      so that the elements inside List L is still sorted in ascending order,
+    *      procedure must also check if such number is already exists (No Duplicate number),
+    *      allocate new element only if the conditions are met
+    * FS : elements in List L sorted in ascending order, x is inside List L
+    */
+
+    //-------------your code here-------------
+    if(first(L)!=NULL){
+
+    }
+    cout<<"your code here"<<endl;
+
+
+    //----------------------------------------
+}
+
+
+(main.cpp)
+#include <iostream>
+#include "list.h"
+#include "operation.h"
+
+using namespace std;
+
+void mainMenu();
+List L;
+address P;
+infotype X;
+
+int main() {
+    createList(L);
+
+    //==================================================
+    // TEST INSERT FIRST
+    P = allocate(6);
+    insertFirst(L, P);
+    printInfo(L);
+    cout<<"output should be: 6,"<<endl;
+
+    insertFirst(L, allocate(3));
+    insertFirst(L, allocate(8));
+    printInfo(L);
+    cout<<"output should be: 8, 3, 6,"<<endl;
+
+    //==================================================
+    // TEST INSERT LAST
+    insertLast(L, allocate(4));
+    insertLast(L, allocate(2));
+    printInfo(L);
+    cout<<"output should be: 8, 3, 6, 4, 2,"<<endl;
+
+    //==================================================
+    // TEST INSERT AFTER
+    P = findElm(L, 6);
+    insertLast(L, allocate(5));
+    printInfo(L);
+    cout<<"output should be: 8, 3, 6, 5, 4, 2,"<<endl;
+
+    //==================================================
+    // TEST DELETE FIRST
+    deleteFirst(L, P);
+    cout<<info(P)<<endl;
+    cout<<"output should be: 8"<<endl;
+    printInfo(L);
+    cout<<"output should be: 3, 6, 5, 4, 2,"<<endl;
+    deallocate(P);
+
+    //==================================================
+    // TEST DELETE LAST
+    deleteLast(L, P);
+    cout<<info(P)<<endl;
+    cout<<"output should be: 2"<<endl;
+    printInfo(L);
+    cout<<"output should be: 3, 6, 5, 4,"<<endl;
+    deallocate(P);
+
+    //==================================================
+    // TEST DELETE AFTER
+    address Prec = findElm(L, 6);
+    deleteAfter(L, Prec, P);
+    cout<<info(P)<<endl;
+    cout<<"output should be: 5"<<endl;
+    printInfo(L);
+    cout<<"output should be: 3, 6, 4,"<<endl;
+    deallocate(P);
+
+    //==================================================
+    // TEST DELETE ALL
+    deleteLast(L, P);
+    deallocate(P);
+    deleteFirst(L, P);
+    deallocate(P);
+    deleteLast(L, P);
+    deallocate(P);
+
+    printInfo(L);
+    cout<<"output should be: [empty]"<<endl;
+
+    //==================================================
+    // TEST INSERT SORTED
+    insert_sorted(L, 5);
+    printInfo(L);
+    cout<<"output should be: 5,"<<endl;
+
+    insert_sorted(L, 3);
+    insert_sorted(L, 8);
+    printInfo(L);
+    cout<<"output should be: 3, 5, 8,"<<endl;
+
+
+    insert_sorted(L, 5);
+    insert_sorted(L, 1);
+    insert_sorted(L, 5);
+    printInfo(L);
+    cout<<"output should be: 1, 3, 5, 8,"<<endl;
+
+    //==================================================
+    cout<<"CONGRATULATION, YOU'VE COMPLETED TASK 2 2019"<<endl;
+    return 0;
+}
