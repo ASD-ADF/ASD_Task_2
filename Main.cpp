@@ -89,15 +89,15 @@ int main()
     insert_sorted(L, 8);
     printInfo(L);
     cout<<"output should be: 3, 5, 8,"<<endl;
-//
-//
-//    insert_sorted(L, 5);
-//    insert_sorted(L, 1);
-//    insert_sorted(L, 5);
-//    printInfo(L);
-//    cout<<"output should be: 1, 3, 5, 8,"<<endl;
 
-    //==================================================
+
+    insert_sorted(L, 5);
+    insert_sorted(L, 1);
+    insert_sorted(L, 5);
+    printInfo(L);
+    cout<<"output should be: 1, 3, 5, 8,"<<endl;
+
+//    ==================================================
     cout<<"CONGRATULATION, YOU'VE COMPLETED TASK 2 2019"<<endl;
     return 0;
 }
