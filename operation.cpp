@@ -13,8 +13,51 @@ void insert_sorted(List &L, infotype x) {
     */
 
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
-
-
+    address P = allocate(x);
+    if (first(L) == NULL){
+        insertFirst(L, P);
+    }else{
+        insertFirst(L,P);
+        address A, B, Double;
+        A = first(L);
+        while (A != NULL && next(A) != NULL){
+            B = A;
+            while (next(B) != NULL){
+                if (info(A) == ((info(next(B))))){
+                    Double = next(B);
+                    next(B) = next(next(B));
+                    delete Double;
+                }else{
+                    B = next(B);
+                }
+            }
+            A = next(A);
+        }
+    }
+    List L2;
+    createList(L2);
+    while (first(L) != NULL){
+        address Max = first(L);
+        address P = next(Max);
+        while (P != NULL){
+            if (info(P) > info(Max)){
+                Max = P;
+            }
+            P = next(P);
+        }
+        if (Max == first(L)){
+            deleteFirst(L,P);
+        }else if (next(Max) == NULL){
+            deleteLast(L,P);
+        }else{
+            address Prec = first(L);
+            while (next(Prec) != Max){
+                Prec = next(Prec);
+            }
+            deleteAfter(L,Prec,P);
+        }
+        insertFirst(L2, P);
+    }
+    L = L2;
     //----------------------------------------
 }
