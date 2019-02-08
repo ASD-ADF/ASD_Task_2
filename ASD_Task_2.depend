@@ -29,3 +29,21 @@
 	"list.h"
 	"operation.h"
 
+1549638039 source:e:\telkom university adhit\asd_task_2\main.cpp
+	<iostream>
+	"list.h"
+	"operation.h"
+
+1549637367 e:\telkom university adhit\asd_task_2\list.h
+	<iostream>
+
+1549634825 e:\telkom university adhit\asd_task_2\operation.h
+	"list.h"
+
+1549637864 source:e:\telkom university adhit\asd_task_2\operation.cpp
+	"list.h"
+	"operation.h"
+
+1549637864 source:e:\telkom university adhit\asd_task_2\list.cpp
+	"list.h"
+
