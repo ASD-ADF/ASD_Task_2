@@ -11,75 +11,76 @@ infotype X;
 
 int main() {
     createList(L);
+    cout << endl;
 
     //==================================================
     // TEST INSERT FIRST
     P = allocate(6);
     insertFirst(L, P);
     printInfo(L);
-    cout<<"output should be: 6,"<<endl;
+    cout<<"output should be: 6,"<<endl<<endl;
 
     insertFirst(L, allocate(3));
     insertFirst(L, allocate(8));
     printInfo(L);
-    cout<<"output should be: 8, 3, 6,"<<endl;
+    cout<<"output should be: 8, 3, 6,"<<endl<<endl;
 
-    //==================================================
-    // TEST INSERT LAST
+    // //==================================================
+    //TEST INSERT LAST
     insertLast(L, allocate(4));
     insertLast(L, allocate(2));
     printInfo(L);
-    cout<<"output should be: 8, 3, 6, 4, 2,"<<endl;
+    cout<<"output should be: 8, 3, 6, 4, 2,"<<endl<<endl;
 
-    //==================================================
-    // TEST INSERT AFTER
+    // //==================================================
+    // // TEST INSERT AFTER
     P = findElm(L, 6);
-    insertLast(L, allocate(5));
+    insertAfter(L,P,allocate(5));
     printInfo(L);
-    cout<<"output should be: 8, 3, 6, 5, 4, 2,"<<endl;
+    cout<<"output should be: 8, 3, 6, 5, 4, 2,"<<endl<<endl;
 
-    //==================================================
-    // TEST DELETE FIRST
-    deleteFirst(L, P);
-    cout<<info(P)<<endl;
-    cout<<"output should be: 8"<<endl;
-    printInfo(L);
-    cout<<"output should be: 3, 6, 5, 4, 2,"<<endl;
-    deallocate(P);
+    // // //==================================================
+    // // // TEST DELETE FIRST
+     deleteFirst(L, P);
+     cout<<info(P)<<endl;
+     cout<<"output should be: 8"<<endl;
+     printInfo(L);
+     cout<<"output should be: 3, 6, 5, 4, 2,"<<endl<<endl;
+     deallocate(P);
 
-    //==================================================
-    // TEST DELETE LAST
-    deleteLast(L, P);
-    cout<<info(P)<<endl;
-    cout<<"output should be: 2"<<endl;
-    printInfo(L);
-    cout<<"output should be: 3, 6, 5, 4,"<<endl;
-    deallocate(P);
+    // // //==================================================
+    // // // TEST DELETE LAST
+     deleteLast(L, P);
+     cout<<info(P)<<endl;
+     cout<<"output should be: 2"<<endl;
+     printInfo(L);
+     cout<<"output should be: 3, 6, 5, 4,"<<endl<<endl;
+     deallocate(P);
 
-    //==================================================
-    // TEST DELETE AFTER
+    // //==================================================
+    // // TEST DELETE AFTER
     address Prec = findElm(L, 6);
     deleteAfter(L, Prec, P);
     cout<<info(P)<<endl;
     cout<<"output should be: 5"<<endl;
     printInfo(L);
-    cout<<"output should be: 3, 6, 4,"<<endl;
+    cout<<"output should be: 3, 6, 4,"<<endl<<endl;
     deallocate(P);
 
-    //==================================================
-    // TEST DELETE ALL
-    deleteLast(L, P);
-    deallocate(P);
-    deleteFirst(L, P);
-    deallocate(P);
-    deleteLast(L, P);
-    deallocate(P);
+    // //==================================================
+    // // TEST DELETE ALL
+     deleteLast(L, P);
+     deallocate(P);
+     deleteFirst(L, P);
+     deallocate(P);
+     deleteLast(L, P);
+     deallocate(P);
 
-    printInfo(L);
-    cout<<"output should be: [empty]"<<endl;
+     printInfo(L);
+     cout<<"output should be: [empty]"<<endl<<endl;
 
-    //==================================================
-    // TEST INSERT SORTED
+    // //==================================================
+    // // TEST INSERT SORTED
     insert_sorted(L, 5);
     printInfo(L);
     cout<<"output should be: 5,"<<endl;
@@ -94,7 +95,7 @@ int main() {
     insert_sorted(L, 1);
     insert_sorted(L, 5);
     printInfo(L);
-    cout<<"output should be: 1, 3, 5, 8,"<<endl;
+    cout<<"output should be: 1, 3, 5, 8,"<<endl<<endl;
 
     //==================================================
     cout<<"CONGRATULATION, YOU'VE COMPLETED TASK 2 2019"<<endl;
