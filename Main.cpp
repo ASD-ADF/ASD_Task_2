@@ -9,7 +9,8 @@ List L;
 address P;
 infotype X;
 
-int main() {
+int main()
+{
     createList(L);
 
     //==================================================
@@ -23,23 +24,23 @@ int main() {
     insertFirst(L, allocate(8));
     printInfo(L);
     cout<<"output should be: 8, 3, 6,"<<endl;
-
-    //==================================================
-    // TEST INSERT LAST
+//
+//    //==================================================
+//    // TEST INSERT LAST
     insertLast(L, allocate(4));
     insertLast(L, allocate(2));
     printInfo(L);
     cout<<"output should be: 8, 3, 6, 4, 2,"<<endl;
-
-    //==================================================
+//
+//    //==================================================
     // TEST INSERT AFTER
     P = findElm(L, 6);
-    insertLast(L, allocate(5));
+    insertAfter(L,P,allocate(5));
     printInfo(L);
     cout<<"output should be: 8, 3, 6, 5, 4, 2,"<<endl;
-
-    //==================================================
-    // TEST DELETE FIRST
+//
+//    //==================================================
+//    // TEST DELETE FIRST
     deleteFirst(L, P);
     cout<<info(P)<<endl;
     cout<<"output should be: 8"<<endl;
@@ -88,13 +89,13 @@ int main() {
     insert_sorted(L, 8);
     printInfo(L);
     cout<<"output should be: 3, 5, 8,"<<endl;
-
-
-    insert_sorted(L, 5);
-    insert_sorted(L, 1);
-    insert_sorted(L, 5);
-    printInfo(L);
-    cout<<"output should be: 1, 3, 5, 8,"<<endl;
+//
+//
+//    insert_sorted(L, 5);
+//    insert_sorted(L, 1);
+//    insert_sorted(L, 5);
+//    printInfo(L);
+//    cout<<"output should be: 1, 3, 5, 8,"<<endl;
 
     //==================================================
     cout<<"CONGRATULATION, YOU'VE COMPLETED TASK 2 2019"<<endl;
