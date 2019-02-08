@@ -13,7 +13,21 @@ void insert_sorted(List &L, infotype x) {
     */
 
     //-------------your code here-------------
-
-
+    address P = allocate(x);
+    address Q = first(L);
+    if (Q == NULL) {
+        insertFirst(L,P);
+    } else if (findElm(L,x) == NULL) {
+        if (info(P) < info(Q)) {
+            insertFirst(L,P);
+        } else if (next(Q) == NULL) {
+            insertLast(L,P);
+        } else {
+            while (next(Q) != NULL && info(Q) < info(P)) {
+                Q = next(Q);
+            }
+            insertAfter(L,Q,P);
+        }
+    }
     //----------------------------------------
 }

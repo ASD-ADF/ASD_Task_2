@@ -18,6 +18,7 @@ address allocate(infotype x) {
     //-------------your code here-------------
     P = new elmlist;
     info(P) = x;
+    next(P) = NULL;
     //----------------------------------------
     return P;
 }
@@ -112,6 +113,7 @@ void deleteLast(List &L, address &P) {
             next(Q) = NULL;
         } else {
             P = first(L);
+            first(L) = NULL;
         }
     }
     //----------------------------------------
@@ -132,7 +134,6 @@ void printInfo(List L) {
     cout<<endl;
 }
 
-
 void insertAfter(List &L, address Prec, address P) {
     /**
     * IS : Prec and P is not NULL
@@ -145,6 +146,7 @@ void insertAfter(List &L, address Prec, address P) {
     //----------------------------------------
 
 }
+
 void deleteAfter(List &L, address Prec, address &P) {
     /**
     * IS : Prec is not NULL

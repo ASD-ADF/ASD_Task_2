@@ -29,20 +29,20 @@
 	"list.h"
 	"operation.h"
 
-1549577086 source:c:\users\user\documents\github\asd_task_2\list.cpp
+1549598576 source:c:\users\user\documents\github\asd_task_2\list.cpp
 	"list.h"
 
 1549576031 c:\users\user\documents\github\asd_task_2\list.h
 	<iostream>
 
-1549186394 source:c:\users\user\documents\github\asd_task_2\operation.cpp
+1549599170 source:c:\users\user\documents\github\asd_task_2\operation.cpp
 	"list.h"
 	"operation.h"
 
 1549186394 c:\users\user\documents\github\asd_task_2\operation.h
 	"list.h"
 
-1549576572 source:c:\users\user\documents\github\asd_task_2\main.cpp
+1549578514 source:c:\users\user\documents\github\asd_task_2\main.cpp
 	<iostream>
 	"list.h"
 	"operation.h"
