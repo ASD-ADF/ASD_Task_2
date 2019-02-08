@@ -33,13 +33,13 @@
 	"list.h"
 	"operation.h"
 
-1549545875 e:\c++ awal\asd_task_2\list.h
+1549635349 e:\c++ awal\asd_task_2\list.h
 	<iostream>
 
 1549543991 e:\c++ awal\asd_task_2\operation.h
 	"list.h"
 
-1549543991 source:e:\c++ awal\asd_task_2\main.cpp
+1549634915 source:e:\c++ awal\asd_task_2\main.cpp
 	<iostream>
 	"list.h"
 	"operation.h"
