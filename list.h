@@ -28,16 +28,16 @@ using namespace std;
 typedef int infotype;
 typedef struct elmlist *address;
 
-struct elmlist{
+struct elmlist {
     //------------- your code here -----------
-
-
+    infotype info;
+    address next;
     //----------------------------------------
 };
 
-struct List{
+struct List {
     //------------- your code here -----------
-
+    address first;
     //----------------------------------------
 };
 

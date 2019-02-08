@@ -29,3 +29,21 @@
 	"list.h"
 	"operation.h"
 
+1549600644 source:c:\users\ajeung\downloads\asd_task_2\list.cpp
+	"list.h"
+
+1549604919 c:\users\ajeung\downloads\asd_task_2\list.h
+	<iostream>
+
+1549603711 source:c:\users\ajeung\downloads\asd_task_2\operation.cpp
+	"list.h"
+	"operation.h"
+
+1549584347 c:\users\ajeung\downloads\asd_task_2\operation.h
+	"list.h"
+
+1549599756 source:c:\users\ajeung\downloads\asd_task_2\main.cpp
+	<iostream>
+	"list.h"
+	"operation.h"
+
