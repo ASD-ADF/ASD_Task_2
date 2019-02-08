@@ -9,7 +9,8 @@ List L;
 address P;
 infotype X;
 
-int main() {
+int main()
+{
     createList(L);
 
     //==================================================
