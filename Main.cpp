@@ -9,7 +9,8 @@ List L;
 address P;
 infotype X;
 
-int main() {
+int main()
+{
     createList(L);
 
     //==================================================
@@ -34,7 +35,7 @@ int main() {
     //==================================================
     // TEST INSERT AFTER
     P = findElm(L, 6);
-    insertLast(L, allocate(5));
+    insertAfter(L, P, allocate(5));
     printInfo(L);
     cout<<"output should be: 8, 3, 6, 5, 4, 2,"<<endl;
 
