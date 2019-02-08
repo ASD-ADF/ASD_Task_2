@@ -29,3 +29,21 @@
 	"list.h"
 	"operation.h"
 
+1549605357 source:d:\sayangstrukdat\asd_task_2\operation.cpp
+	"list.h"
+	"operation.h"
+
+1549545095 d:\sayangstrukdat\asd_task_2\list.h
+	<iostream>
+
+1549543232 d:\sayangstrukdat\asd_task_2\operation.h
+	"list.h"
+
+1549600159 source:d:\sayangstrukdat\asd_task_2\main.cpp
+	<iostream>
+	"list.h"
+	"operation.h"
+
+1549606154 source:d:\sayangstrukdat\asd_task_2\list.cpp
+	"list.h"
+
