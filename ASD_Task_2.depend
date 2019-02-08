@@ -29,3 +29,21 @@
 	"list.h"
 	"operation.h"
 
+1549634695 source:e:\c++ awal\asd_task_2\operation.cpp
+	"list.h"
+	"operation.h"
+
+1549545875 e:\c++ awal\asd_task_2\list.h
+	<iostream>
+
+1549543991 e:\c++ awal\asd_task_2\operation.h
+	"list.h"
+
+1549543991 source:e:\c++ awal\asd_task_2\main.cpp
+	<iostream>
+	"list.h"
+	"operation.h"
+
+1549634374 source:e:\c++ awal\asd_task_2\list.cpp
+	"list.h"
+
