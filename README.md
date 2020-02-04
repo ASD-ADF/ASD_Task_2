@@ -1,7 +1,7 @@
-# Task_2 [2019]
+# Task_2 [2020]
 Task 2 : Linked List Introduction
 
-# DEADLINE = FEBRUARY 8th, 2019 - 23:59
+# DEADLINE = FEBRUARY 9th, 2020 - 23:59
 
 ## Reading Material
 * [git cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)
@@ -51,6 +51,6 @@ Create a program to store and manage a data using single linear linked list
 Implement function and procedure defined in operation.h
 
 ### main.cpp
-**TODO**: Run `main.cp` to check your implementation
+**TODO**: Run `main.cpp` to check your implementation
 
 
