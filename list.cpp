@@ -6,8 +6,6 @@ void createList(List &L) {
     */
     //-------------your code here-------------
    first(L) = NULL;
-
-
     //----------------------------------------
 }
 
@@ -33,7 +31,6 @@ void deallocate(address &P) {
     */
     //-------------your code here-------------
     delete P;
-
 
     //----------------------------------------
 }
@@ -77,7 +74,7 @@ address findElm(List L, infotype x) {
     //-------------your code here-------------
     P = first(L);
 
-    while ((P != NULL ) && (info(P) == x)){
+    while ((P != NULL ) && (info(P)!= x)){
         P = next(P);
     }
     //----------------------------------------
@@ -92,8 +89,8 @@ void deleteFirst(List &L, address &P) {
     //-------------your code here-------------
     if (first(L) != NULL){
         P = first(L);
-        first(L)=next(P);
-        next(P)=NULL;
+        first(L) = next(P);
+        next(P) = NULL;
     }
     //----------------------------------------
 }
@@ -106,13 +103,15 @@ void deleteLast(List &L, address &P) {
     //-------------your code here-------------
     address Q;
     Q = first(L);
-    while (next(next(Q))!= NULL ){
-        Q = next(Q);
+    if (next(Q) == NULL){
+       deleteFirst(L,P);
+    } else {
+        while (next(next(Q))!= NULL ){
+            Q = next(Q);
+        }
+        P = next(Q);
+        next(Q) = NULL;
     }
-    P = next(Q);
-    next(Q)=NULL;
-
-
     //----------------------------------------
 }
 
@@ -140,8 +139,8 @@ void insertAfter(List &L, address Prec, address P) {
     *      pointed by pointer Prec
     */
     //-------------your code here-------------
-    next(P)=next(Prec);
-    next(Prec)=P;
+    next(P) = next(Prec);
+    next(Prec) = P;
 
     //----------------------------------------
 
