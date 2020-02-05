@@ -29,3 +29,39 @@
 	"list.h"
 	"operation.h"
 
+1580915353 source:c:\latihan coding\asd_task_2\main.cpp
+	<iostream>
+	"list.h"
+	"operation.h"
+
+1580915353 c:\latihan coding\asd_task_2\list.h
+	<iostream>
+
+1580915353 c:\latihan coding\asd_task_2\operation.h
+	"list.h"
+
+1580915439 source:c:\latihan coding\asd_task_2\list.cpp
+	"list.h"
+
+1580915353 source:c:\latihan coding\asd_task_2\operation.cpp
+	"list.h"
+	"operation.h"
+
+1580883591 source:c:\users\zils99\downloads\asd_task_2\list.cpp
+	"list.h"
+
+1580880951 c:\users\zils99\downloads\asd_task_2\list.h
+	<iostream>
+
+1580884888 source:c:\users\zils99\downloads\asd_task_2\operation.cpp
+	"list.h"
+	"operation.h"
+
+1580830654 c:\users\zils99\downloads\asd_task_2\operation.h
+	"list.h"
+
+1580884860 source:c:\users\zils99\downloads\asd_task_2\main.cpp
+	<iostream>
+	"list.h"
+	"operation.h"
+
