@@ -1,3 +1,7 @@
+/*
+    Nama    =   Bagja 9102 Kurniawan
+    NIM     =   1301194020
+*/
 #include <iostream>
 #include "list.h"
 #include "operation.h"
@@ -34,13 +38,14 @@ int main() {
     //==================================================
     // TEST INSERT AFTER
     P = findElm(L, 6);
-    insertLast(L, allocate(5));
+    insertAfter(L,P, allocate(5));
     printInfo(L);
     cout<<"output should be: 8, 3, 6, 5, 4, 2,"<<endl;
 
     //==================================================
     // TEST DELETE FIRST
     deleteFirst(L, P);
+    cout << "My output : ";
     cout<<info(P)<<endl;
     cout<<"output should be: 8"<<endl;
     printInfo(L);
@@ -50,6 +55,7 @@ int main() {
     //==================================================
     // TEST DELETE LAST
     deleteLast(L, P);
+    cout << "My output : ";
     cout<<info(P)<<endl;
     cout<<"output should be: 2"<<endl;
     printInfo(L);
@@ -60,6 +66,7 @@ int main() {
     // TEST DELETE AFTER
     address Prec = findElm(L, 6);
     deleteAfter(L, Prec, P);
+    cout << "My output : ";
     cout<<info(P)<<endl;
     cout<<"output should be: 5"<<endl;
     printInfo(L);
@@ -99,4 +106,6 @@ int main() {
     //==================================================
     cout<<"CONGRATULATION, YOU'VE COMPLETED TASK 2 2019"<<endl;
     return 0;
+
+
 }
