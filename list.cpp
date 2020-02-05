@@ -18,9 +18,9 @@ address allocate(infotype x) {
 
     address P = NULL;
     //-------------your code here-------------
-    address p = new elmlist;
-    info(p) = x;
-    next(p) = NULL;
+    P = new elmlist;
+    info(P) = x;
+    next(P) = NULL;
 
 
     //----------------------------------------
@@ -32,7 +32,7 @@ void deallocate(address &P) {
     * FS : delete element pointed by P
     */
     //-------------your code here-------------
-    P = NULL;
+    delete P;
 
 
     //----------------------------------------
@@ -62,6 +62,7 @@ void insertLast(List &L, address P) {
     while(next(Q)!=NULL){
         Q = next(Q);
     }
+    next(Q)= P;
     //----------------------------------------
 }
 
@@ -75,7 +76,8 @@ address findElm(List L, infotype x) {
     address P;
     //-------------your code here-------------
     P = first(L);
-    while (P != NULL ) && (info(P)==x){
+
+    while ((P != NULL ) && (info(P) == x)){
         P = next(P);
     }
     //----------------------------------------
@@ -105,7 +107,7 @@ void deleteLast(List &L, address &P) {
     address Q;
     Q = first(L);
     while (next(next(Q))!= NULL ){
-        Q = next(Q)
+        Q = next(Q);
     }
     P = next(Q);
     next(Q)=NULL;
@@ -123,7 +125,7 @@ void printInfo(List L) {
     address P;
     P = first(L);
     while(P!=NULL){
-        cout<<info(P)<<endl;
+        cout<<info(P)<<" , ";
         P = next(P);
     }
     //----------------------------------------
