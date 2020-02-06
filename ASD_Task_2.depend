@@ -29,3 +29,21 @@
 	"list.h"
 	"operation.h"
 
+1580978659 source:/home/vincent/Documents/Struktur Data/ASD_Task_2/Main.cpp
+	<iostream>
+	"list.h"
+	"operation.h"
+
+1580916505 /home/vincent/Documents/Struktur Data/ASD_Task_2/list.h
+	<iostream>
+
+1580912500 /home/vincent/Documents/Struktur Data/ASD_Task_2/operation.h
+	"list.h"
+
+1580916259 source:/home/vincent/Documents/Struktur Data/ASD_Task_2/operation.cpp
+	"list.h"
+	"operation.h"
+
+1580916421 source:/home/vincent/Documents/Struktur Data/ASD_Task_2/list.cpp
+	"list.h"
+
