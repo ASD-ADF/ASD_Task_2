@@ -13,7 +13,7 @@ void insert_sorted(List &L, infotype x) {
     */
 
     //-------------your code here-------------
-    address Q,P;
+    /*address Q,P;
     if ((first(L) == NULL) || (x < info(first(L)))) {
         P = allocate(x);
         insertFirst(L,P);
@@ -22,7 +22,7 @@ void insert_sorted(List &L, infotype x) {
         while ((next(Q)!= NULL) && (x > info(next(Q)))){
             Q = next(Q);
         }
-        if (next(Q)==NULL){
+        if (next(Q) == NULL){
             P = allocate(x);
             insertLast(L,P);
         }else if (info(P)!=info(Q)){
@@ -31,6 +31,5 @@ void insert_sorted(List &L, infotype x) {
         }
     }
 
-
     //----------------------------------------
-}
+*/}
