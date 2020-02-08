@@ -29,3 +29,21 @@
 	"list.h"
 	"operation.h"
 
+1581161084 source:d:\tugas kuliah\github\asd_task_2\main.cpp
+	<iostream>
+	"list.h"
+	"operation.h"
+
+1581157762 d:\tugas kuliah\github\asd_task_2\list.h
+	<iostream>
+
+1581151586 d:\tugas kuliah\github\asd_task_2\operation.h
+	"list.h"
+
+1581157612 source:d:\tugas kuliah\github\asd_task_2\operation.cpp
+	"list.h"
+	"operation.h"
+
+1581160022 source:d:\tugas kuliah\github\asd_task_2\list.cpp
+	"list.h"
+
