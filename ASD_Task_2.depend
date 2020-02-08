@@ -29,3 +29,21 @@
 	"list.h"
 	"operation.h"
 
+1581170938 source:d:\kuliah\semester 2\asd_task_2\operation.cpp
+	"list.h"
+	"operation.h"
+
+1580809364 d:\kuliah\semester 2\asd_task_2\list.h
+	<iostream>
+
+1580808708 d:\kuliah\semester 2\asd_task_2\operation.h
+	"list.h"
+
+1581170877 source:d:\kuliah\semester 2\asd_task_2\main.cpp
+	<iostream>
+	"list.h"
+	"operation.h"
+
+1581170715 source:d:\kuliah\semester 2\asd_task_2\list.cpp
+	"list.h"
+
