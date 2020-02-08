@@ -30,6 +30,9 @@ typedef struct elmlist *address;
 
 struct elmlist{
     //------------- your code here -----------
+     infotype info;
+    address next;
+
 
 
     //----------------------------------------
@@ -37,6 +40,7 @@ struct elmlist{
 
 struct List{
     //------------- your code here -----------
+    address first;
 
     //----------------------------------------
 };
