@@ -29,3 +29,22 @@
 	"list.h"
 	"operation.h"
 
+1581160608 source:/Users/760007/Documents/Kuliah/StrukDat/ASD_Task_2/operation.cpp
+	"list.h"
+	"operation.h"
+
+1581077172 /Users/760007/Documents/Kuliah/StrukDat/ASD_Task_2/list.h
+	<iostream>
+
+1581047543 /Users/760007/Documents/Kuliah/StrukDat/ASD_Task_2/operation.h
+	"list.h"
+
+1581161061 source:/Users/760007/Documents/Kuliah/StrukDat/ASD_Task_2/Main.cpp
+	<iostream>
+	"list.h"
+	"operation.h"
+
+1581163112 source:/Users/760007/Documents/Kuliah/StrukDat/ASD_Task_2/list.cpp
+	<iostream>
+	"list.h"
+
