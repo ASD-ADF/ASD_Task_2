@@ -2,7 +2,8 @@
 #include "operation.h"
 
 
-void insert_sorted(List &L, infotype x) {
+void insert_sorted(List &L, infotype x)
+{
     /**
     * IS : List may be empty
     * PR : insert an infotype x into an already sorted List L
@@ -11,10 +12,35 @@ void insert_sorted(List &L, infotype x) {
     *      allocate new element only if the conditions are met
     * FS : elements in List L sorted in ascending order, x is inside List L
     */
-
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
-
-
+    address Q,P ;
+    P = allocate(x) ;
+    if (first(L) == NULL)
+    {
+        insertFirst(L,P) ;
+    }
+    else
+    {
+        Q = first(L) ;
+        while ((next(Q) != NULL) && (x>info(Q)))
+        {
+            Q = next(Q) ;
+        }
+        if (info(Q) != x)
+        {
+            if (x > info(Q))
+            {
+                insertLast(L,P) ;
+            }
+            else if (x < info(Q))
+            {
+                insertFirst(L,P) ;
+            }
+            else
+            {
+                insertAfter(L,Q,P) ;
+            }
+        }
     //----------------------------------------
+    }
 }
