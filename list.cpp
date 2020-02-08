@@ -5,8 +5,9 @@ void createList(List &L) {
     * FS : set first(L) with Null
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
 
+    cout<<"your code here"<<endl;
+    first(L) = NULL;
 
     //----------------------------------------
 }
@@ -19,6 +20,9 @@ address allocate(infotype x) {
     address P = NULL;
     //-------------your code here-------------
     cout<<"your code here"<<endl;
+        addrees P = new elmlist;
+        info(P) = x;
+        next(P) = NULL;
 
 
     //----------------------------------------
@@ -31,7 +35,7 @@ void deallocate(address &P) {
     */
     //-------------your code here-------------
     cout<<"your code here"<<endl;
-
+        P = NULL;
 
     //----------------------------------------
 }
@@ -43,7 +47,8 @@ void insertFirst(List &L, address P) {
     */
     //-------------your code here-------------
     cout<<"your code here"<<endl;
-
+        next(P) = first (L);
+        first(L) = P;
 
 
     //----------------------------------------
@@ -56,7 +61,13 @@ void insertLast(List &L, address P) {
     */
     //-------------your code here-------------
     cout<<"your code here"<<endl;
-
+        P = new elmlist;
+        Q = first(L);
+        while (next(next(Q)) != NULL {
+            Q = next(Q)
+        }
+        P = next(Q);
+        next(Q) = NULL ;
 
     //----------------------------------------
 }
@@ -71,7 +82,9 @@ address findElm(List L, infotype x) {
     address P;
     //-------------your code here-------------
     cout<<"your code here"<<endl;
-
+        P = first(L);
+        while (P != NULL ) && (info(P)==x){
+            P = next(P);
 
     //----------------------------------------
     return P;
@@ -84,6 +97,12 @@ void deleteFirst(List &L, address &P) {
     */
     //-------------your code here-------------
     cout<<"your code here"<<endl;
+    if (first(L) = NULL){
+        P = First(L);
+        first(L) = next(P);
+        next(P) = NULL
+    }
+
 
 
 
@@ -97,7 +116,13 @@ void deleteLast(List &L, address &P) {
     */
     //-------------your code here-------------
     cout<<"your code here"<<endl;
-
+    Q = address;
+    Q = first(L);
+    while(next(next(Q)) != NULL {
+        Q = next(Q);
+    }
+    P = next(Q);
+    next(Q) = NULL;
 
 
     //----------------------------------------
@@ -110,8 +135,11 @@ void printInfo(List L) {
     */
     //-------------your code here-------------
     cout<<"your code here"<<endl;
-
-
+    P = address;
+    p = first(L);
+    while(P != NULL){
+        print(info(P));
+        P = next(P);
     //----------------------------------------
     cout<<endl;
 }
@@ -126,6 +154,13 @@ void insertAfter(List &L, address Prec, address P) {
     //-------------your code here-------------
     cout<<"your code here"<<endl;
 
+    P = new elmlist;
+    Q = first(L);
+    while (info(Q) != prec{
+        Q = next(Q)
+    }
+    next(P) = next(Q)
+    next(Q) = P
     //----------------------------------------
 
 }
@@ -137,8 +172,14 @@ void deleteAfter(List &L, address Prec, address &P) {
     */
     //-------------your code here-------------
     cout<<"your code here"<<endl;
-
-
+    Q = first(L);
+    while info(Q) != prec{
+        Q  = next(Q)
+    }
+    P = next(Q);
+    R = next(P);
+    next(Q) = R;
+    next P = NULL;
     //----------------------------------------
 }
 
