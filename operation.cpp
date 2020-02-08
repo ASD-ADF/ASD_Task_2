@@ -13,8 +13,24 @@ void insert_sorted(List &L, infotype x) {
     */
 
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
-
-
+    address P, Prec;
+    P=allocate(x);
+    if (first(L)==NULL){
+        insertFirst(L, P);
+    } else{
+        Prec=first(L);
+        while (next(Prec) != NULL && x > info(Prec)){
+            Prec=next(Prec);
+        }
+        if (x!=info(Prec)){
+            if(x>info(Prec)){
+                insertLast(L, P);
+            } else if(x<info(Prec)){
+                insertFirst(L, P);
+            } else{
+                insertAfter(L, Prec, P);
+            }
+        }
+    }
     //----------------------------------------
 }
