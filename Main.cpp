@@ -34,7 +34,7 @@ int main() {
     //==================================================
     // TEST INSERT AFTER
     P = findElm(L, 6);
-    insertLast(L, allocate(5));
+    insertAfter(L,P,allocate(5));
     printInfo(L);
     cout<<"output should be: 8, 3, 6, 5, 4, 2,"<<endl;
 
@@ -97,6 +97,6 @@ int main() {
     cout<<"output should be: 1, 3, 5, 8,"<<endl;
 
     //==================================================
-    cout<<"CONGRATULATION, YOU'VE COMPLETED TASK 2 2019"<<endl;
+    cout<<"CONGRATULATION, YOU'VE COMPLETED TASK 2 2020"<<endl;
     return 0;
 }
