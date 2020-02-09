@@ -5,8 +5,8 @@ void createList(List &L) {
     * FS : set first(L) with Null
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
 
+  first(L) = NULL;
 
     //----------------------------------------
 }
@@ -18,8 +18,10 @@ address allocate(infotype x) {
 
     address P = NULL;
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
 
+     P = new elmlist;
+    info(P) = x;
+    next(P) = NULL;
 
     //----------------------------------------
     return P;
@@ -30,9 +32,7 @@ void deallocate(address &P) {
     * FS : delete element pointed by P
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
-
-
+    delete P;
     //----------------------------------------
 }
 
@@ -42,10 +42,9 @@ void insertFirst(List &L, address P) {
     * FS : element pointed by P became the first element in List L
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
 
-
-
+    next(P)= first(L);
+    first(L)= P;
     //----------------------------------------
 }
 
@@ -55,9 +54,17 @@ void insertLast(List &L, address P) {
     * FS : element pointed by P became the last element in List L
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
 
 
+    address temp=first(L);
+    if (temp!=NULL){
+        while (next(temp)!=NULL){
+            temp= next(temp);
+        }
+        next(temp)=P;
+    }else {
+        insertFirst(L,P);
+    }
     //----------------------------------------
 }
 
@@ -70,8 +77,10 @@ address findElm(List L, infotype x) {
 
     address P;
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
-
+    P=first(L);
+    while((next(P)!=NULL) && (info(P)!=x)){
+        P= next(P);
+    }
 
     //----------------------------------------
     return P;
@@ -83,8 +92,12 @@ void deleteFirst(List &L, address &P) {
     * FS : first element in List L is removed and is pointed by P
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
 
+ if (first(L)!=NULL){
+        P= first(L);
+        first(L)=next(P);
+        next(P)=NULL;
+    }
 
 
     //----------------------------------------
@@ -96,10 +109,18 @@ void deleteLast(List &L, address &P) {
     * FS : last element in List L is removed and is pointed by P
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
+    address temp= first(L);
+    if (next(temp)!=NULL){
 
-
-
+     P = next(temp);
+    while (next(P)!=NULL){
+        temp=next(temp);
+        P=next(temp);
+    }
+    next(temp)=NULL;
+    }else {
+        deleteFirst(L,P);
+    }
     //----------------------------------------
 }
 
@@ -109,7 +130,12 @@ void printInfo(List L) {
     *      call the view_data function from my_data.h to print the info
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
+    cout<<"your code here :";
+    address p = first(L);
+    while (p != NULL){
+        cout << info(p)<<",";
+        p = next(p);
+    }
 
 
     //----------------------------------------
@@ -124,7 +150,8 @@ void insertAfter(List &L, address Prec, address P) {
     *      pointed by pointer Prec
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
+    next(P)=next(Prec);
+    next(Prec)=P;
 
     //----------------------------------------
 
@@ -136,7 +163,9 @@ void deleteAfter(List &L, address Prec, address &P) {
     *      is removed and pointed by pointer P
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
+    P=next(Prec);
+    next(Prec)= next(P);
+    next(P)=NULL;
 
 
     //----------------------------------------
