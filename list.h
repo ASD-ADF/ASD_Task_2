@@ -9,36 +9,16 @@
 
 using namespace std;
 
-
-/**
-* Type infotype : integer
-* Type address  : pointer to ElmList
-*
-* Type ElmList <
-*	info : infotype
-*	next : address
-* >
-*
-* Type List : < First : address >
-*
-**/
-
-
-
 typedef int infotype;
 typedef struct elmlist *address;
 
-struct elmlist{
-    //------------- your code here -----------
-
-
-    //----------------------------------------
+struct elmlist {
+    infotype info;
+    address next;
 };
 
-struct List{
-    //------------- your code here -----------
-
-    //----------------------------------------
+struct List {
+    address first;
 };
 
 
