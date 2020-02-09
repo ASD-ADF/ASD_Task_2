@@ -55,10 +55,14 @@ void insertLast(List &L, address P) {
     //-------------your code here-------------
     address Q;
     Q = first(L);
-    while (next(Q) != NULL){
-        Q = next(Q);
+    if (Q == NULL){
+        first(L) = P;
+    } else {
+        while (next(Q) != NULL){
+            Q = next(Q);
+        }
+        next(Q) = P;
     }
-    next(Q) = P;
 
     //----------------------------------------
 }
