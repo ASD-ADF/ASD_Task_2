@@ -13,8 +13,17 @@ void insert_sorted(List &L, infotype x) {
     */
 
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
-
+    address P, Q;
+    P = first(L);
+    if (P == NULL || info(P) > x){
+        insertFirst(L, allocate(x));
+    } else if (findElm(L, x) == NULL){
+        while (P != NULL && info(P) < x){
+            Q = P;
+            P = next(P);
+        }
+        insertAfter(L, Q, allocate(x));
+    }
 
     //----------------------------------------
 }
