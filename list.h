@@ -1,3 +1,4 @@
+
 #ifndef LIST_H_INCLUDED
 #define LIST_H_INCLUDED
 
@@ -15,32 +16,25 @@ using namespace std;
 * Type address  : pointer to ElmList
 *
 * Type ElmList <
-*	info : infotype
-*	next : address
+*     info : infotype
+*     next : address
 * >
 *
 * Type List : < First : address >
 *
 **/
 
-
-
 typedef int infotype;
 typedef struct elmlist *address;
 
 struct elmlist{
-    //------------- your code here -----------
-
-
-    //----------------------------------------
+    infotype info;
+    address next;
 };
 
 struct List{
-    //------------- your code here -----------
-
-    //----------------------------------------
+    address first;
 };
-
 
 
 // define a function and a procedure to allocate and deallocate an element list

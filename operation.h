@@ -1,3 +1,4 @@
+
 #ifndef OPERATION_H_INCLUDED
 #define OPERATION_H_INCLUDED
 

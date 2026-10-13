@@ -1,3 +1,4 @@
+
 #include "list.h"
 #include "operation.h"
 
@@ -12,9 +13,23 @@ void insert_sorted(List &L, infotype x) {
     * FS : elements in List L sorted in ascending order, x is inside List L
     */
 
-    //-------------your code here-------------
-    cout<<"your code here"<<endl;
+    address P = first(L);
+    address Prec = NULL;
 
+    while (P != NULL && info(P) < x) {
+        Prec = P;
+        P = next(P);
+    }
 
-    //----------------------------------------
+    if (P != NULL && info(P) == x) {
+        return;
+    }
+
+    address Q = allocate(x);
+
+    if (Prec == NULL) {
+        insertFirst(L, Q);
+    } else {
+        insertAfter(L, Prec, Q);
+    }
 }
