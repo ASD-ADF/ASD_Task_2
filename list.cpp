@@ -5,8 +5,7 @@ void createList(List &L) {
     * FS : set first(L) with Null
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
-
+    L.first = NULL;
 
     //----------------------------------------
 }
@@ -16,9 +15,10 @@ address allocate(infotype x) {
     * FS : return new list element with info = x and next element is Null
     */
 
-    address P = NULL;
+    address P = new elmlist;
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
+    P->info = x;
+    P->next = NULL;
 
 
     //----------------------------------------
@@ -30,8 +30,8 @@ void deallocate(address &P) {
     * FS : delete element pointed by P
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
-
+    delete P;
+    P = NULL;
 
     //----------------------------------------
 }
@@ -42,7 +42,8 @@ void insertFirst(List &L, address P) {
     * FS : element pointed by P became the first element in List L
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
+    P->next = L.first;
+    L.first = P;
 
 
 
@@ -55,10 +56,18 @@ void insertLast(List &L, address P) {
     * FS : element pointed by P became the last element in List L
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
+    if (L.first == NULL) {
+        insertFirst(L, P);
+    }else{
+        address q = L.first;
+        while (q->next != NULL) {
+            q = q->next;
+        }
+        q->next = P;
 
 
     //----------------------------------------
+    }
 }
 
 address findElm(List L, infotype x) {
@@ -68,13 +77,18 @@ address findElm(List L, infotype x) {
            return Null if such ID is not found
     */
 
-    address P;
+    address P = L.first;
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
+    while (P != NULL){
+        if (P->info == x){
+            return P;
+        }
+        P = P->next;
+    }
 
 
     //----------------------------------------
-    return P;
+    return NULL;
 }
 
 void deleteFirst(List &L, address &P) {
@@ -83,8 +97,11 @@ void deleteFirst(List &L, address &P) {
     * FS : first element in List L is removed and is pointed by P
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
-
+    P = L.first;
+    if (P != NULL) {
+        L.first = P->next;
+        P->next = NULL;
+    }
 
 
     //----------------------------------------
@@ -96,7 +113,19 @@ void deleteLast(List &L, address &P) {
     * FS : last element in List L is removed and is pointed by P
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
+    if (L.first == NULL){
+        P = NULL;
+    }else if (L.first->next == NULL){
+        deleteFirst(L, P);
+    }else{
+        address Q = L.first;
+        while (Q->next->next != NULL){
+            Q = Q->next;
+        }
+        P = Q->next;
+        Q->next=NULL;
+
+    }
 
 
 
@@ -109,11 +138,19 @@ void printInfo(List L) {
     *      call the view_data function from my_data.h to print the info
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
+    address p = L.first;
 
+    while (p != nullptr) {
+        cout << p->info;
 
-    //----------------------------------------
-    cout<<endl;
+        if (p->next != nullptr) {
+            cout << ", ";
+        }
+
+        p = p->next;
+    }
+
+    cout << endl;
 }
 
 
@@ -124,7 +161,11 @@ void insertAfter(List &L, address Prec, address P) {
     *      pointed by pointer Prec
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
+    if (Prec != NULL) {
+        P->next = Prec->next;
+        Prec->next = P;
+    }
+
 
     //----------------------------------------
 
@@ -136,8 +177,13 @@ void deleteAfter(List &L, address Prec, address &P) {
     *      is removed and pointed by pointer P
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
-
+    if (Prec  !=NULL && Prec->next !=NULL){
+        P = Prec->next;
+        Prec->next = P->next;
+        P->next = NULL;
+    }else{
+        P = NULL;
+    }
 
     //----------------------------------------
 }
