@@ -5,7 +5,7 @@ void createList(List &L) {
     * FS : set first(L) with Null
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
+    L.first = nullptr;
 
 
     //----------------------------------------
@@ -16,13 +16,13 @@ address allocate(infotype x) {
     * FS : return new list element with info = x and next element is Null
     */
 
-    address P = NULL;
+    address p = nullptr;
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
-
-
+    p = new elmlist;
+    p->info = x;
+    p->next = nullptr;
     //----------------------------------------
-    return P;
+    return p;
 }
 
 void deallocate(address &P) {
@@ -30,8 +30,9 @@ void deallocate(address &P) {
     * FS : delete element pointed by P
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
 
+    delete P;
+    P = nullptr;
 
     //----------------------------------------
 }
@@ -42,10 +43,12 @@ void insertFirst(List &L, address P) {
     * FS : element pointed by P became the first element in List L
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
-
-
-
+    if (L.first == nullptr){
+        L.first = P;
+    } else {
+        P->next = L.first;
+        L.first = P;
+    } 
     //----------------------------------------
 }
 
@@ -55,9 +58,16 @@ void insertLast(List &L, address P) {
     * FS : element pointed by P became the last element in List L
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
-
-
+    address q ;
+    if (L.first == nullptr){
+        L.first = P;
+    } else {
+        q = L.first;
+        while (q->next != nullptr){
+            q = q->next;
+        }
+        q->next = P;
+    }
     //----------------------------------------
 }
 
@@ -68,13 +78,19 @@ address findElm(List L, infotype x) {
            return Null if such ID is not found
     */
 
-    address P;
-    //-------------your code here-------------
-    cout<<"your code here"<<endl;
 
+    //-------------your code here-------------
+    address q;
+    q=L.first;
+    while (q != nullptr){
+        if (q->info == x){
+            return q;
+        }
+        q = q->next;
+    }
+    return nullptr;
 
     //----------------------------------------
-    return P;
 }
 
 void deleteFirst(List &L, address &P) {
@@ -83,10 +99,13 @@ void deleteFirst(List &L, address &P) {
     * FS : first element in List L is removed and is pointed by P
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
-
-
-
+    if (L.first == nullptr) {
+        P = nullptr;
+    } else {
+    P = L.first;
+    L.first = P->next;
+    P = nullptr;
+    }
     //----------------------------------------
 }
 
@@ -96,10 +115,19 @@ void deleteLast(List &L, address &P) {
     * FS : last element in List L is removed and is pointed by P
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
-
-
-
+     address q = L.first;
+    if (L.first == nullptr) {
+        P = nullptr;
+    } else if (L.first->next == nullptr) {
+        P = L.first;
+        L.first = nullptr;
+    } else {
+        while (q->next->next != nullptr){
+            q = q->next;
+        }
+    P = q->next;
+    q->next = nullptr;
+    }
     //----------------------------------------
 }
 
@@ -109,8 +137,14 @@ void printInfo(List L) {
     *      call the view_data function from my_data.h to print the info
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
-
+    address p = L.first;
+    if (p == nullptr){
+        cout<<"List Kosong"<<endl;
+    }
+    while (p != nullptr){
+        cout << p->info << " ";
+        p = p->next;
+    }
 
     //----------------------------------------
     cout<<endl;
@@ -124,8 +158,10 @@ void insertAfter(List &L, address Prec, address P) {
     *      pointed by pointer Prec
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
-
+    if (Prec != nullptr){
+    P = Prec->next;
+    Prec->next = P->next;
+    }
     //----------------------------------------
 
 }
@@ -136,9 +172,13 @@ void deleteAfter(List &L, address Prec, address &P) {
     *      is removed and pointed by pointer P
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
-
-
+    if (Prec == nullptr || Prec->next == nullptr) {
+        P = nullptr;
+    } else {
+        P = Prec->next;
+        Prec->next = P->next;
+        P->next = nullptr;
+    }
     //----------------------------------------
 }
 
