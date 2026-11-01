@@ -154,7 +154,8 @@ void insertAfter(List &L, address Prec, address P) {
      * FS : element pointed by P is placed behind the element
      *      pointed by pointer Prec
      */
-    //-------------your code here-------------
+    P->next = Prec->next;
+    Prec->next = P;
     cout << "your code here" << endl;
     P->next = Prec->next;
     Prec->next = P;
