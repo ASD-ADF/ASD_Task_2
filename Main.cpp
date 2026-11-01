@@ -33,6 +33,7 @@ int main() {
 
     //==================================================
     // TEST INSERT AFTER
+    // TEST INSERT AFTER
     P = findElm(L, 6);
     insertAfter(L, P, allocate(5));
     printInfo(L);

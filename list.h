@@ -38,7 +38,6 @@ struct List{
 };
 
 
-
 // define a function and a procedure to allocate and deallocate an element list
 void createList(List &L);
 address allocate(infotype x);
