@@ -6,6 +6,7 @@
 #define first(L) L.first
 #define next(P) P->next
 #define info(P) P->info
+#define NIL nullptr
 
 using namespace std;
 
@@ -30,14 +31,14 @@ typedef struct elmlist *address;
 
 struct elmlist{
     //------------- your code here -----------
-
-
+    infotype info;
+    address next;
     //----------------------------------------
 };
 
 struct List{
     //------------- your code here -----------
-
+    address first;
     //----------------------------------------
 };
 
