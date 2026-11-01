@@ -21,12 +21,10 @@ struct List{
     address first;
 };
 
-// define a function and a procedure to allocate and deallocate an element list
 void createList(List &L);
 address allocate(infotype x);
 void deallocate(address &P);
 
-// define insert and delete procedure
 void insertFirst(List &L, address P);
 void insertLast(List &L, address P);
 void deleteFirst(List &L, address &P);
@@ -34,7 +32,6 @@ void deleteLast(List &L, address &P);
 void insertAfter(List &L, address Prec, address P);
 void deleteAfter(List &L, address Prec, address &P);
 
-// define search-by-ID function and view procedure
 address findElm(List L, infotype x);
 void printInfo(List L);
 

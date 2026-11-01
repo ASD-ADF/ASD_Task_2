@@ -1,20 +1,29 @@
 #include "list.h"
 #include "operation.h"
 
+ void insert_sorted(List &L, infotype x) {
 
-void insert_sorted(List &L, infotype x) {
-    /**
-    * IS : List may be empty
-    * PR : insert an infotype x into an already sorted List L
-    *      so that the elements inside List L is still sorted in ascending order,
-    *      procedure must also check if such number is already exists (No Duplicate number),
-    *      allocate new element only if the conditions are met
-    * FS : elements in List L sorted in ascending order, x is inside List L
-    */
+    // Cek apakah angka sudah ada
+    if (findElm(L, x) != nullptr) {
+        return;
+    }
 
-    //-------------your code here-------------
-    cout<<"your code here"<<endl;
+    // Allocate node baru
+    address P = allocate(x);
 
+    // Jika list kosong atau x lebih kecil dari elemen pertama
+    if (L.first == nullptr || x < L.first->info) {
+        insertFirst(L, P);
+    }
+    else {
+        address Q = L.first;
 
-    //----------------------------------------
+        // Cari posisi yang tepat
+        while (Q->next != nullptr && Q->next->info < x) {
+            Q = Q->next;
+        }
+
+        // Masukkan setelah Q
+        insertAfter(L, Q, P);
+    }
 }
