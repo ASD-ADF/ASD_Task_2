@@ -9,39 +9,35 @@
 
 using namespace std;
 
-
 /**
-* Type infotype : integer
-* Type address  : pointer to ElmList
-*
-* Type ElmList <
-*	info : infotype
-*	next : address
-* >
-*
-* Type List : < First : address >
-*
-**/
-
-
+ * Type infotype : integer
+ * Type address  : pointer to ElmList
+ *
+ * Type ElmList <
+ *	info : infotype
+ *	next : address
+ * >
+ *
+ * Type List : < First : address >
+ *
+ **/
 
 typedef int infotype;
 typedef struct elmlist *address;
 
-struct elmlist{
+struct elmlist {
     //------------- your code here -----------
-
+    infotype info;
+    address next;
 
     //----------------------------------------
 };
 
-struct List{
+struct List {
     //------------- your code here -----------
-
+    address first;
     //----------------------------------------
 };
-
-
 
 // define a function and a procedure to allocate and deallocate an element list
 void createList(List &L);
@@ -59,6 +55,5 @@ void deleteAfter(List &L, address Prec, address &P);
 // define search-by-ID function and view procedure
 address findElm(List L, infotype x);
 void printInfo(List L);
-
 
 #endif // LIST_H_INCLUDED
