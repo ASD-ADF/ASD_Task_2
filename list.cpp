@@ -5,9 +5,7 @@ void createList(List &L) {
     * FS : set first(L) with Null
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
-
-
+     L.first = nullptr;
     //----------------------------------------
 }
 
@@ -18,9 +16,9 @@ address allocate(infotype x) {
 
     address P = NULL;
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
-
-
+    P = new elmlist;
+    P->info = x;
+    P->next = nullptr;
     //----------------------------------------
     return P;
 }
@@ -30,9 +28,8 @@ void deallocate(address &P) {
     * FS : delete element pointed by P
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
-
-
+    delete P;
+    P = nullptr;
     //----------------------------------------
 }
 
@@ -42,10 +39,12 @@ void insertFirst(List &L, address P) {
     * FS : element pointed by P became the first element in List L
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
-
-
-
+    if (L.first == nullptr){
+        L.first = P;
+    } else {
+        P->next = L.first;
+        L.first = P;
+    }
     //----------------------------------------
 }
 
@@ -55,9 +54,16 @@ void insertLast(List &L, address P) {
     * FS : element pointed by P became the last element in List L
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
-
-
+    address q;
+    if (L.first == nullptr) {
+        L.first = P;
+    } else {
+        q = L.first;
+        while (q->next != nullptr) {
+            q = q->next;
+        }
+        q->next = P;
+    }
     //----------------------------------------
 }
 
@@ -84,10 +90,13 @@ void deleteFirst(List &L, address &P) {
     * FS : first element in List L is removed and is pointed by P
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
-
-
-
+    if (L.first == nullptr) {
+        P = nullptr;
+    } else {
+        P = L.first;
+        L.first = P->next;
+        P->next = nullptr;
+    }
     //----------------------------------------
 }
 
