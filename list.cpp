@@ -5,7 +5,6 @@ void createList(List &L) {
      * FS : set first(L) with Null
      */
     //-------------your code here-------------
-    cout << "your code here" << endl;
     L.first = nullptr;
 
     //----------------------------------------
@@ -16,10 +15,8 @@ address allocate(infotype x) {
      * FS : return new list element with info = x and next element is Null
      */
 
-    address P = nullptr;
+    address P = new elmlist;
     //-------------your code here-------------
-    cout << "your code here" << endl;
-    P = new elmlist;
     P->info = x;
     P->next = nullptr;
     //----------------------------------------
@@ -31,7 +28,6 @@ void deallocate(address &P) {
      * FS : delete element pointed by P
      */
     //-------------your code here-------------
-    cout << "your code here" << endl;
     delete P;
     P = nullptr;
 
@@ -44,7 +40,6 @@ void insertFirst(List &L, address P) {
      * FS : element pointed by P became the first element in List L
      */
     //-------------your code here-------------
-    cout << "your code here" << endl;
     P->next = L.first;
     L.first = P;
 
@@ -57,7 +52,6 @@ void insertLast(List &L, address P) {
      * FS : element pointed by P became the last element in List L
      */
     //-------------your code here-------------
-    cout << "your code here" << endl;
     if (L.first == nullptr){
         P->next = L.first;
         L.first = P;
@@ -80,15 +74,17 @@ address findElm(List L, infotype x) {
            return Null if such ID is not found
     */
 
-    address P;
+    address P = L.first;
     //-------------your code here-------------
-    P = L.first;
 
-    while (P != nullptr && P->info.ID != x.ID) {
+    while (P != nullptr) {
+        if (P->info == x){
+            return P;
+        }
         P = P->next;
     }
     //----------------------------------------
-    return P;
+    return nullptr;
 }
 
 void deleteFirst(List &L, address &P) {
@@ -97,7 +93,6 @@ void deleteFirst(List &L, address &P) {
      * FS : first element in List L is removed and is pointed by P
      */
     //-------------your code here-------------
-    cout << "your code here" << endl;
     if (L.first == nullptr){
         P = nullptr;
     }else{
@@ -114,7 +109,6 @@ void deleteLast(List &L, address &P) {
      * FS : last element in List L is removed and is pointed by P
      */
     //-------------your code here-------------
-    cout << "your code here" << endl;
     address Q;
     if (L.first == nullptr){
         P = nullptr;
@@ -123,9 +117,9 @@ void deleteLast(List &L, address &P) {
         L.first = nullptr;
     }else{
        Q = L.first;
-       while (Q->next->next != nullptr){
-        Q = Q->next;
-       }
+        while (Q->next->next != nullptr){
+            Q = Q->next;
+        }
        P = Q->next;
        Q->next = nullptr;
     }
@@ -141,7 +135,7 @@ void printInfo(List L) {
     address P = L.first;
 
     while (P != nullptr) {
-        cout << P->info << " ";
+        cout << P->info << ", ";
         P = P->next;
     }
     //----------------------------------------
@@ -154,11 +148,11 @@ void insertAfter(List &L, address Prec, address P) {
      * FS : element pointed by P is placed behind the element
      *      pointed by pointer Prec
      */
-    P->next = Prec->next;
-    Prec->next = P;
-    cout << "your code here" << endl;
-    P->next = Prec->next;
-    Prec->next = P;
+    
+    if (Prec != nullptr && P != nullptr){
+        P->next = Prec->next;
+        Prec->next = P;
+    }
     //----------------------------------------
 }
 void deleteAfter(List &L, address Prec, address &P) {
@@ -168,9 +162,12 @@ void deleteAfter(List &L, address Prec, address &P) {
      *      is removed and pointed by pointer P
      */
     //-------------your code here-------------
-    cout << "your code here" << endl;
-    P = Prec->next;
-    Prec->next = P->next;
-    P->next = nullptr;
+    if (Prec != nullptr && Prec->next != nullptr){
+        P = Prec->next;
+        Prec->next = P->next;
+        P->next = nullptr;
+    } else {
+        P = nullptr;
+    }
     //----------------------------------------
 }
