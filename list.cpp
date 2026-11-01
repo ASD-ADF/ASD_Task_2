@@ -82,7 +82,10 @@ address findElm(List L, infotype x) {
     address P;
     //-------------your code here-------------
     cout << "your code here" << endl;
-
+    P = L.first;
+    while (P != nullptr && P->info != x) {
+        P = P->next;
+    }
     //----------------------------------------
     return P;
 }
@@ -116,7 +119,11 @@ void printInfo(List L) {
      */
     //-------------your code here-------------
     cout << "your code here" << endl;
-
+    address P = L.first;
+    while (P != nullptr) {
+        cout << P->info << " ";
+        P = P->next;
+    }
     //----------------------------------------
     cout << endl;
 }
