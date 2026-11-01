@@ -70,9 +70,10 @@ address findElm(List L, infotype x) {
 
     address P;
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
-
-
+    P = L.first;
+    while (P != NULL && P->info != x) {
+        P = P->next;
+    }
     //----------------------------------------
     return P;
 }
@@ -96,10 +97,19 @@ void deleteLast(List &L, address &P) {
     * FS : last element in List L is removed and is pointed by P
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
-
-
-
+    if (L.first == NULL) {
+        P = NULL;
+    } else if (L.first->next == NULL) {
+        P = L.first;
+        L.first = NULL;
+    } else {
+        address Q = L.first;
+        while (Q->next->next != NULL) {
+            Q = Q->next;
+        }
+        P = Q->next;
+        Q->next = NULL;
+    }
     //----------------------------------------
 }
 
@@ -109,9 +119,17 @@ void printInfo(List L) {
     *      call the view_data function from my_data.h to print the info
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
-
-
+    address P = L.first;
+    if (P == NULL) {
+        cout<<"[empty]";
+    }
+    while (P != NULL) {
+        cout<<P->info<<",";
+        if (P->next != NULL) {
+            cout<<" ";
+        }
+        P = P->next;
+    }
     //----------------------------------------
     cout<<endl;
 }
@@ -124,8 +142,8 @@ void insertAfter(List &L, address Prec, address P) {
     *      pointed by pointer Prec
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
-
+    P->next = Prec->next;
+    Prec->next = P;
     //----------------------------------------
 
 }
@@ -136,8 +154,11 @@ void deleteAfter(List &L, address Prec, address &P) {
     *      is removed and pointed by pointer P
     */
     //-------------your code here-------------
-    cout<<"your code here"<<endl;
-
+    P = Prec->next;
+    if (P != NULL) {
+        Prec->next = P->next;
+        P->next = NULL;
+    }
 
     //----------------------------------------
 }
