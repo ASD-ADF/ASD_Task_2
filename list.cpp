@@ -19,9 +19,9 @@ address allocate(infotype x) {
     address P = nullptr;
     //-------------your code here-------------
     cout << "your code here" << endl;
-    address P = new elmlist;
-    p->info = x;
-    p->next = nullptr;
+    P = new elmlist;
+    P->info = x;
+    P->next = nullptr;
     //----------------------------------------
     return P;
 }
@@ -67,6 +67,7 @@ void insertLast(List &L, address P) {
             q = q->next;
         }
         q->next = P;
+        P->next = nullptr;
     }
 
     //----------------------------------------
@@ -81,9 +82,9 @@ address findElm(List L, infotype x) {
 
     address P;
     //-------------your code here-------------
-    cout << "your code here" << endl;
     P = L.first;
-    while (P != nullptr && P->info != x) {
+
+    while (P != nullptr && P->info.ID != x.ID) {
         P = P->next;
     }
     //----------------------------------------
@@ -97,7 +98,13 @@ void deleteFirst(List &L, address &P) {
      */
     //-------------your code here-------------
     cout << "your code here" << endl;
-
+    if (L.first == nullptr){
+        P = nullptr;
+    }else{
+        P = L.first;
+        L.first = P->next;
+        P->next = nullptr;
+    }
     //----------------------------------------
 }
 
@@ -108,7 +115,20 @@ void deleteLast(List &L, address &P) {
      */
     //-------------your code here-------------
     cout << "your code here" << endl;
-
+    address Q;
+    if (L.first == nullptr){
+        P = nullptr;
+    }else if (L.first->next == nullptr){
+        P = L.first;
+        L.first = nullptr;
+    }else{
+       Q = L.first;
+       while (Q->next->next != nullptr){
+        Q = Q->next;
+       }
+       P = Q->next;
+       Q->next = nullptr;
+    }
     //----------------------------------------
 }
 
@@ -118,8 +138,8 @@ void printInfo(List L) {
      *      call the view_data function from my_data.h to print the info
      */
     //-------------your code here-------------
-    cout << "your code here" << endl;
     address P = L.first;
+
     while (P != nullptr) {
         cout << P->info << " ";
         P = P->next;
@@ -136,7 +156,8 @@ void insertAfter(List &L, address Prec, address P) {
      */
     //-------------your code here-------------
     cout << "your code here" << endl;
-
+    P->next = Prec->next;
+    Prec->next = P;
     //----------------------------------------
 }
 void deleteAfter(List &L, address Prec, address &P) {
@@ -147,6 +168,8 @@ void deleteAfter(List &L, address Prec, address &P) {
      */
     //-------------your code here-------------
     cout << "your code here" << endl;
-
+    P = Prec->next;
+    Prec->next = P->next;
+    P->next = nullptr;
     //----------------------------------------
 }
