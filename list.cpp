@@ -106,9 +106,19 @@ void deleteLast(List &L, address &P) {
     */
     //-------------your code here-------------
     cout<<"your code here"<<endl;
-
-
-
+    if (L.first == nullptr) {
+        P = nullptr;
+    } else if (L.first->next == nullptr) {
+        P = L.first;
+        L.first = nullptr;
+    } else {
+        address q = L.first;
+        while (q->next->next != nullptr) {
+            q = q->next;
+        }
+        P = q->next;
+        q->next = nullptr;
+    }
     //----------------------------------------
 }
 
@@ -119,7 +129,11 @@ void printInfo(List L) {
     */
     //-------------your code here-------------
     cout<<"your code here"<<endl;
-
+    address q = L.first;
+    while (q != nullptr) {
+        cout << q->info << " ";
+        q = q->next;
+    }
 
     //----------------------------------------
     cout<<endl;

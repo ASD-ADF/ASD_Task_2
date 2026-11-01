@@ -9,22 +9,6 @@
 
 using namespace std;
 
-
-/**
-* Type infotype : integer
-* Type address  : pointer to ElmList
-*
-* Type ElmList <
-*	info : infotype
-*	next : address
-* >
-*
-* Type List : < First : address >
-*
-**/
-
-
-
 typedef int infotype;
 typedef struct elmlist *address;
 
@@ -36,8 +20,6 @@ struct elmlist{
 struct List{
     address first;
 };
-
-
 
 // define a function and a procedure to allocate and deallocate an element list
 void createList(List &L);
