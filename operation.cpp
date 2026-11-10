@@ -14,6 +14,24 @@ void insert_sorted(List &L, infotype x) {
 
     //-------------your code here-------------
     cout<<"your code here"<<endl;
+    void insert_sorted(List &L, infotype x) {
+    if (findElm(L, x) != Null) {
+        return;  
+    }
+    address P = allocate(x);
+
+    if (L.first == Null || x.ID < L.first->info.ID) {
+        insertFirst(L, P);
+        return;
+    }
+
+    address q = L.first;
+    while (q->next != Null && q->next->info.ID < x.ID) {
+        q = q->next;
+    }
+
+    insertAfter(L, q, P);
+}
 
 
     //----------------------------------------
