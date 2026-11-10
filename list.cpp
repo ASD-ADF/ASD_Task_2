@@ -6,9 +6,8 @@ void createList(List &L) {
     */
     //-------------your code here-------------
     cout<<"your code here"<<endl;
+    L.first = Null;
 
-
-    //----------------------------------------
 }
 
 address allocate(infotype x) {
@@ -19,8 +18,9 @@ address allocate(infotype x) {
     address P = NULL;
     //-------------your code here-------------
     cout<<"your code here"<<endl;
-
-
+    P = new elmlist;
+    P -> info = x;
+    P -> next = Null;
     //----------------------------------------
     return P;
 }
@@ -31,7 +31,8 @@ void deallocate(address &P) {
     */
     //-------------your code here-------------
     cout<<"your code here"<<endl;
-
+    delete P;
+    P = Null;
 
     //----------------------------------------
 }
@@ -43,9 +44,12 @@ void insertFirst(List &L, address P) {
     */
     //-------------your code here-------------
     cout<<"your code here"<<endl;
-
-
-
+    if (P->next == Null){
+        L.first = P;
+    } else {
+        P-> next = L.first;
+        L.first = P;
+    }
     //----------------------------------------
 }
 
@@ -56,7 +60,18 @@ void insertLast(List &L, address P) {
     */
     //-------------your code here-------------
     cout<<"your code here"<<endl;
-
+    address q;
+    q = L.first;
+    if (L.first == Null){
+        L.first = P;
+    } else {
+        while (q -> next != Null){
+            q = q->next;
+        }
+        q->next = P;
+    
+    }
+    
 
     //----------------------------------------
 }
@@ -69,9 +84,15 @@ address findElm(List L, infotype x) {
     */
 
     address P;
+    P = L.first;
     //-------------your code here-------------
     cout<<"your code here"<<endl;
-
+    
+    while (P != Null && P->info.ID != x.ID){
+        P = P->next;
+            
+    }
+        
 
     //----------------------------------------
     return P;
@@ -84,8 +105,13 @@ void deleteFirst(List &L, address &P) {
     */
     //-------------your code here-------------
     cout<<"your code here"<<endl;
-
-
+    if (L.first == Null){
+        P = Null;
+    }else{
+        P = L.first;
+        L.first = P->next;
+        P->next = Null;
+    }
 
     //----------------------------------------
 }
@@ -97,7 +123,20 @@ void deleteLast(List &L, address &P) {
     */
     //-------------your code here-------------
     cout<<"your code here"<<endl;
-
+    address q;
+    if (L.first == Null){
+        P = Null;
+    }else if (L.first->next == Null){
+        P= L.first;
+        L.first = Null;
+    } else {
+        q = L.first;
+        while (q->next->next != Null){
+            q = q->next;
+        }
+        P= q->next;
+        q->next = Null;
+    }
 
 
     //----------------------------------------
@@ -110,7 +149,16 @@ void printInfo(List L) {
     */
     //-------------your code here-------------
     cout<<"your code here"<<endl;
-
+    address P;
+    P =  L.first;
+    if (P == Null){
+        cout << "LIST KOSONG";
+    }else {
+        while (P != Null){
+            cout << P->info << ", ";
+            P = P->next;
+        }
+    }
 
     //----------------------------------------
     cout<<endl;
@@ -125,7 +173,13 @@ void insertAfter(List &L, address Prec, address P) {
     */
     //-------------your code here-------------
     cout<<"your code here"<<endl;
-
+    if (L.first == Null){
+        L.first = P;
+    }else{
+        P->next = Prec->next;
+        Prec->next = P;
+        
+    }
     //----------------------------------------
 
 }
@@ -137,8 +191,13 @@ void deleteAfter(List &L, address Prec, address &P) {
     */
     //-------------your code here-------------
     cout<<"your code here"<<endl;
-
-
+     if (Prec == Null || Prec->next == Null) {
+        P = Null;
+    }else{
+        P = Prec->next;
+        Prec->next = P->next;
+        P->next = NULL;
+    }
     //----------------------------------------
 }
 
